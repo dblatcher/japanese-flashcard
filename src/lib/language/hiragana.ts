@@ -1,7 +1,7 @@
-import { Alphabet, Word } from "./alphabet"
+import { Alphabet } from "./alphabet"
 
 
-var hiragana = new Alphabet([
+const HIRAGANA = new Alphabet([
     [0x3042, "A"],
     [0x3044, "I"],
     [0x3046, "U"],
@@ -79,14 +79,4 @@ var hiragana = new Alphabet([
 ])
 
 
-const hiraganaWordList = [
-    new Word('kinnoko', 'mushrooms', hiragana),
-    new Word('konbanwa', 'good evening', hiragana),
-    new Word('ki', 'tree', hiragana),
-    new Word('inu', 'dog', hiragana),
-    new Word('tamogo', 'eggs', hiragana),
-    new Word('niku', 'meat', hiragana),
-    new Word('ohashi', 'chopsticks', hiragana),
-]
-
-export { hiraganaWordList }
+export { HIRAGANA }

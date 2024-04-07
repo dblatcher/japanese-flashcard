@@ -1,7 +1,6 @@
-import { hiraganaWordList } from "@/lib/hiragana";
+import { hiraganaWordList, katakanaWordList } from "@/lib/wordlists";
 import styles from "./page.module.css";
 import Link from "next/link";
-import { katakanaWordList } from "@/lib/katakana";
 
 export default function Home() {
 

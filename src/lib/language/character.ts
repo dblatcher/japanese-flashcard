@@ -1,4 +1,3 @@
-
 class Character {
     identifier: string
     charCode: number

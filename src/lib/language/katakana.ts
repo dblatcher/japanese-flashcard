@@ -1,6 +1,6 @@
-import { Alphabet, Word } from "./alphabet"
+import { Alphabet } from "./alphabet"
 
-var katakana = new Alphabet([
+const KATAKANA = new Alphabet([
 
     [0x30A2, "A"],
     [0x30A4, "I"],
@@ -83,12 +83,4 @@ var katakana = new Alphabet([
     [0x30fc, "H"]
 ])
 
-var katakanaWordList = [
-    new Word("gurasu", "glass", katakana),
-    new Word("minibah", "minibar", katakana),
-    new Word('shiatsu', 'shirt', katakana),
-    new Word('nekutai', '(neck)tie', katakana),
-    new Word('tahminaru', 'terminal', katakana),
-]
-
-export { katakanaWordList }
+export { KATAKANA }
