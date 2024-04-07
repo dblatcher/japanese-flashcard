@@ -1,11 +1,22 @@
+import { hiraganaWordList } from "@/lib/hiragana";
 import styles from "./page.module.css";
 import Link from "next/link";
+import { katakanaWordList } from "@/lib/katakana";
 
 export default function Home() {
+
+  const hiraganaWord = hiraganaWordList[1]
+  const katakanaWord = katakanaWordList[2]
+  
+
   return (
     <main className={styles.main}>
       <h1>Japanese Flashcards</h1>
-      <div>placeholder</div>
+
+      <p>{hiraganaWord.text}, {hiraganaWord.translation}</p>
+      <p dangerouslySetInnerHTML={{__html: hiraganaWord.write()}}></p>
+      <p>{katakanaWord.text}, {katakanaWord.translation}</p>
+      <p dangerouslySetInnerHTML={{__html: katakanaWord.write()}}></p>
       <Link href="/about">about page</Link>
     </main>
   );
