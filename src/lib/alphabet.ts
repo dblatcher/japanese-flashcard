@@ -82,7 +82,7 @@ class Alphabet {
                 output += character
                 continue
             }
-            output += character.html
+            output += character.string
         }
         return output
     }

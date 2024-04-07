@@ -30,6 +30,9 @@ class Character {
     get html() {
         return "&#" + this.charCode + ";"
     }
+    get string() {
+        return String.fromCharCode(this.charCode)
+    }
 
 
     get span() {
