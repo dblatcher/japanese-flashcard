@@ -22,11 +22,6 @@ export default function Home() {
       <p>{katakanaWord.text}, {katakanaWord.translation}</p>
       <p>{katakanaWord.write()}</p>
 
-      <Box>
-        <TalkingTile identifier="NI" />
-        <TalkingTile identifier="WA" />
-      </Box>
-
       <AlphabetGrid alphabet={HIRAGANA} />
       <AlphabetGrid alphabet={KATAKANA} />
     </main>
