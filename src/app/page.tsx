@@ -1,8 +1,9 @@
-import { hiraganaWordList, katakanaWordList } from "@/lib/wordlists";
-import styles from "./page.module.css";
-import Link from "next/link";
-import { SyllableCard } from "@/components/SyllableCard";
+import { AlphabetGrid } from "@/components/AlphabetGrid";
 import { HIRAGANA } from "@/lib/language/hiragana";
+import { hiraganaWordList, katakanaWordList } from "@/lib/wordlists";
+import Link from "next/link";
+import styles from "./page.module.css";
+import { KATAKANA } from "@/lib/language/katakana";
 
 export default function Home() {
 
@@ -14,9 +15,7 @@ export default function Home() {
     <main className={styles.main}>
       <h1>Japanese Flashcards</h1>
       <span>フラッシュカード</span>
-      <SyllableCard character={HIRAGANA.characters['O']} />
-      <SyllableCard character={HIRAGANA.characters['A']} />
-      <SyllableCard character={HIRAGANA.characters['KI']} />
+
 
       <p>{hiraganaWord.text}, {hiraganaWord.translation}</p>
       <p>{hiraganaWord.write()}</p>
@@ -24,6 +23,9 @@ export default function Home() {
       <p>{katakanaWord.text}, {katakanaWord.translation}</p>
       <p>{katakanaWord.write()}</p>
       <Link href="/about">about page</Link>
+
+      <AlphabetGrid alphabet={HIRAGANA} />
+      <AlphabetGrid alphabet={KATAKANA} />
     </main>
   );
 }
