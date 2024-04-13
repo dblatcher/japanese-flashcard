@@ -25,6 +25,7 @@ export default function Home() {
       <p>{katakanaWord.text}, {katakanaWord.translation}</p>
       <p>{katakanaWord.write()}</p>
       <Link href="/about">about page</Link>
+      <Link href="/learn-characters">learn characters</Link>
 
       <Box>
         <TalkingTile identifier="NI" />
