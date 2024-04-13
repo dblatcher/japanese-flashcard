@@ -11,25 +11,32 @@ interface Props {
 
 export const TalkingTile = ({ identifier }: Props) => {
 
-    const [voices, setVoices] = useState(speechSynthesis.getVoices())
+    const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([])
 
     const character = HIRAGANA.characters[identifier]
 
-
-    useEffect(() => {
+    const loadVoices = () => {
         const newVoices = speechSynthesis.getVoices()
         setVoices(newVoices)
+        console.log(newVoices)
+        return newVoices
+    }
+
+    useEffect(() => {
+        setTimeout(loadVoices, 10)
     }, [setVoices])
 
     const talk = () => {
+        const availableVoices = voices.length === 0 ? loadVoices() : voices
+        const japaneseVoice = availableVoices.find(voice => voice.lang === 'ja-JP')
+        const ukVoice = availableVoices.find(voice => voice.lang === 'en-GB')
+        const usVoice = availableVoices.find(voice => voice.lang === 'en-US')
 
-        const japaneseVoice = voices.find(voice => voice.lang === 'ja-JP')
-        const ukVoice = voices.find(voice => voice.lang === 'en-GB')
-        const usVoice = voices.find(voice => voice.lang === 'en-US')
-
-        const voice = japaneseVoice ?? ukVoice ?? usVoice ?? voices[0]
+        const voice = japaneseVoice ?? ukVoice ?? usVoice ?? availableVoices[0]
 
         if (!voice) {
+            console.warn('no voices');
+            loadVoices()
             return
         }
         const text = voice === japaneseVoice ? character.string : character.phonetic.toLowerCase()
