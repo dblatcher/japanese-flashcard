@@ -13,9 +13,11 @@ export const SyllableCard = ({ character }: Props) => {
             padding: 1,
             display: 'flex',
             justifyContent: 'center',
-            minWidth: 80,
+            minWidth: 60,
+            flexDirection: 'column',
+            textAlign: 'center',
         }}>
-            <Typography fontSize={40}>{character.string}</Typography>
+            <Typography fontSize={40} lineHeight={1}>{character.string}</Typography>
             <Typography variant='caption'>{character.phonetic}</Typography>
         </Card>
     )
