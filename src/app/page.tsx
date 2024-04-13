@@ -15,17 +15,12 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <h1>Japanese Flashcards</h1>
-      <span>フラッシュカード</span>
-
 
       <p>{hiraganaWord.text}, {hiraganaWord.translation}</p>
       <p>{hiraganaWord.write()}</p>
 
       <p>{katakanaWord.text}, {katakanaWord.translation}</p>
       <p>{katakanaWord.write()}</p>
-      <Link href="/about">about page</Link>
-      <Link href="/learn-characters">learn characters</Link>
 
       <Box>
         <TalkingTile identifier="NI" />

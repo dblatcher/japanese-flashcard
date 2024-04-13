@@ -1,5 +1,8 @@
+import { PageHeader } from "@/components/PageHeader";
+import { CssBaseline } from "@mui/material";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { CSSProperties } from "react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -30,6 +33,14 @@ export const viewport: Viewport = {
   // "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
 }
 
+const layoutStyle: CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  height: '100vh'
+}
+
+CssBaseline
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -37,7 +48,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className} style={layoutStyle}>
+        <PageHeader />
+        {children}
+      </body>
     </html>
   );
 }
