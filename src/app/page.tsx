@@ -4,6 +4,8 @@ import { hiraganaWordList, katakanaWordList } from "@/lib/wordlists";
 import Link from "next/link";
 import styles from "./page.module.css";
 import { KATAKANA } from "@/lib/language/katakana";
+import { TalkingTile } from "@/components/TalkingTile";
+import { Box } from "@mui/material";
 
 export default function Home() {
 
@@ -23,6 +25,11 @@ export default function Home() {
       <p>{katakanaWord.text}, {katakanaWord.translation}</p>
       <p>{katakanaWord.write()}</p>
       <Link href="/about">about page</Link>
+
+      <Box>
+        <TalkingTile identifier="NI" />
+        <TalkingTile identifier="WA" />
+      </Box>
 
       <AlphabetGrid alphabet={HIRAGANA} />
       <AlphabetGrid alphabet={KATAKANA} />
