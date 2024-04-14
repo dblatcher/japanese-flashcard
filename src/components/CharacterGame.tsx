@@ -2,7 +2,7 @@
 import { SpeechProvider } from "@/context/speechContext";
 import { Character } from "@/lib/language/character";
 import { HIRAGANA } from "@/lib/language/hiragana";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, Button, Skeleton } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { CharacterQuestion } from "./CharacterQuestion";
 import { RoundHistory } from "./RoundHistory";
@@ -49,33 +49,37 @@ export const CharacterGame: React.FunctionComponent = () => {
     const previousRound = rounds.length ? rounds[rounds.length - 1] : undefined
 
     return <SpeechProvider>
-        <Grid container spacing={1}>
-            <Grid item xs={6} >
-                <Box>
-                    {character &&
-                        <CharacterQuestion
-                            title={`Round #${rounds.length + 1}`}
-                            character={character}
-                            submit={handleSubmit} />
-                    }
+        <Box>
+            <Button onClick={reset}>restart</Button>
+            <Grid container spacing={1}>
+                <Grid item xs={6} >
+                    <Box>
+                        {character ?
+                            <CharacterQuestion
+                                title={`Round #${rounds.length + 1}`}
+                                character={character}
+                                submit={handleSubmit} />
 
-                </Box>
-            </Grid>
-            <Grid item xs={6} >
-                <Box>
-                    {previousRound && (
+                            : <Skeleton height={180} width={'100%'} component={'div'} />
+                        }
+                    </Box>
+                </Grid>
+                <Grid item xs={6} >
+                    <Box>
+                        {previousRound && (
+                            <Typography>
+                                {previousRound.correct ? 'CORRECT! ' : `WRONG! `}
+                                {previousRound.character.string} is "{previousRound.character.identifier}"
+                            </Typography>
+                        )}
                         <Typography>
-                            {previousRound.correct ? 'CORRECT! ' : `WRONG! `}
-                            {previousRound.character.string} is "{previousRound.character.identifier}"
+                            SCORE:  {numberRight} / {rounds.length}
                         </Typography>
-                    )}
-                    <Typography>
-                        SCORE:  {numberRight} / {rounds.length}
-                    </Typography>
 
-                    <RoundHistory rounds={rounds} />
-                </Box>
+                        <RoundHistory rounds={rounds} />
+                    </Box>
+                </Grid>
             </Grid>
-        </Grid>
+        </Box>
     </SpeechProvider>
 }

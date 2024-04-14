@@ -36,7 +36,7 @@ export const viewport: Viewport = {
 const layoutStyle: CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
-  height: '100vh'
+  height: '100vh',
 }
 
 CssBaseline
