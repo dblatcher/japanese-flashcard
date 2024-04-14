@@ -1,11 +1,11 @@
 'use client'
-import { Box, Card, Grid, Stack, TextField, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
 import { SpeechProvider } from "@/context/speechContext";
 import { Character } from "@/lib/language/character";
 import { HIRAGANA } from "@/lib/language/hiragana";
-import { SyllableCard } from "./SyllableCard";
-import { GuessAndAnswer } from "./GuessAndAnswer";
+import { Box, Grid, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { CharacterQuestion } from "./CharacterQuestion";
+import { RoundHistory } from "./RoundHistory";
 
 type Round = {
     character: Character
@@ -13,14 +13,11 @@ type Round = {
     correct: boolean
 }
 
-
-
 export const CharacterGame: React.FunctionComponent = () => {
 
     const [rounds, setRounds] = useState<Round[]>([])
     const [character, setCharacter] = useState<Character | undefined>(undefined)
     const [initialised, setInitalised] = useState(false)
-    const [guess, setGuess] = useState("")
 
     const reset = () => {
         console.log('reset')
@@ -28,18 +25,16 @@ export const CharacterGame: React.FunctionComponent = () => {
         setCharacter(HIRAGANA.random(() => true))
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (guess: string) => {
         if (!character || !guess) {
             return
         }
         const answer = guess.trim().toUpperCase()
         const correct = answer === character.identifier
-        console.log({ guess, answer, correct })
         setRounds([...rounds, {
             character, answer, correct
         }])
         setCharacter(HIRAGANA.random((nextCharacter) => nextCharacter.identifier !== character.identifier))
-        setGuess("")
     }
 
     useEffect(() => {
@@ -51,64 +46,36 @@ export const CharacterGame: React.FunctionComponent = () => {
     }, [setInitalised])
 
     const numberRight = rounds.filter(round => round.correct).length
-
     const previousRound = rounds.length ? rounds[rounds.length - 1] : undefined
 
-    return <article>
-        <SpeechProvider>
-            <Grid container spacing={1}>
-                <Grid item xs={6} >
-                    <Box>
-                        <Box component={Card} marginBottom={2} sx={{
-                            padding: 1,
-                            backgroundColor: 'primary.light'
-                        }}>
+    return <SpeechProvider>
+        <Grid container spacing={1}>
+            <Grid item xs={6} >
+                <Box>
+                    {character &&
+                        <CharacterQuestion
+                            title={`Round #${rounds.length + 1}`}
+                            character={character}
+                            submit={handleSubmit} />
+                    }
 
-                            <Typography>Round #{rounds.length + 1}</Typography>
-                            <Typography>What is this?</Typography>
-                            {character &&
-                                <SyllableCard character={character} noCaption />
-                            }
-
-                            <TextField value={guess} onChange={(event) => {
-                                setGuess(event.target.value.trim().toUpperCase())
-                            }} onKeyDown={(event) => {
-                                if (event.key === 'Enter') {
-                                    event.preventDefault()
-                                    handleSubmit()
-                                }
-                            }} />
-                        </Box>
-
-                        {previousRound && (
-                            <Box>
-                                <Typography>
-                                    {previousRound.correct ? 'CORRECT' : 'WRONG'}
-                                </Typography>
-                                <GuessAndAnswer answer={previousRound.answer} rightAnswer={previousRound.character.identifier} />
-                            </Box>
-                        )}
-                    </Box>
-                </Grid>
-                <Grid item xs={6} >
-                    <Box>
-                        <Typography>
-                            SCORE:  {numberRight} / {rounds.length}
-                        </Typography>
-                        {[...rounds].reverse().map((round, index) => (
-                            <Stack direction={'row'} key={index} gap={1} marginBottom={.5} alignItems={'center'}
-                                sx={{
-                                    borderColor: round.correct ? 'success.main' : 'error.main',
-                                    borderWidth: 2,
-                                    borderStyle: 'solid',
-                                }}>
-                                <SyllableCard character={round.character} size="small" noCaption />
-                                <GuessAndAnswer rightAnswer={round.character.identifier} answer={round.answer} />
-                            </Stack>
-                        ))}
-                    </Box>
-                </Grid>
+                </Box>
             </Grid>
-        </SpeechProvider>
-    </article>
+            <Grid item xs={6} >
+                <Box>
+                    {previousRound && (
+                        <Typography>
+                            {previousRound.correct ? 'CORRECT! ' : `WRONG! `}
+                            {previousRound.character.string} is "{previousRound.character.identifier}"
+                        </Typography>
+                    )}
+                    <Typography>
+                        SCORE:  {numberRight} / {rounds.length}
+                    </Typography>
+
+                    <RoundHistory rounds={rounds} />
+                </Box>
+            </Grid>
+        </Grid>
+    </SpeechProvider>
 }

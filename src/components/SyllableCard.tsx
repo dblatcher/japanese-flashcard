@@ -2,11 +2,12 @@ import { Character } from "@/lib/language/character";
 import { Card, Typography } from "@mui/material";
 
 
-type Size = 'normal' | 'small'
+type Size = 'normal' | 'small' | 'large'
 
 type Dims = {
     minWidth: number
     fontSize: number
+    padding: number
 }
 
 interface Props {
@@ -17,28 +18,37 @@ interface Props {
 
 
 const sizes: Record<Size, Dims> = {
+    large: {
+        minWidth: 70,
+        fontSize: 60,
+        padding: 1,
+    },
     normal: {
         minWidth: 60,
-        fontSize: 40
+        fontSize: 40,
+        padding: 1,
     },
     small: {
-        minWidth: 30,
-        fontSize: 20,
-    }
+        minWidth: 20,
+        fontSize: 18,
+        padding: .25,
+    },
+
 }
 
 export const SyllableCard = ({ character, noCaption = false, size = 'normal' }: Props) => {
 
-    const { minWidth, fontSize } = sizes[size]
+    const { minWidth, fontSize, padding } = sizes[size]
 
     return (
         <Card sx={{
-            padding: 1,
+            padding,
             display: 'flex',
             justifyContent: 'center',
             minWidth,
             flexDirection: 'column',
             textAlign: 'center',
+            boxSizing: 'border-box',
         }}>
             <Typography fontSize={fontSize} lineHeight={1}>{character.string}</Typography>
             {!noCaption && (
