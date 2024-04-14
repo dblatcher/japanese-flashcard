@@ -6,6 +6,7 @@ import { Box, Grid, Typography, Button, Skeleton } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { CharacterQuestion } from "./CharacterQuestion";
 import { RoundHistory } from "./RoundHistory";
+import { ConstanentPicker } from "./ConstanentPicker";
 
 type Round = {
     character: Character
@@ -17,12 +18,21 @@ export const CharacterGame: React.FunctionComponent = () => {
 
     const [rounds, setRounds] = useState<Round[]>([])
     const [character, setCharacter] = useState<Character | undefined>(undefined)
+    const [constanents, setConstanents] = useState<string[]>(HIRAGANA.constanents)
     const [initialised, setInitalised] = useState(false)
+
+    const filterFunction = (possibleCharacter: Character) => {
+        if (possibleCharacter.identifier === character?.identifier) {
+            return false
+        }
+
+        return constanents.includes(possibleCharacter.constanent)
+    }
 
     const reset = () => {
         console.log('reset')
         setRounds([])
-        setCharacter(HIRAGANA.random(() => true))
+        setCharacter(HIRAGANA.random(filterFunction))
     }
 
     const handleSubmit = (guess: string) => {
@@ -34,7 +44,7 @@ export const CharacterGame: React.FunctionComponent = () => {
         setRounds([...rounds, {
             character, answer, correct
         }])
-        setCharacter(HIRAGANA.random((nextCharacter) => nextCharacter.identifier !== character.identifier))
+        setCharacter(HIRAGANA.random(filterFunction))
     }
 
     useEffect(() => {
@@ -51,6 +61,7 @@ export const CharacterGame: React.FunctionComponent = () => {
     return <SpeechProvider>
         <Box>
             <Button onClick={reset}>restart</Button>
+            <ConstanentPicker {...{ constanents, setConstanents }} options={HIRAGANA.constanents} />
             <Grid container spacing={1}>
                 <Grid item xs={6} >
                     <Box>
