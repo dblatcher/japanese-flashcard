@@ -2,11 +2,14 @@
 import { useSpeech } from "@/context/speechContext";
 import { Character } from "@/lib/language/character";
 import { HIRAGANA } from "@/lib/language/hiragana";
-import { Box, Button, Grid, Skeleton, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { CharacterQuestion } from "./CharacterQuestion";
-import { ConstanentPicker } from "./ConstanentPicker";
 import { RoundHistory } from "./RoundHistory";
+
+interface Props {
+    constanents: string[]
+}
 
 type Round = {
     character: Character
@@ -14,11 +17,14 @@ type Round = {
     correct: boolean
 }
 
-export const CharacterGame: React.FunctionComponent = () => {
+export const CharacterGame: React.FunctionComponent<Props> = ({constanents}) => {
+
+    useEffect(() => {
+        reset()
+    },[constanents])
 
     const [rounds, setRounds] = useState<Round[]>([])
     const [character, setCharacter] = useState<Character | undefined>(undefined)
-    const [constanents, setConstanents] = useState<string[]>(HIRAGANA.constanents)
     const [initialised, setInitalised] = useState(false)
 
     const { pronounce } = useSpeech()
@@ -70,14 +76,9 @@ export const CharacterGame: React.FunctionComponent = () => {
     const numberRight = rounds.filter(round => round.correct).length
     const previousRound = rounds.length ? rounds[rounds.length - 1] : undefined
 
-    const setConstanentsAndReset = (value: string[]) => {
-        setConstanents(value)
-        reset()
-    }
 
     return <Box>
         <Button onClick={reset}>reset</Button>
-        <ConstanentPicker {...{ constanents, setConstanents: setConstanentsAndReset }} options={HIRAGANA.constanents} />
         <Grid container spacing={1}>
             <Grid item xs={6} >
                 <Box>
