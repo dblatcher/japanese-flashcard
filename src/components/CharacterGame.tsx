@@ -1,12 +1,12 @@
 'use client'
-import { SpeechProvider } from "@/context/speechContext";
+import { useSpeech } from "@/context/speechContext";
 import { Character } from "@/lib/language/character";
 import { HIRAGANA } from "@/lib/language/hiragana";
-import { Box, Grid, Typography, Button, Skeleton } from "@mui/material";
+import { Box, Button, Grid, Skeleton, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { CharacterQuestion } from "./CharacterQuestion";
-import { RoundHistory } from "./RoundHistory";
 import { ConstanentPicker } from "./ConstanentPicker";
+import { RoundHistory } from "./RoundHistory";
 
 type Round = {
     character: Character
@@ -20,6 +20,8 @@ export const CharacterGame: React.FunctionComponent = () => {
     const [character, setCharacter] = useState<Character | undefined>(undefined)
     const [constanents, setConstanents] = useState<string[]>(HIRAGANA.constanents)
     const [initialised, setInitalised] = useState(false)
+
+    const {pronounce} = useSpeech()
 
     const filterFunction = (possibleCharacter: Character) => {
         if (possibleCharacter.identifier === character?.identifier) {
@@ -46,6 +48,7 @@ export const CharacterGame: React.FunctionComponent = () => {
         }
         const answer = guess.trim().toUpperCase()
         const correct = answer === character.identifier
+        pronounce(character)
         setRounds([...rounds, {
             character, answer, correct
         }])
@@ -68,39 +71,37 @@ export const CharacterGame: React.FunctionComponent = () => {
         reset()
     }
 
-    return <SpeechProvider>
-        <Box>
-            <Button onClick={reset}>restart</Button>
-            <ConstanentPicker {...{ constanents, setConstanents: setConstanentsAndReset }} options={HIRAGANA.constanents} />
-            <Grid container spacing={1}>
-                <Grid item xs={6} >
-                    <Box>
-                        {character ?
-                            <CharacterQuestion
-                                title={`Round #${rounds.length + 1}`}
-                                character={character}
-                                submit={handleSubmit} />
+    return <Box>
+        <Button onClick={reset}>restart</Button>
+        <ConstanentPicker {...{ constanents, setConstanents: setConstanentsAndReset }} options={HIRAGANA.constanents} />
+        <Grid container spacing={1}>
+            <Grid item xs={6} >
+                <Box>
+                    {character ?
+                        <CharacterQuestion
+                            title={`Round #${rounds.length + 1}`}
+                            character={character}
+                            submit={handleSubmit} />
 
-                            : <Skeleton height={180} width={'100%'} component={'div'} />
-                        }
-                    </Box>
-                </Grid>
-                <Grid item xs={6} >
-                    <Box>
-                        {previousRound && (
-                            <Typography>
-                                {previousRound.correct ? 'CORRECT! ' : `WRONG! `}
-                                {previousRound.character.string} is "{previousRound.character.identifier}"
-                            </Typography>
-                        )}
-                        <Typography>
-                            SCORE:  {numberRight} / {rounds.length}
-                        </Typography>
-
-                        <RoundHistory rounds={rounds} />
-                    </Box>
-                </Grid>
+                        : <Skeleton height={180} width={'100%'} component={'div'} />
+                    }
+                </Box>
             </Grid>
-        </Box>
-    </SpeechProvider>
+            <Grid item xs={6} >
+                <Box>
+                    {previousRound && (
+                        <Typography>
+                            {previousRound.correct ? 'CORRECT! ' : `WRONG! `}
+                            {previousRound.character.string} is "{previousRound.character.identifier}"
+                        </Typography>
+                    )}
+                    <Typography>
+                        SCORE:  {numberRight} / {rounds.length}
+                    </Typography>
+
+                    <RoundHistory rounds={rounds} />
+                </Box>
+            </Grid>
+        </Grid>
+    </Box>
 }
