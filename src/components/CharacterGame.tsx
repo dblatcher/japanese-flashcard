@@ -21,7 +21,7 @@ export const CharacterGame: React.FunctionComponent = () => {
     const [constanents, setConstanents] = useState<string[]>(HIRAGANA.constanents)
     const [initialised, setInitalised] = useState(false)
 
-    const {pronounce} = useSpeech()
+    const { pronounce } = useSpeech()
 
     const filterFunction = (possibleCharacter: Character) => {
         if (possibleCharacter.identifier === character?.identifier) {
@@ -47,7 +47,7 @@ export const CharacterGame: React.FunctionComponent = () => {
             return
         }
         const answer = guess.trim().toUpperCase()
-        const correct = answer === character.identifier
+        const correct = answer === character.phonetic
         pronounce(character)
         setRounds([...rounds, {
             character, answer, correct

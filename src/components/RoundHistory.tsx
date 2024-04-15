@@ -32,7 +32,7 @@ export const RoundHistory: React.FunctionComponent<Props> = ({ rounds }) => {
                             backgroundColor: round.correct ? 'success.main' : 'error.main',
                         }}>
                         <SyllableCard character={round.character} size="small" noCaption />
-                        <Typography>{round.character.identifier}</Typography>
+                        <Typography>{round.character.phonetic}</Typography>
 
                         {!round.correct && (
                             <Typography component={'s'}>{round.answer}</Typography>
