@@ -25,7 +25,6 @@ export const CharacterGame: React.FunctionComponent<Props> = ({constanents}) => 
 
     const [rounds, setRounds] = useState<Round[]>([])
     const [character, setCharacter] = useState<Character | undefined>(undefined)
-    const [initialised, setInitalised] = useState(false)
 
     const { pronounce } = useSpeech()
 
@@ -64,14 +63,6 @@ export const CharacterGame: React.FunctionComponent<Props> = ({constanents}) => 
         }])
         setCharacter(HIRAGANA.random(filterFunction))
     }
-
-    useEffect(() => {
-        if (initialised) {
-            return
-        }
-        setInitalised(true)
-        reset()
-    }, [setInitalised])
 
     const numberRight = rounds.filter(round => round.correct).length
     const previousRound = rounds.length ? rounds[rounds.length - 1] : undefined
