@@ -26,6 +26,11 @@ export const CharacterGame: React.FunctionComponent = () => {
             return false
         }
 
+        // treat none as 'vowels only'
+        if (constanents.length === 0) {
+            return possibleCharacter.constanent === ""
+        }
+
         return constanents.includes(possibleCharacter.constanent)
     }
 
@@ -58,10 +63,15 @@ export const CharacterGame: React.FunctionComponent = () => {
     const numberRight = rounds.filter(round => round.correct).length
     const previousRound = rounds.length ? rounds[rounds.length - 1] : undefined
 
+    const setConstanentsAndReset = (value: string[]) => {
+        setConstanents(value)
+        reset()
+    }
+
     return <SpeechProvider>
         <Box>
             <Button onClick={reset}>restart</Button>
-            <ConstanentPicker {...{ constanents, setConstanents }} options={HIRAGANA.constanents} />
+            <ConstanentPicker {...{ constanents, setConstanents: setConstanentsAndReset }} options={HIRAGANA.constanents} />
             <Grid container spacing={1}>
                 <Grid item xs={6} >
                     <Box>
