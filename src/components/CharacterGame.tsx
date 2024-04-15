@@ -8,7 +8,8 @@ import { CharacterQuestion } from "./CharacterQuestion";
 import { RoundHistory } from "./RoundHistory";
 
 interface Props {
-    constanents: string[]
+    constanents: string[];
+    roundsPerGame?: number;
 }
 
 type Round = {
@@ -17,11 +18,11 @@ type Round = {
     correct: boolean
 }
 
-export const CharacterGame: React.FunctionComponent<Props> = ({constanents}) => {
+export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, roundsPerGame }) => {
 
     useEffect(() => {
         reset()
-    },[constanents])
+    }, [constanents, roundsPerGame])
 
     const [rounds, setRounds] = useState<Round[]>([])
     const [character, setCharacter] = useState<Character | undefined>(undefined)
@@ -58,12 +59,22 @@ export const CharacterGame: React.FunctionComponent<Props> = ({constanents}) => 
         const answer = guess.trim().toUpperCase()
         const correct = answer === character.phonetic
         pronounce(character)
-        setRounds([...rounds, {
+
+        const updatedRounds = [...rounds, {
             character, answer, correct
-        }])
-        setCharacter(HIRAGANA.random(filterFunction))
+        }]
+
+        setRounds(updatedRounds)
+
+        const hasNextRound = typeof roundsPerGame === 'undefined' ? true : updatedRounds.length < roundsPerGame
+        if (hasNextRound) {
+            setCharacter(HIRAGANA.random(filterFunction))
+        } else {
+            setCharacter(undefined)
+        }
     }
 
+    const hasFinished = roundsPerGame && rounds.length >= roundsPerGame
     const numberRight = rounds.filter(round => round.correct).length
     const previousRound = rounds.length ? rounds[rounds.length - 1] : undefined
 
@@ -84,19 +95,21 @@ export const CharacterGame: React.FunctionComponent<Props> = ({constanents}) => 
                             <Button
                                 onClick={start}
                                 sx={{ flex: 1 }}
-                                variant="contained">start</Button>
+                                variant="contained">{hasFinished ? 'new game' : 'start'}</Button>
                         </Box>
                     }
-                </Box>
-            </Grid>
-            <Grid item xs={6} >
-                <Box>
+
                     {previousRound && (
                         <Typography>
                             {previousRound.correct ? 'CORRECT! ' : `WRONG! `}
                             {previousRound.character.string} is "{previousRound.character.identifier}"
                         </Typography>
                     )}
+                </Box>
+            </Grid>
+            <Grid item xs={6} >
+                <Box>
+
                     <Typography>
                         SCORE:  {numberRight} / {rounds.length}
                     </Typography>
