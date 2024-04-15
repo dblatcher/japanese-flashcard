@@ -39,6 +39,10 @@ export const CharacterGame: React.FunctionComponent = () => {
     const reset = () => {
         console.log('reset')
         setRounds([])
+        setCharacter(undefined)
+    }
+
+    const start = () => {
         setCharacter(HIRAGANA.random(filterFunction))
     }
 
@@ -72,7 +76,7 @@ export const CharacterGame: React.FunctionComponent = () => {
     }
 
     return <Box>
-        <Button onClick={reset}>restart</Button>
+        <Button onClick={reset}>reset</Button>
         <ConstanentPicker {...{ constanents, setConstanents: setConstanentsAndReset }} options={HIRAGANA.constanents} />
         <Grid container spacing={1}>
             <Grid item xs={6} >
@@ -83,7 +87,13 @@ export const CharacterGame: React.FunctionComponent = () => {
                             character={character}
                             submit={handleSubmit} />
 
-                        : <Skeleton height={180} width={'100%'} component={'div'} />
+                        :
+                        <Box display={'flex'} padding={1} minHeight={100}>
+                            <Button
+                                onClick={start}
+                                sx={{ flex: 1 }}
+                                variant="contained">start</Button>
+                        </Box>
                     }
                 </Box>
             </Grid>
