@@ -32,19 +32,6 @@ class Character {
     get string() {
         return String.fromCharCode(this.charCode)
     }
-
-
-    get span() {
-        var node = document.createElement('span')
-        node.innerHTML = this.html
-        return node
-    }
-
-    get phoneticSpan() {
-        var node = document.createElement('span')
-        node.innerHTML = this.phonetic
-        return node
-    }
 }
 
 export { Character }
