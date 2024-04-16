@@ -2,7 +2,7 @@
 import { useSpeech } from "@/context/speechContext";
 import { Character } from "@/lib/language/character";
 import { HIRAGANA } from "@/lib/language/hiragana";
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Dialog, DialogActions, DialogContent, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { CharacterQuestion } from "./CharacterQuestion";
 import { RoundHistory } from "./RoundHistory";
@@ -56,7 +56,7 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, rou
         if (!character || !guess) {
             return
         }
-        const answer = guess.trim().toUpperCase()
+        const answer = guess
         const correct = answer === character.phonetic
         pronounce(character)
 
@@ -74,49 +74,55 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, rou
         }
     }
 
-    const hasFinished = roundsPerGame && rounds.length >= roundsPerGame
+    const hasFinished = !!(roundsPerGame && rounds.length >= roundsPerGame)
     const numberRight = rounds.filter(round => round.correct).length
     const previousRound = rounds.length ? rounds[rounds.length - 1] : undefined
 
 
     return <Box>
-        <Button onClick={reset}>reset</Button>
-        <Grid container spacing={1}>
-            <Grid item xs={6} >
-                <Box>
-                    {character ?
-                        <CharacterQuestion
-                            title={`Round #${rounds.length + 1}`}
-                            character={character}
-                            submit={handleSubmit} />
+        <Box display={'flex'} justifyContent={'space-between'} gap={1}>
+            <Typography component="span">
+                SCORE:  {numberRight} / {rounds.length}
+            </Typography>
+            <Typography component="span">
+                round:  {rounds.length} / {roundsPerGame}
+            </Typography>
+        </Box>
+        <Box>
+            {character ?
+                <CharacterQuestion
+                    title={`Round #${rounds.length + 1}`}
+                    character={character}
+                    submit={handleSubmit} />
 
-                        :
-                        <Box display={'flex'} padding={1} minHeight={100}>
-                            <Button
-                                onClick={start}
-                                sx={{ flex: 1 }}
-                                variant="contained">{hasFinished ? 'new game' : 'start'}</Button>
-                        </Box>
-                    }
-
-                    {previousRound && (
-                        <Typography>
-                            {previousRound.correct ? 'CORRECT! ' : `WRONG! `}
-                            {previousRound.character.string} is "{previousRound.character.identifier}"
-                        </Typography>
-                    )}
+                :
+                <Box display={'flex'} padding={1} minHeight={100} justifyContent={'center'}>
+                    <Button
+                        onClick={start}
+                        sx={{ flexBasis: 300 }}
+                        variant="contained">start</Button>
                 </Box>
-            </Grid>
-            <Grid item xs={6} >
-                <Box>
+            }
 
-                    <Typography>
-                        SCORE:  {numberRight} / {rounds.length}
-                    </Typography>
+            {previousRound && (
+                <Typography>
+                    {previousRound.correct ? 'CORRECT! ' : `WRONG! `}
+                    {previousRound.character.string} is "{previousRound.character.identifier}"
+                </Typography>
+            )}
+        </Box>
 
-                    <RoundHistory rounds={rounds} />
-                </Box>
-            </Grid>
-        </Grid>
+
+        <Dialog
+            fullWidth
+            open={hasFinished}
+            onClose={reset} >
+            <DialogContent>
+                <RoundHistory rounds={rounds} />
+            </DialogContent>
+            <DialogActions>
+                <Button onClick={reset}>new game</Button>
+            </DialogActions>
+        </Dialog>
     </Box>
 }

@@ -1,6 +1,6 @@
 'use client'
 import { Character } from "@/lib/language/character";
-import { Box, Card, TextField, Typography } from "@mui/material";
+import { Box, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { SyllableCard } from "./SyllableCard";
 
@@ -15,9 +15,8 @@ export const CharacterQuestion: React.FunctionComponent<Props> = ({ title = "wha
     const [guess, setGuess] = useState("")
 
     return (
-        <Box component={Card} sx={{
+        <Box sx={{
             padding: 1,
-            backgroundColor: 'primary.light'
         }} display={'flex'} flexDirection={'column'} alignItems={'center'} gap={1}>
             <Typography textAlign={'center'}>{title}</Typography>
             <SyllableCard size="large" character={character} noCaption />
