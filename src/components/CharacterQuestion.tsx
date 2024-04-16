@@ -3,6 +3,7 @@ import { Character } from "@/lib/language/character";
 import { Box, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { SyllableCard } from "./SyllableCard";
+import { FadeIn } from "./FadeIn";
 
 type Props = {
     character: Character
@@ -19,7 +20,11 @@ export const CharacterQuestion: React.FunctionComponent<Props> = ({ title = "wha
             padding: 1,
         }} display={'flex'} flexDirection={'column'} alignItems={'center'} gap={1}>
             <Typography textAlign={'center'}>{title}</Typography>
-            <SyllableCard size="large" character={character} noCaption />
+
+            <FadeIn key={character.identifier} timeout={500}>
+
+                <SyllableCard size="large" character={character} noCaption />
+            </FadeIn>
 
             <TextField value={guess}
                 variant="outlined"

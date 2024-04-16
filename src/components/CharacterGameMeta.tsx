@@ -11,7 +11,7 @@ export const CharacterGameMeta: React.FunctionComponent = () => {
 
     const [optionsOpen, setOptionsOpen] = useState(false)
     const [constanents, setConstanents] = useState<string[]>(HIRAGANA.constanents)
-    const [roundsPerGame, setRoundPerGame] = useState<number>(3)
+    const [roundsPerGame, setRoundPerGame] = useState<number>(10)
 
     return <SpeechProvider>
         <Box>
