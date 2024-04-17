@@ -3,9 +3,10 @@ import { useSpeech } from "@/context/speechContext";
 import { Character } from "@/lib/language/character";
 import { HIRAGANA } from "@/lib/language/hiragana";
 import { Box, Button, Collapse, Dialog, DialogActions, DialogContent, Typography, Zoom } from "@mui/material";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CharacterInput } from "./CharacterInput";
 import { RoundHistory } from "./RoundHistory";
+import { ScoreLine } from "./ScoreLine";
 import { SyllableCard } from "./SyllableCard";
 import { TransitionIn } from "./TransitionIn";
 
@@ -79,7 +80,6 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, rou
     const hasFinished = !!(roundsPerGame && rounds.length >= roundsPerGame)
     const numberRight = rounds.filter(round => round.correct).length
     const previousRound = rounds.length ? rounds[rounds.length - 1] : undefined
-
     const characterToDisplay = character ?? previousRound?.character
 
     const answerFeedback = previousRound ? <>
@@ -103,17 +103,17 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, rou
                     minWidth: 300,
                     maxWidth: '100%',
                 }}>
-                <Box display={'flex'} justifyContent={'space-between'} gap={1}>
-                    <Typography component="span">
-                        SCORE:  {numberRight} / {rounds.length}
-                    </Typography>
-                    <Typography component="span">
-                        round:  {rounds.length + 1} / {roundsPerGame}
-                    </Typography>
-                </Box>
-                <Box sx={{
-                    padding: 1,
-                }} display={'flex'} flexDirection={'column'} alignItems={'center'} gap={1}>
+
+                <ScoreLine
+                    roundsCorrect={numberRight}
+                    roundsPlayed={rounds.length}
+                    roundsPerGame={roundsPerGame} />
+                <Box
+                    display={'flex'}
+                    flexDirection={'column'}
+                    alignItems={'center'}
+                    gap={1}
+                    padding={1}>
                     <TransitionIn key={characterToDisplay.identifier} timeout={500} Transition={Zoom}>
                         <SyllableCard size="large" character={characterToDisplay} noCaption />
                     </TransitionIn>
@@ -121,9 +121,7 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, rou
                 </Box>
                 <Box minHeight={'1.5em'} maxHeight={'1.5em'}>
                     <TransitionIn key={rounds.length} timeout={500} Transition={Collapse} orientation='horizontal'>
-                        <Typography sx={
-                            { maxHeight: '1.5em', }
-                        }>
+                        <Typography sx={{ maxHeight: '1.5em', }}>
                             {answerFeedback}
                         </Typography>
                     </TransitionIn>
