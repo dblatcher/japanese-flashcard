@@ -2,8 +2,8 @@
 import { useSpeech } from "@/context/speechContext";
 import { Character } from "@/lib/language/character";
 import { HIRAGANA } from "@/lib/language/hiragana";
-import { Box, Button, Dialog, DialogActions, DialogContent, Slide, Typography, Zoom } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import { Box, Button, Collapse, Dialog, DialogActions, DialogContent, Typography, Zoom } from "@mui/material";
+import React, { useEffect, useRef, useState } from "react";
 import { CharacterInput } from "./CharacterInput";
 import { RoundHistory } from "./RoundHistory";
 import { SyllableCard } from "./SyllableCard";
@@ -80,45 +80,56 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, rou
     const numberRight = rounds.filter(round => round.correct).length
     const previousRound = rounds.length ? rounds[rounds.length - 1] : undefined
 
+    const characterToDisplay = character ?? previousRound?.character
 
-    return <Box>
-        <Box display={'flex'} justifyContent={'space-between'} gap={1}>
-            <Typography component="span">
-                SCORE:  {numberRight} / {rounds.length}
-            </Typography>
-            <Typography component="span">
-                round:  {rounds.length} / {roundsPerGame}
-            </Typography>
-        </Box>
-        <Box>
-            {character ?
+    const answerFeedback = previousRound ? <>
+        {previousRound.correct ? 'CORRECT! ' : `WRONG! `}
+        {previousRound.character.string} is "{previousRound.character.phonetic}"
+    </> : undefined
+
+    return <Box display={'flex'} minHeight={100} justifyContent={'center'} >
+
+        {!characterToDisplay && (
+            <Box>
+                <Button
+                    onClick={start}
+                    sx={{ minWidth: 250, minHeight: 150 }}
+                    variant="contained">start</Button>
+            </Box>
+        )}
+        {characterToDisplay &&
+            <Box
+                sx={{
+                    minWidth: 300,
+                    maxWidth: '100%',
+                }}>
+                <Box display={'flex'} justifyContent={'space-between'} gap={1}>
+                    <Typography component="span">
+                        SCORE:  {numberRight} / {rounds.length}
+                    </Typography>
+                    <Typography component="span">
+                        round:  {rounds.length + 1} / {roundsPerGame}
+                    </Typography>
+                </Box>
                 <Box sx={{
                     padding: 1,
                 }} display={'flex'} flexDirection={'column'} alignItems={'center'} gap={1}>
-                    <TransitionIn key={character.identifier} timeout={500} Transition={Zoom}>
-                        <SyllableCard size="large" character={character} noCaption />
+                    <TransitionIn key={characterToDisplay.identifier} timeout={500} Transition={Zoom}>
+                        <SyllableCard size="large" character={characterToDisplay} noCaption />
                     </TransitionIn>
                     <CharacterInput submit={handleSubmit} />
                 </Box>
-                :
-                <Box display={'flex'} padding={1} minHeight={100} justifyContent={'center'}>
-                    <Button
-                        onClick={start}
-                        sx={{ flexBasis: 300 }}
-                        variant="contained">start</Button>
+                <Box minHeight={'1.5em'} maxHeight={'1.5em'}>
+                    <TransitionIn key={rounds.length} timeout={500} Transition={Collapse} orientation='horizontal'>
+                        <Typography sx={
+                            { maxHeight: '1.5em', }
+                        }>
+                            {answerFeedback}
+                        </Typography>
+                    </TransitionIn>
                 </Box>
-            }
-
-            {previousRound && (
-                <TransitionIn key={rounds.length} timeout={500} Transition={Slide} direction='right'>
-                    <Typography>
-                        {previousRound.correct ? 'CORRECT! ' : `WRONG! `}
-                        {previousRound.character.string} is "{previousRound.character.phonetic}"
-                    </Typography>
-                </TransitionIn>
-            )}
-        </Box>
-
+            </Box>
+        }
 
         <Dialog
             fullWidth

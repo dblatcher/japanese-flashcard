@@ -1,7 +1,7 @@
-import { Fade, FadeProps, SlideProps, Zoom, ZoomProps } from "@mui/material";
+import { CollapseProps, Fade, FadeProps, SlideProps, Zoom, ZoomProps } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
-type Props = FadeProps & SlideProps & ZoomProps & {
+type Props = FadeProps & SlideProps & ZoomProps & CollapseProps & {
     Transition?: typeof Fade
 }
 
