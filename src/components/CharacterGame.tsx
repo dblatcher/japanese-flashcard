@@ -2,10 +2,12 @@
 import { useSpeech } from "@/context/speechContext";
 import { Character } from "@/lib/language/character";
 import { HIRAGANA } from "@/lib/language/hiragana";
-import { Box, Button, Dialog, DialogActions, DialogContent, Grid, Typography } from "@mui/material";
+import { Box, Button, Dialog, DialogActions, DialogContent, Slide, Typography, Zoom } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { CharacterQuestion } from "./CharacterQuestion";
+import { CharacterInput } from "./CharacterInput";
 import { RoundHistory } from "./RoundHistory";
+import { SyllableCard } from "./SyllableCard";
+import { TransitionIn } from "./TransitionIn";
 
 interface Props {
     constanents: string[];
@@ -19,13 +21,13 @@ type Round = {
 }
 
 export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, roundsPerGame }) => {
+    const [rounds, setRounds] = useState<Round[]>([])
+    const [character, setCharacter] = useState<Character | undefined>(undefined)
 
     useEffect(() => {
         reset()
     }, [constanents, roundsPerGame])
 
-    const [rounds, setRounds] = useState<Round[]>([])
-    const [character, setCharacter] = useState<Character | undefined>(undefined)
 
     const { pronounce } = useSpeech()
 
@@ -90,11 +92,14 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, rou
         </Box>
         <Box>
             {character ?
-                <CharacterQuestion
-                    title={`Round #${rounds.length + 1}`}
-                    character={character}
-                    submit={handleSubmit} />
-
+                <Box sx={{
+                    padding: 1,
+                }} display={'flex'} flexDirection={'column'} alignItems={'center'} gap={1}>
+                    <TransitionIn key={character.identifier} timeout={500} Transition={Zoom}>
+                        <SyllableCard size="large" character={character} noCaption />
+                    </TransitionIn>
+                    <CharacterInput submit={handleSubmit} />
+                </Box>
                 :
                 <Box display={'flex'} padding={1} minHeight={100} justifyContent={'center'}>
                     <Button
@@ -105,10 +110,12 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, rou
             }
 
             {previousRound && (
-                <Typography>
-                    {previousRound.correct ? 'CORRECT! ' : `WRONG! `}
-                    {previousRound.character.string} is "{previousRound.character.identifier}"
-                </Typography>
+                <TransitionIn key={rounds.length} timeout={500} Transition={Slide} direction='right'>
+                    <Typography>
+                        {previousRound.correct ? 'CORRECT! ' : `WRONG! `}
+                        {previousRound.character.string} is "{previousRound.character.phonetic}"
+                    </Typography>
+                </TransitionIn>
             )}
         </Box>
 

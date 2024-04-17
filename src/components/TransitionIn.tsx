@@ -1,12 +1,15 @@
-import { Fade, FadeProps } from "@mui/material";
+import { Fade, FadeProps, SlideProps, Zoom, ZoomProps } from "@mui/material";
 import React, { useEffect, useState } from "react";
 
+type Props = FadeProps & SlideProps & ZoomProps & {
+    Transition?: typeof Fade
+}
 
-export const FadeIn: React.FunctionComponent<FadeProps> = (props) => {
+export const TransitionIn: React.FunctionComponent<Props> = (props) => {
     const [fadedIn, setFadedIn] = useState(false);
     const [timerstarted, setTimerStarted] = useState(false);
 
-    const { children, ...rest } = props
+    const { Transition = Fade, children, ...rest } = props
 
     useEffect(() => {
         if (timerstarted) {
@@ -19,7 +22,7 @@ export const FadeIn: React.FunctionComponent<FadeProps> = (props) => {
     }, [setTimerStarted])
 
 
-    return (<Fade  {...rest} in={fadedIn}>
+    return (<Transition  {...rest} in={fadedIn}>
         <div>{children}</div>
-    </Fade>)
+    </Transition>)
 } 
