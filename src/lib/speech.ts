@@ -1,6 +1,11 @@
+const isJapanese = (voice: SpeechSynthesisVoice) => voice.lang === 'ja-JP'
 
-
-
+const pickVoice = (voices: SpeechSynthesisVoice[]): SpeechSynthesisVoice | undefined => {
+    const japaneseVoice = voices.find(isJapanese)
+    const ukVoice = voices.find(voice => voice.lang === 'en-GB')
+    const usVoice = voices.find(voice => voice.lang === 'en-US')
+    return japaneseVoice ?? ukVoice ?? usVoice ?? voices[0]
+}
 
 function speak(synth: SpeechSynthesis, text: string, voice: SpeechSynthesisVoice, pitch: number, rate: number) {
     if (synth.speaking) {
@@ -15,7 +20,7 @@ function speak(synth: SpeechSynthesis, text: string, voice: SpeechSynthesisVoice
     };
 
     utterThis.onerror = function (event) {
-        console.error("SpeechSynthesisUtterance.onerror");
+        console.error("SpeechSynthesisUtterance.onerror", event);
     };
 
     utterThis.voice = voice
@@ -23,10 +28,8 @@ function speak(synth: SpeechSynthesis, text: string, voice: SpeechSynthesisVoice
 
     utterThis.pitch = pitch;
     utterThis.rate = rate;
-    utterThis.volume= .5
+    utterThis.volume = .5
     synth.speak(utterThis);
-    console.log('utterance', utterThis)
 }
 
-
-export { speak }
+export { speak, pickVoice, isJapanese }

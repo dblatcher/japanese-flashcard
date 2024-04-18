@@ -1,7 +1,6 @@
 import { Character } from "@/lib/language/character";
-import { speak } from "@/lib/speech";
+import { isJapanese, pickVoice, speak } from "@/lib/speech";
 import React, { ReactNode, createContext, useContext, useEffect, useState } from "react";
-
 
 
 const SpeechContext = createContext<{
@@ -14,34 +13,27 @@ const SpeechProvider: React.FunctionComponent<{ children: ReactNode }> = ({ chil
 
     const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([])
 
-    const loadVoices = () => {
-        const newVoices = speechSynthesis.getVoices()
-        setVoices(newVoices)
-        console.log(newVoices)
-        return newVoices
-    }
-
     useEffect(() => {
-        setTimeout(loadVoices, 10)
+        const { speechSynthesis } = window
+        const loadVoices = () => {
+            const newVoices = speechSynthesis.getVoices()
+            setVoices(newVoices)
+            console.log(newVoices)
+        }
+        speechSynthesis.addEventListener('voiceschanged', loadVoices)
+        return () => {
+            speechSynthesis.removeEventListener('voiceschanged', loadVoices)
+        }
     }, [setVoices])
 
     const pronounce = (character: Character) => {
-
-        const availableVoices = voices.length === 0 ? loadVoices() : voices
-        const japaneseVoice = availableVoices.find(voice => voice.lang === 'ja-JP')
-        const ukVoice = availableVoices.find(voice => voice.lang === 'en-GB')
-        const usVoice = availableVoices.find(voice => voice.lang === 'en-US')
-
-        const voice = japaneseVoice ?? ukVoice ?? usVoice ?? availableVoices[0]
-
+        const voice = pickVoice(voices)
         if (!voice) {
             console.warn('no voices');
-            loadVoices()
             return
         }
-        const text = voice === japaneseVoice ? character.string : character.phonetic.toLowerCase()
+        const text = isJapanese(voice) ? character.string : character.phonetic.toLowerCase()
         speak(speechSynthesis, text, voice, 1, 1)
-
     }
 
     return (
@@ -53,4 +45,4 @@ const SpeechProvider: React.FunctionComponent<{ children: ReactNode }> = ({ chil
 
 const useSpeech = () => useContext(SpeechContext)
 
-export { SpeechProvider, useSpeech }
+export { SpeechProvider, useSpeech };
