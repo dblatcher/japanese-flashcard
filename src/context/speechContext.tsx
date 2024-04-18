@@ -18,7 +18,6 @@ const SpeechProvider: React.FunctionComponent<{ children: ReactNode }> = ({ chil
         const loadVoices = () => {
             const newVoices = speechSynthesis.getVoices()
             setVoices(newVoices)
-            console.log(newVoices)
         }
         speechSynthesis.addEventListener('voiceschanged', loadVoices)
         return () => {

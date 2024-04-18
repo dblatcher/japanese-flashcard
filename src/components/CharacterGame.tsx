@@ -22,7 +22,6 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, rou
     const { pronounce } = useSpeech()
 
     const reset = () => {
-        console.log('reset')
         setRounds([])
         setCharacter(undefined)
     }

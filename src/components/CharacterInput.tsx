@@ -11,7 +11,6 @@ export const CharacterInput: React.FunctionComponent<Props> = ({ submit }) => {
     const [guess, setGuess] = useState("")
 
     useEffect(() => {
-        console.log(inputRef)
         inputRef?.current?.focus()
     }, [inputRef.current])
 
