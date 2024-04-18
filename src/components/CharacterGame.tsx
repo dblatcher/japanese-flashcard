@@ -1,7 +1,6 @@
 'use client'
 import { useSpeech } from "@/context/speechContext";
 import { Character } from "@/lib/language/character";
-import { HIRAGANA } from "@/lib/language/hiragana";
 import { Box, Button, Collapse, Dialog, DialogActions, DialogContent, Typography, Zoom } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { CharacterInput } from "./CharacterInput";
@@ -9,41 +8,18 @@ import { RoundHistory } from "./RoundHistory";
 import { ScoreLine } from "./ScoreLine";
 import { SyllableCard } from "./SyllableCard";
 import { TransitionIn } from "./TransitionIn";
+import { Round, getCharacterForNextRound } from "@/lib/game-logic";
 
 interface Props {
     constanents: string[];
     roundsPerGame?: number;
 }
 
-type Round = {
-    character: Character
-    answer: string
-    correct: boolean
-}
 
 export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, roundsPerGame }) => {
     const [rounds, setRounds] = useState<Round[]>([])
     const [character, setCharacter] = useState<Character | undefined>(undefined)
-
-    useEffect(() => {
-        reset()
-    }, [constanents, roundsPerGame])
-
-
     const { pronounce } = useSpeech()
-
-    const filterFunction = (possibleCharacter: Character) => {
-        if (possibleCharacter.identifier === character?.identifier) {
-            return false
-        }
-
-        // treat none as 'vowels only'
-        if (constanents.length === 0) {
-            return possibleCharacter.constanent === ""
-        }
-
-        return constanents.includes(possibleCharacter.constanent)
-    }
 
     const reset = () => {
         console.log('reset')
@@ -51,8 +27,10 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, rou
         setCharacter(undefined)
     }
 
+    useEffect(reset, [constanents, roundsPerGame])
+
     const start = () => {
-        setCharacter(HIRAGANA.random(filterFunction))
+        setCharacter(getCharacterForNextRound([], constanents))
     }
 
     const handleSubmit = (guess: string) => {
@@ -71,7 +49,7 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, rou
 
         const hasNextRound = typeof roundsPerGame === 'undefined' ? true : updatedRounds.length < roundsPerGame
         if (hasNextRound) {
-            setCharacter(HIRAGANA.random(filterFunction))
+            setCharacter(getCharacterForNextRound(updatedRounds, constanents))
         } else {
             setCharacter(undefined)
         }

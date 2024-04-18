@@ -1,14 +1,9 @@
 'use client'
-import { Character } from "@/lib/language/character";
 import { Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import { SyllableCard } from "./SyllableCard";
+import { Round } from "@/lib/game-logic";
 
-type Round = {
-    character: Character
-    answer: string
-    correct: boolean
-}
 
 interface Props {
     rounds: Round[]
