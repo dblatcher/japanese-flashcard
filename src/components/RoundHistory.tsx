@@ -1,8 +1,9 @@
 'use client'
-import { Grid, Stack, Typography } from "@mui/material";
+import { Round } from "@/lib/game-logic";
+import { Box, List, ListItem, ListItemIcon, Typography } from "@mui/material";
 import React from "react";
 import { SyllableCard } from "./SyllableCard";
-import { Round } from "@/lib/game-logic";
+import { ScoreLine } from "./ScoreLine";
 
 
 interface Props {
@@ -12,29 +13,28 @@ interface Props {
 export const RoundHistory: React.FunctionComponent<Props> = ({ rounds }) => {
 
     return (
-        <Grid container spacing={.5}>
-            {[...rounds].reverse().map((round, index) => (
-                <Grid item xs={6} sm={4}
-                    key={index}
-                >
-                    <Stack
-                        direction={'row'}
-                        gap={1}
-                        alignItems={'center'}
-                        sx={{
-                            color: round.correct ? 'success.contrastText' : 'error.contrastText',
-                            padding: .5,
-                            backgroundColor: round.correct ? 'success.main' : 'error.main',
-                        }}>
-                        <SyllableCard character={round.character} size="small" noCaption />
-                        <Typography>{round.character.phonetic}</Typography>
+        <Box display='flex' flexWrap={'wrap'} gap={1}>
+            <Box paddingY={1} flex={1}>
+                <ScoreLine roundsCorrect={rounds.filter(r => r.correct).length} roundsPlayed={rounds.length} />
+            </Box>
+            <List dense>
+                {rounds.map((round, index) => (
+                    <ListItem key={index} sx={{
+                        backgroundColor: round.correct ? 'success.main' : 'error.main',
+                        color: round.correct ? 'success.contrastText' : 'error.contrastText',
+                        marginBottom: .25,
+                    }}>
+                        <ListItemIcon>
+                            <SyllableCard character={round.character} size="small" noCaption />
+                        </ListItemIcon>
+                        <Typography minWidth={50}>{round.character.phonetic}</Typography>
 
                         {!round.correct && (
                             <Typography component={'s'}>{round.answer}</Typography>
                         )}
-
-                    </Stack>
-                </Grid>
-            ))}
-        </Grid>)
+                    </ListItem>
+                ))}
+            </List>
+        </Box>
+    )
 }

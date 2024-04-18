@@ -29,8 +29,8 @@ const sizes: Record<Size, Dims> = {
         padding: 1,
     },
     small: {
-        minWidth: 20,
-        fontSize: 18,
+        minWidth: 22,
+        fontSize: 20,
         padding: .25,
     },
 
