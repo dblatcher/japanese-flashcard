@@ -19,9 +19,8 @@ class Alphabet {
         return Object.keys(this.characters)
     }
 
-    get characterArray() {
-        var that = this
-        return Object.keys(this.characters).map(function (identifer) { return that.characters[identifer] })
+    get characterArray():Character[] {
+         return Object.values(this.characters)
     }
 
     get constanents() {

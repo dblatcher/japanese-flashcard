@@ -12,11 +12,12 @@ import { Round, getCharacterForNextRound } from "@/lib/game-logic";
 
 interface Props {
     hiraganaConstanents: string[];
+    katakanaConstanents: string[];
     roundsPerGame?: number;
 }
 
 
-export const CharacterGame: React.FunctionComponent<Props> = ({ hiraganaConstanents, roundsPerGame }) => {
+export const CharacterGame: React.FunctionComponent<Props> = ({ hiraganaConstanents, katakanaConstanents, roundsPerGame }) => {
     const [rounds, setRounds] = useState<Round[]>([])
     const [character, setCharacter] = useState<Character | undefined>(undefined)
     const { pronounce } = useSpeech()
@@ -26,10 +27,10 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ hiraganaConstane
         setCharacter(undefined)
     }
 
-    useEffect(reset, [hiraganaConstanents, roundsPerGame])
+    useEffect(reset, [hiraganaConstanents, katakanaConstanents, roundsPerGame])
 
     const start = () => {
-        setCharacter(getCharacterForNextRound([], hiraganaConstanents))
+        setCharacter(getCharacterForNextRound([], hiraganaConstanents, katakanaConstanents))
     }
 
     const handleSubmit = (guess: string) => {
@@ -48,7 +49,7 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ hiraganaConstane
 
         const hasNextRound = typeof roundsPerGame === 'undefined' ? true : updatedRounds.length < roundsPerGame
         if (hasNextRound) {
-            setCharacter(getCharacterForNextRound(updatedRounds, hiraganaConstanents))
+            setCharacter(getCharacterForNextRound(updatedRounds, hiraganaConstanents, katakanaConstanents))
         } else {
             setCharacter(undefined)
         }

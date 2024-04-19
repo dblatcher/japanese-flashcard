@@ -5,32 +5,42 @@ import { CharacterGame } from "./CharacterGame";
 import { HIRAGANA } from "@/lib/language/hiragana";
 import { ConstanentPicker } from "./ConstanentPicker";
 import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Grid, TextField, Typography } from "@mui/material";
+import { KATAKANA } from "@/lib/language/katakana";
 
 
 export const CharacterGameMeta: React.FunctionComponent = () => {
 
     const [optionsOpen, setOptionsOpen] = useState(false)
-    const [hiraganaConstanents, setHiraganaConstanents] = useState<string[]>(HIRAGANA.constanents)
+    const [hiraganaConstanents, setHiraganaConstanents] = useState<string[]>([""])
+    const [katakanaConstanents, seKatakanaConstanents] = useState<string[]>([""])
     const [roundsPerGame, setRoundPerGame] = useState<number>(10)
 
     return <SpeechProvider>
         <Box>
             <Button onClick={() => { setOptionsOpen(true) }}>options</Button>
-            <CharacterGame hiraganaConstanents={hiraganaConstanents} roundsPerGame={roundsPerGame} />
+            <CharacterGame
+                hiraganaConstanents={hiraganaConstanents}
+                roundsPerGame={roundsPerGame}
+                katakanaConstanents={katakanaConstanents} />
         </Box>
         <Dialog open={optionsOpen} onClose={() => { setOptionsOpen(false) }}>
             <DialogTitle>game options</DialogTitle>
             <DialogContent>
                 <Grid container gap={1}>
                     <Grid item xs={6} md={8} >
-                        <Typography variant="overline">Hiragana Characters to test</Typography>
+                        <Typography variant="overline">Hiragana Characters</Typography>
                         <ConstanentPicker
                             setConstanents={setHiraganaConstanents}
                             constanents={hiraganaConstanents}
                             options={HIRAGANA.constanents} />
+                        <Typography variant="overline">Katakana Characters</Typography>
+                        <ConstanentPicker
+                            setConstanents={seKatakanaConstanents}
+                            constanents={katakanaConstanents}
+                            options={KATAKANA.constanents} />
                     </Grid>
 
-                    <Grid item xs={3} paddingTop={1}>
+                    <Grid item xs={3} md={2} paddingTop={1}>
                         <TextField label="rounds per game"
                             value={roundsPerGame}
                             type="number" onChange={(event) => {
