@@ -10,13 +10,13 @@ import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Grid, T
 export const CharacterGameMeta: React.FunctionComponent = () => {
 
     const [optionsOpen, setOptionsOpen] = useState(false)
-    const [constanents, setConstanents] = useState<string[]>(HIRAGANA.constanents)
+    const [hiraganaConstanents, setHiraganaConstanents] = useState<string[]>(HIRAGANA.constanents)
     const [roundsPerGame, setRoundPerGame] = useState<number>(10)
 
     return <SpeechProvider>
         <Box>
             <Button onClick={() => { setOptionsOpen(true) }}>options</Button>
-            <CharacterGame constanents={constanents} roundsPerGame={roundsPerGame} />
+            <CharacterGame hiraganaConstanents={hiraganaConstanents} roundsPerGame={roundsPerGame} />
         </Box>
         <Dialog open={optionsOpen} onClose={() => { setOptionsOpen(false) }}>
             <DialogTitle>game options</DialogTitle>
@@ -24,19 +24,22 @@ export const CharacterGameMeta: React.FunctionComponent = () => {
                 <Grid container gap={1}>
                     <Grid item xs={6} md={8} >
                         <Typography variant="overline">Hiragana Characters to test</Typography>
-                        <ConstanentPicker {...{ constanents, setConstanents }} options={HIRAGANA.constanents} />
+                        <ConstanentPicker
+                            setConstanents={setHiraganaConstanents}
+                            constanents={hiraganaConstanents}
+                            options={HIRAGANA.constanents} />
                     </Grid>
 
                     <Grid item xs={3} paddingTop={1}>
-                        <TextField label="rounds per game" 
-                        value={roundsPerGame} 
-                        type="number" onChange={(event) => {
-                            const numberValue = Number(event.target.value)
-                            if (isNaN(numberValue)) {
-                                return
-                            }
-                            setRoundPerGame(Math.floor(numberValue))
-                        }} />
+                        <TextField label="rounds per game"
+                            value={roundsPerGame}
+                            type="number" onChange={(event) => {
+                                const numberValue = Number(event.target.value)
+                                if (isNaN(numberValue)) {
+                                    return
+                                }
+                                setRoundPerGame(Math.floor(numberValue))
+                            }} />
                     </Grid>
                 </Grid>
             </DialogContent>

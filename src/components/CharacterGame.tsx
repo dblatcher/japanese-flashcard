@@ -11,12 +11,12 @@ import { TransitionIn } from "./TransitionIn";
 import { Round, getCharacterForNextRound } from "@/lib/game-logic";
 
 interface Props {
-    constanents: string[];
+    hiraganaConstanents: string[];
     roundsPerGame?: number;
 }
 
 
-export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, roundsPerGame }) => {
+export const CharacterGame: React.FunctionComponent<Props> = ({ hiraganaConstanents, roundsPerGame }) => {
     const [rounds, setRounds] = useState<Round[]>([])
     const [character, setCharacter] = useState<Character | undefined>(undefined)
     const { pronounce } = useSpeech()
@@ -26,10 +26,10 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, rou
         setCharacter(undefined)
     }
 
-    useEffect(reset, [constanents, roundsPerGame])
+    useEffect(reset, [hiraganaConstanents, roundsPerGame])
 
     const start = () => {
-        setCharacter(getCharacterForNextRound([], constanents))
+        setCharacter(getCharacterForNextRound([], hiraganaConstanents))
     }
 
     const handleSubmit = (guess: string) => {
@@ -48,7 +48,7 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, rou
 
         const hasNextRound = typeof roundsPerGame === 'undefined' ? true : updatedRounds.length < roundsPerGame
         if (hasNextRound) {
-            setCharacter(getCharacterForNextRound(updatedRounds, constanents))
+            setCharacter(getCharacterForNextRound(updatedRounds, hiraganaConstanents))
         } else {
             setCharacter(undefined)
         }
