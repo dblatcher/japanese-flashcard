@@ -64,6 +64,8 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, rou
         {previousRound.character.string} is "{previousRound.character.phonetic}"
     </> : undefined
 
+    const answerBackground = previousRound?.correct ? 'success.light' : 'error.light';
+
     return <Box display={'flex'} minHeight={100} justifyContent={'center'} >
 
         {!characterToDisplay && (
@@ -98,7 +100,7 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ constanents, rou
                 </Box>
                 <Box minHeight={'1.5em'} maxHeight={'1.5em'}>
                     <TransitionIn key={rounds.length} timeout={500} Transition={Collapse} orientation='horizontal'>
-                        <Typography sx={{ maxHeight: '1.5em', }}>
+                        <Typography sx={{ maxHeight: '1.5em', backgroundColor: answerBackground }}>
                             {answerFeedback}
                         </Typography>
                     </TransitionIn>
