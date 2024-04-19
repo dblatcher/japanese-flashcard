@@ -1,10 +1,10 @@
 import { CharacterGameMeta } from "@/components/CharacterGameMeta";
-import styles from "../page.module.css";
+import { PageMain } from "@/components/layout/PageMain";
 
 export default function LearnCharacters() {
   return (
-    <main className={styles.main}>
+    <PageMain>
       <CharacterGameMeta />
-    </main>
+    </PageMain>
   );
 }

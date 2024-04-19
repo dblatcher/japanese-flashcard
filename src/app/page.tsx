@@ -1,11 +1,8 @@
 import { AlphabetGrid } from "@/components/AlphabetGrid";
+import { PageMain } from "@/components/layout/PageMain";
 import { HIRAGANA } from "@/lib/language/hiragana";
-import { hiraganaWordList, katakanaWordList } from "@/lib/wordlists";
-import Link from "next/link";
-import styles from "./page.module.css";
 import { KATAKANA } from "@/lib/language/katakana";
-import { TalkingTile } from "@/components/TalkingTile";
-import { Box } from "@mui/material";
+import { hiraganaWordList, katakanaWordList } from "@/lib/wordlists";
 
 export default function Home() {
 
@@ -14,7 +11,7 @@ export default function Home() {
 
 
   return (
-    <main className={styles.main}>
+    <PageMain>
 
       <p>{hiraganaWord.text}, {hiraganaWord.translation}</p>
       <p>{hiraganaWord.write()}</p>
@@ -24,6 +21,6 @@ export default function Home() {
 
       <AlphabetGrid alphabet={HIRAGANA} />
       <AlphabetGrid alphabet={KATAKANA} />
-    </main>
+    </PageMain>
   );
 }

@@ -1,4 +1,4 @@
-import { PageHeader } from "@/components/PageHeader";
+import { PageHeader } from "@/components/layout/PageHeader";
 import { CssBaseline } from "@mui/material";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";

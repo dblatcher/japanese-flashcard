@@ -2,7 +2,7 @@
 import { ButtonGroup } from "@mui/material";
 import { usePathname } from "next/navigation";
 import React from "react";
-import { LinkButton } from "./LinkButton";
+import { LinkButton } from "../LinkButton";
 
 
 const NavButton: React.FunctionComponent<{
