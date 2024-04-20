@@ -35,10 +35,12 @@ const sizes: Record<Size, Dims> = {
 export const WordCard = ({ word, noCaption = false, size = 'normal' }: Props) => {
 
     const { fontSize, padding } = sizes[size]
+    const minWidth = fontSize * 5;
 
     return (
         <Card sx={{
             padding,
+            minWidth,
             display: 'flex',
             justifyContent: 'center',
             flexDirection: 'column',

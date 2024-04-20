@@ -8,8 +8,8 @@ import { Box, Typography } from "@mui/material";
 
 export default function Home() {
 
-  const hiraganaWord = hiraganaWordList[0]
-  const katakanaWord = katakanaWordList[1]
+  const hiraganaWord = hiraganaWordList[3]
+  const katakanaWord = katakanaWordList[3]
 
 
   return (
