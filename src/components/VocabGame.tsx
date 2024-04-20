@@ -11,10 +11,11 @@ import { WordCard } from "./WordCard";
 
 interface Props {
     roundsPerGame?: number;
+    showRomanji:boolean
 }
 
 
-export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame }) => {
+export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame, showRomanji }) => {
     const [rounds, setRounds] = useState<VocabRound[]>([])
     const [word, setWord] = useState<Word | undefined>(undefined)
     const { } = useSpeech()
@@ -24,7 +25,7 @@ export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame }) => 
         setWord(undefined)
     }
 
-    useEffect(reset, [roundsPerGame])
+    useEffect(reset, [roundsPerGame, showRomanji])
 
     const start = () => {
         setWord(getWordForNextRound([]))
@@ -91,7 +92,10 @@ export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame }) => 
                     gap={1}
                     padding={1}>
                     <TransitionIn key={wordToDisplay.text} timeout={500} Transition={Zoom}>
-                        <WordCard size="large" word={wordToDisplay} noCaption />
+                        <WordCard size="large" 
+                            word={wordToDisplay} 
+                            noCaption 
+                            showRomanji={showRomanji} />
                     </TransitionIn>
                     <CharacterInput submit={handleSubmit} isFor="word" />
                 </Box>
@@ -113,7 +117,7 @@ export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame }) => 
                 <ScoreLine roundsCorrect={rounds.filter(r => r.correct).length} roundsPlayed={rounds.length} />
                 {rounds.map((round, index) => (
                     <Box key={index} display={'flex'} gap={1} marginBottom={1}>
-                        <WordCard word={round.word} size="small" />
+                        <WordCard word={round.word} size="small" showRomanji/>
                         <Typography color={round.correct ? 'success.dark' : 'error.dark'}>{round.answer}</Typography>
                     </Box>
                 ))}

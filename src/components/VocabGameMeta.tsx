@@ -1,6 +1,6 @@
 'use client'
 import { SpeechProvider } from "@/context/speechContext";
-import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Grid, TextField, Typography } from "@mui/material";
+import { Box, Button, Checkbox, Dialog, DialogActions, DialogContent, DialogTitle, FormLabel, Grid, Stack, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { VocabGame } from "./VocabGame";
 
@@ -8,6 +8,7 @@ import { VocabGame } from "./VocabGame";
 export const VocabGameMeta: React.FunctionComponent = () => {
 
     const [optionsOpen, setOptionsOpen] = useState(false)
+    const [showRomanji, setShowRomanji] = useState(false)
     const [roundsPerGame, setRoundPerGame] = useState<number>(10)
 
     return <SpeechProvider>
@@ -15,17 +16,21 @@ export const VocabGameMeta: React.FunctionComponent = () => {
             <Button onClick={() => { setOptionsOpen(true) }}>options</Button>
             <VocabGame
                 roundsPerGame={roundsPerGame}
+                showRomanji={showRomanji}
             />
         </Box>
         <Dialog open={optionsOpen} onClose={() => { setOptionsOpen(false) }}>
             <DialogTitle>game options</DialogTitle>
             <DialogContent>
                 <Grid container gap={1}>
-                    <Grid item xs={6} md={8} >
-                        <Typography variant="overline">Hiragana Characters</Typography>
+                    <Grid item xs={5} md={5} >
+                        <Stack flexDirection={'row'} border={1} alignItems={'center'} minWidth={60} justifyContent={'center'}>
+                            <FormLabel>Show romanji</FormLabel>
+                            <Checkbox checked={showRomanji} size="small" onChange={() => { setShowRomanji(!showRomanji) }} />
+                        </Stack>
                     </Grid>
 
-                    <Grid item xs={3} md={2} paddingTop={1}>
+                    <Grid item xs={5} md={5} paddingTop={1}>
                         <TextField label="rounds per game"
                             value={roundsPerGame}
                             type="number" onChange={(event) => {

@@ -13,6 +13,7 @@ interface Props {
     word: Word
     noCaption?: boolean
     size?: Size
+    showRomanji?: boolean
 }
 
 
@@ -32,7 +33,7 @@ const sizes: Record<Size, Dims> = {
 
 }
 
-export const WordCard = ({ word, noCaption = false, size = 'normal' }: Props) => {
+export const WordCard = ({ word, noCaption = false, size = 'normal', showRomanji = false }: Props) => {
 
     const { fontSize, padding } = sizes[size]
     const minWidth = fontSize * 5;
@@ -48,10 +49,13 @@ export const WordCard = ({ word, noCaption = false, size = 'normal' }: Props) =>
             boxSizing: 'border-box',
         }}>
             <Typography fontSize={fontSize * 1.5} lineHeight={1}>{word.write()}</Typography>
-            <Typography paddingBottom={1}
-                variant="overline" fontSize={fontSize} lineHeight={1}>{word.text}</Typography>
+            {showRomanji &&
+                <Typography
+                    variant="overline" fontSize={fontSize} lineHeight={1}>{word.text}</Typography>
+            }
             {!noCaption && (
                 <Typography
+                    paddingTop={1}
                     variant='caption' fontSize={fontSize * .75}>{word.translation}</Typography>
             )}
         </Card>
