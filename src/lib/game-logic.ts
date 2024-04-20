@@ -1,10 +1,18 @@
 import { Character } from "./language/character"
 import { HIRAGANA } from "./language/hiragana"
 import { KATAKANA } from "./language/katakana"
+import { Word } from "./language/word"
+import { hiraganaWordList, katakanaWordList } from "./wordlists"
 
 
 export type Round = {
     character: Character
+    answer: string
+    correct: boolean
+}
+
+export type VocabRound = {
+    word: Word
     answer: string
     correct: boolean
 }
@@ -15,7 +23,6 @@ export const getCharacterForNextRound = (
     katakanaConstanents: string[],
 ): Character => {
     const lastCharacter = previousRounds[previousRounds.length - 1]?.character
-
 
     const hiraganaFilterFunction = (possibleCharacter: Character) => {
         if (possibleCharacter === lastCharacter) {
@@ -42,4 +49,13 @@ export const getCharacterForNextRound = (
     const both = [...hiraganaOptions, ...katakanaOptions]
     const index = Math.floor(Math.random() * both.length)
     return both[index] ?? both[0]
+}
+
+export const getWordForNextRound = (
+    previousRounds: VocabRound[]
+): Word => {
+    const lastWord = previousRounds[previousRounds.length - 1]?.word;
+    const allWords = [...hiraganaWordList, ...katakanaWordList].filter(_ => _ !== lastWord)
+    const index = Math.floor(Math.random() * allWords.length);
+    return allWords[index]
 }

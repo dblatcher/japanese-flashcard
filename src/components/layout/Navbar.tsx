@@ -22,6 +22,7 @@ export const Navbar: React.FunctionComponent = () => {
         <ButtonGroup>
             <NavButton href="/" label="home" currentPath={path} />
             <NavButton href="/learn-characters" label="learn characters" currentPath={path} />
+            <NavButton href="/vocab-test" label="learn words" currentPath={path} />
             <NavButton href="/about" label="about" currentPath={path} />
         </ButtonGroup>
     )

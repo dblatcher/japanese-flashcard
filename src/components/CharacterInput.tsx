@@ -4,9 +4,10 @@ import React, { useEffect, useRef, useState } from "react";
 
 type Props = {
     submit: { (answer: string): void }
+    isFor?: 'word' | 'character'
 }
 
-export const CharacterInput: React.FunctionComponent<Props> = ({ submit }) => {
+export const CharacterInput: React.FunctionComponent<Props> = ({ submit, isFor = 'character' }) => {
     const inputRef = useRef<HTMLInputElement>(null)
     const [guess, setGuess] = useState("")
 
@@ -14,11 +15,15 @@ export const CharacterInput: React.FunctionComponent<Props> = ({ submit }) => {
         inputRef?.current?.focus()
     }, [inputRef.current])
 
+    const convertInput = isFor === 'character'
+        ? (value: string) => value.trim().toUpperCase().substring(0, 3)
+        : (value: string) => value.toLowerCase()
+
     return (
         <TextField value={guess} inputRef={inputRef}
             variant="outlined"
             onChange={(event) => {
-                setGuess(event.target.value.trim().toUpperCase().substring(0, 3))
+                setGuess(convertInput(event.target.value))
             }}
             onKeyDown={(event) => {
                 if (event.key === 'Enter') {
