@@ -2,6 +2,7 @@ import { Character } from "./language/character"
 import { HIRAGANA } from "./language/hiragana"
 import { KATAKANA } from "./language/katakana"
 import { Word } from "./language/word"
+import { pickAtRandom, pickManyAtRandom, shuffle } from "./util"
 import { hiraganaWordList, katakanaWordList } from "./wordlists"
 
 
@@ -47,8 +48,7 @@ export const getCharacterForNextRound = (
     const katakanaOptions = KATAKANA.characterArray.filter(katakanaFilterFunction)
 
     const both = [...hiraganaOptions, ...katakanaOptions]
-    const index = Math.floor(Math.random() * both.length)
-    return both[index] ?? both[0]
+    return pickAtRandom(both) ?? both[0]
 }
 
 export const getWordForNextRound = (
@@ -56,6 +56,18 @@ export const getWordForNextRound = (
 ): Word => {
     const lastWord = previousRounds[previousRounds.length - 1]?.word;
     const allWords = [...hiraganaWordList, ...katakanaWordList].filter(_ => _ !== lastWord)
-    const index = Math.floor(Math.random() * allWords.length);
-    return allWords[index]
+    return pickAtRandom(allWords)
+}
+
+export const getOptionsForNextRound = (
+    correctWord: Word,
+    previousRounds: VocabRound[],
+): Word[] => {
+    const lastWord = previousRounds[previousRounds.length - 1]?.word;
+    const allWords = [...hiraganaWordList, ...katakanaWordList].filter(_ => _ !== lastWord && _ !== correctWord)
+
+    const options = [correctWord, ...pickManyAtRandom(3, allWords)]
+
+    return shuffle(options)
+
 }

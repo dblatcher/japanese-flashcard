@@ -1,34 +1,38 @@
 'use client'
 import { useSpeech } from "@/context/speechContext";
-import { VocabRound, getWordForNextRound } from "@/lib/game-logic";
+import { VocabRound, getOptionsForNextRound, getWordForNextRound } from "@/lib/game-logic";
 import { Word } from "@/lib/language/word";
 import { Box, Button, Collapse, Dialog, DialogActions, DialogContent, Typography, Zoom } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { CharacterInput } from "./CharacterInput";
+import { MultipleChoice } from "./MultipleChoice";
 import { ScoreLine } from "./ScoreLine";
 import { TransitionIn } from "./TransitionIn";
 import { WordCard } from "./WordCard";
 
 interface Props {
     roundsPerGame?: number;
-    showRomanji:boolean
+    showRomanji: boolean
 }
 
 
 export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame, showRomanji }) => {
     const [rounds, setRounds] = useState<VocabRound[]>([])
     const [word, setWord] = useState<Word | undefined>(undefined)
+    const [options, setOptions] = useState<Word[]>([])
     const { } = useSpeech()
 
     const reset = () => {
         setRounds([])
         setWord(undefined)
+        setOptions([])
     }
 
     useEffect(reset, [roundsPerGame, showRomanji])
 
     const start = () => {
-        setWord(getWordForNextRound([]))
+        const firstWord = getWordForNextRound([])
+        setWord(firstWord)
+        setOptions(getOptionsForNextRound(firstWord, []))
     }
 
     const handleSubmit = (guess: string) => {
@@ -46,9 +50,12 @@ export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame, showR
 
         const hasNextRound = typeof roundsPerGame === 'undefined' ? true : updatedRounds.length < roundsPerGame
         if (hasNextRound) {
-            setWord(getWordForNextRound(rounds))
+            const nextWord = getWordForNextRound(updatedRounds)
+            setWord(nextWord)
+            setOptions(getOptionsForNextRound(nextWord, updatedRounds))
         } else {
             setWord(undefined)
+            setOptions([])
         }
     }
 
@@ -92,12 +99,12 @@ export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame, showR
                     gap={1}
                     padding={1}>
                     <TransitionIn key={wordToDisplay.text} timeout={500} Transition={Zoom}>
-                        <WordCard size="large" 
-                            word={wordToDisplay} 
-                            noCaption 
+                        <WordCard size="large"
+                            word={wordToDisplay}
+                            noCaption
                             showRomanji={showRomanji} />
                     </TransitionIn>
-                    <CharacterInput submit={handleSubmit} isFor="word" />
+                    <MultipleChoice submit={handleSubmit} options={options.map(_=>_.translation)}/>
                 </Box>
                 <Box minHeight={'1.5em'} maxHeight={'1.5em'}>
                     <TransitionIn key={rounds.length} timeout={500} Transition={Collapse} orientation='horizontal'>
@@ -117,7 +124,7 @@ export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame, showR
                 <ScoreLine roundsCorrect={rounds.filter(r => r.correct).length} roundsPlayed={rounds.length} />
                 {rounds.map((round, index) => (
                     <Box key={index} display={'flex'} gap={1} marginBottom={1}>
-                        <WordCard word={round.word} size="small" showRomanji/>
+                        <WordCard word={round.word} size="small" showRomanji />
                         <Typography color={round.correct ? 'success.dark' : 'error.dark'}>{round.answer}</Typography>
                     </Box>
                 ))}
