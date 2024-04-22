@@ -62,7 +62,7 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ hiraganaConstane
 
     const answerFeedback = previousRound ? <>
         {previousRound.correct ? 'CORRECT! ' : `WRONG! `}
-        {previousRound.character.string} is "{previousRound.character.phonetic}"
+        {previousRound.character.string} is &ldquo;{previousRound.character.phonetic}&rdquo;
     </> : undefined
 
     const answerBackground = previousRound?.correct ? 'success.light' : 'error.light';

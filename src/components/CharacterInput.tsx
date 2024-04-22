@@ -13,7 +13,7 @@ export const CharacterInput: React.FunctionComponent<Props> = ({ submit, isFor =
 
     useEffect(() => {
         inputRef?.current?.focus()
-    }, [inputRef.current])
+    }, [inputRef])
 
     const convertInput = isFor === 'character'
         ? (value: string) => value.trim().toUpperCase().substring(0, 3)

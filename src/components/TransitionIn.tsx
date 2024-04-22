@@ -19,7 +19,7 @@ export const TransitionIn: React.FunctionComponent<Props> = (props) => {
         setTimeout(() => {
             setFadedIn(true)
         }, 1)
-    }, [setTimerStarted])
+    }, [setTimerStarted, timerstarted])
 
 
     return (<Transition  {...rest} in={fadedIn}>

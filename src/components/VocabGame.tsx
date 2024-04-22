@@ -66,7 +66,7 @@ export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame, showR
 
     const answerFeedback = previousRound ? <>
         {previousRound.correct ? 'CORRECT! ' : `WRONG! `}
-        {previousRound.word.write()} is "{previousRound.word.translation}"
+        {previousRound.word.write()} is &ldquo;{previousRound.word.translation}&rdquo;
     </> : undefined
 
     const answerBackground = previousRound?.correct ? 'success.light' : 'error.light';
