@@ -8,6 +8,11 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+
+  applicationName: 'japanese flashcards',
+  formatDetection: { telephone: false },
+  appleWebApp: { capable: true, title: "My Website", statusBarStyle: "black-translucent" },
+
   title: "Japanese Flashcards",
   description: "An app for learning Japanese characters",
   generator: "Next.js",
@@ -22,6 +27,8 @@ export const metadata: Metadata = {
     { rel: "apple-touch-icon", url: "icons/icon-128x128.png" },
     { rel: "icon", url: "icons/icon-128x128.png" },
   ],
+
+
 };
 
 export const viewport: Viewport = {
