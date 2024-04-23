@@ -1,5 +1,5 @@
-import { CharacterGameMeta } from "@/components/CharacterGameMeta";
-import { VocabGameMeta } from "@/components/VocabGameMeta";
+import { CharacterGameMeta } from "@/components/game/CharacterGameMeta";
+import { VocabGameMeta } from "@/components/game/VocabGameMeta";
 import { PageMain } from "@/components/layout/PageMain";
 
 export default function LearnCharacters() {

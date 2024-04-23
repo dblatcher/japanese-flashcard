@@ -8,8 +8,8 @@ import { AnswerFeedback } from "./AnswerFeedback";
 import { CharacterInput } from "./CharacterInput";
 import { RoundHistory } from "./RoundHistory";
 import { ScoreLine } from "./ScoreLine";
-import { SyllableCard } from "./SyllableCard";
-import { TransitionIn } from "./TransitionIn";
+import { SyllableCard } from "../SyllableCard";
+import { TransitionIn } from "../TransitionIn";
 
 interface Props {
     hiraganaConstanents: string[];

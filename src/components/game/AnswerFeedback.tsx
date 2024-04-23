@@ -1,6 +1,6 @@
 import { Box, Collapse, Typography } from "@mui/material";
 import React, { ReactNode } from "react";
-import { TransitionIn } from "./TransitionIn";
+import { TransitionIn } from "../TransitionIn";
 
 interface Props {
     transitionKey: number | string;

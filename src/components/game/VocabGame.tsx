@@ -7,8 +7,8 @@ import React, { useEffect, useState } from "react";
 import { AnswerFeedback } from "./AnswerFeedback";
 import { MultipleChoice } from "./MultipleChoice";
 import { ScoreLine } from "./ScoreLine";
-import { TransitionIn } from "./TransitionIn";
-import { WordCard } from "./WordCard";
+import { TransitionIn } from "../TransitionIn";
+import { WordCard } from "../WordCard";
 
 interface Props {
     roundsPerGame?: number;

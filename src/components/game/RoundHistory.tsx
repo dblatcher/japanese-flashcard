@@ -2,7 +2,7 @@
 import { Round } from "@/lib/game-logic";
 import { Box, List, ListItem, ListItemIcon, Typography } from "@mui/material";
 import React from "react";
-import { SyllableCard } from "./SyllableCard";
+import { SyllableCard } from "../SyllableCard";
 import { ScoreLine } from "./ScoreLine";
 
 
