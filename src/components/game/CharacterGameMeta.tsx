@@ -4,8 +4,9 @@ import React, { useState } from "react";
 import { CharacterGame } from "./CharacterGame";
 import { HIRAGANA } from "@/lib/language/hiragana";
 import { ConstanentPicker } from "./ConstanentPicker";
-import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Grid, TextField, Typography } from "@mui/material";
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Grid, TextField, Typography } from "@mui/material";
 import { KATAKANA } from "@/lib/language/katakana";
+import { FullHeightBox } from "../layout/FullHeightBox";
 
 
 export const CharacterGameMeta: React.FunctionComponent = () => {
@@ -16,13 +17,16 @@ export const CharacterGameMeta: React.FunctionComponent = () => {
     const [roundsPerGame, setRoundPerGame] = useState<number>(10)
 
     return <SpeechProvider>
-        <Box>
-            <Button onClick={() => { setOptionsOpen(true) }}>options</Button>
+        <FullHeightBox position={'relative'}>
+            <Button sx={{
+                position: 'absolute',
+                right: 0, top: 0
+            }} onClick={() => { setOptionsOpen(true) }}>options</Button>
             <CharacterGame
                 hiraganaConstanents={hiraganaConstanents}
                 roundsPerGame={roundsPerGame}
                 katakanaConstanents={katakanaConstanents} />
-        </Box>
+        </FullHeightBox>
         <Dialog open={optionsOpen} onClose={() => { setOptionsOpen(false) }}>
             <DialogTitle>game options</DialogTitle>
             <DialogContent>

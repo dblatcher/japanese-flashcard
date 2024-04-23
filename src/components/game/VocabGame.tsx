@@ -9,6 +9,7 @@ import { MultipleChoice } from "./MultipleChoice";
 import { ScoreLine } from "./ScoreLine";
 import { TransitionIn } from "../TransitionIn";
 import { WordCard } from "../WordCard";
+import { FullHeightBox } from "../layout/FullHeightBox";
 
 interface Props {
     roundsPerGame?: number;
@@ -70,15 +71,13 @@ export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame, showR
         {previousRound.word.write()} is &ldquo;{previousRound.word.translation}&rdquo;
     </> : undefined
 
-    return <Box display={'flex'} minHeight={100} justifyContent={'center'} >
+    return <FullHeightBox alignItems={'center'} width={'100%'} justifyContent={'center'}>
 
         {!wordToDisplay && (
-            <Box>
-                <Button
-                    onClick={start}
-                    sx={{ minWidth: 250, minHeight: 150 }}
-                    variant="contained">start</Button>
-            </Box>
+            <Button
+                onClick={start}
+                sx={{ minWidth: 250, minHeight: 150 }}
+                variant="contained">start vocab test</Button>
         )}
         {wordToDisplay &&
             <Box
@@ -130,5 +129,5 @@ export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame, showR
                 <Button onClick={reset}>new game</Button>
             </DialogActions>
         </Dialog>
-    </Box>
+    </FullHeightBox>
 }

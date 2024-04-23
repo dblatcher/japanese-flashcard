@@ -19,8 +19,8 @@ interface Props {
 
 const sizes: Record<Size, Dims> = {
     large: {
-        minWidth: 100,
-        fontSize: 90,
+        minWidth: 180,
+        fontSize: 160,
         padding: 1,
     },
     normal: {

@@ -1,8 +1,9 @@
 'use client'
 import { SpeechProvider } from "@/context/speechContext";
-import { Box, Button, Checkbox, Dialog, DialogActions, DialogContent, DialogTitle, FormLabel, Grid, Stack, TextField, Typography } from "@mui/material";
+import { Button, Checkbox, Dialog, DialogActions, DialogContent, DialogTitle, FormLabel, Grid, Stack, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { VocabGame } from "./VocabGame";
+import { FullHeightBox } from "../layout/FullHeightBox";
 
 
 export const VocabGameMeta: React.FunctionComponent = () => {
@@ -12,13 +13,16 @@ export const VocabGameMeta: React.FunctionComponent = () => {
     const [roundsPerGame, setRoundPerGame] = useState<number>(10)
 
     return <SpeechProvider>
-        <Box>
-            <Button onClick={() => { setOptionsOpen(true) }}>options</Button>
+        <FullHeightBox position={'relative'}>
+            <Button sx={{
+                position: 'absolute',
+                right: 0, top: 0
+            }} onClick={() => { setOptionsOpen(true) }}>options</Button>
             <VocabGame
                 roundsPerGame={roundsPerGame}
                 showRomanji={showRomanji}
             />
-        </Box>
+        </FullHeightBox>
         <Dialog open={optionsOpen} onClose={() => { setOptionsOpen(false) }}>
             <DialogTitle>game options</DialogTitle>
             <DialogContent>

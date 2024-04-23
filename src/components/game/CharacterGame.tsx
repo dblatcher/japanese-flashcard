@@ -10,6 +10,7 @@ import { RoundHistory } from "./RoundHistory";
 import { ScoreLine } from "./ScoreLine";
 import { SyllableCard } from "../SyllableCard";
 import { TransitionIn } from "../TransitionIn";
+import { FullHeightBox } from "../layout/FullHeightBox";
 
 interface Props {
     hiraganaConstanents: string[];
@@ -66,20 +67,19 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ hiraganaConstane
         {previousRound.character.string} is &ldquo;{previousRound.character.phonetic}&rdquo;
     </> : undefined
 
-    return <Box display={'flex'} minHeight={100} justifyContent={'center'} >
+    return <FullHeightBox alignItems={'center'} width={'100%'} justifyContent={'center'}>
 
         {!characterToDisplay && (
-            <Box>
-                <Button
-                    onClick={start}
-                    sx={{ minWidth: 250, minHeight: 150 }}
-                    variant="contained">start</Button>
-            </Box>
+            <Button
+                onClick={start}
+                sx={{ minWidth: 250, minHeight: 150 }}
+                variant="contained">start character test</Button>
         )}
         {characterToDisplay &&
             <Box
+                component={'article'}
                 sx={{
-                    minWidth: 300,
+                    minWidth: 350,
                     maxWidth: '100%',
                 }}>
 
@@ -116,5 +116,5 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ hiraganaConstane
                 <Button onClick={reset}>new game</Button>
             </DialogActions>
         </Dialog>
-    </Box>
+    </FullHeightBox>
 }
