@@ -1,14 +1,15 @@
 'use client'
 import { useSpeech } from "@/context/speechContext";
+import { Round, getCharacterForNextRound } from "@/lib/game-logic";
 import { Character } from "@/lib/language/character";
-import { Box, Button, Collapse, Dialog, DialogActions, DialogContent, Typography, Zoom } from "@mui/material";
+import { Box, Button, Dialog, DialogActions, DialogContent, Zoom } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import { AnswerFeedback } from "./AnswerFeedback";
 import { CharacterInput } from "./CharacterInput";
 import { RoundHistory } from "./RoundHistory";
 import { ScoreLine } from "./ScoreLine";
 import { SyllableCard } from "./SyllableCard";
 import { TransitionIn } from "./TransitionIn";
-import { Round, getCharacterForNextRound } from "@/lib/game-logic";
 
 interface Props {
     hiraganaConstanents: string[];
@@ -65,8 +66,6 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ hiraganaConstane
         {previousRound.character.string} is &ldquo;{previousRound.character.phonetic}&rdquo;
     </> : undefined
 
-    const answerBackground = previousRound?.correct ? 'success.light' : 'error.light';
-
     return <Box display={'flex'} minHeight={100} justifyContent={'center'} >
 
         {!characterToDisplay && (
@@ -99,13 +98,10 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ hiraganaConstane
                     </TransitionIn>
                     <CharacterInput submit={handleSubmit} />
                 </Box>
-                <Box minHeight={'1.5em'} maxHeight={'1.5em'}>
-                    <TransitionIn key={rounds.length} timeout={500} Transition={Collapse} orientation='horizontal'>
-                        <Typography sx={{ maxHeight: '1.5em', backgroundColor: answerBackground }}>
-                            {answerFeedback}
-                        </Typography>
-                    </TransitionIn>
-                </Box>
+                <AnswerFeedback
+                    content={answerFeedback}
+                    transitionKey={rounds.length}
+                    success={previousRound?.correct} />
             </Box>
         }
 
