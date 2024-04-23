@@ -1,12 +1,14 @@
 import { Character } from "@/lib/language/character";
-import { isJapanese, pickVoice, speak } from "@/lib/speech";
+import { isJapanese, pickJapaneseVoice, pickVoice, speak } from "@/lib/speech";
 import React, { ReactNode, createContext, useContext, useEffect, useState } from "react";
 
 
 const SpeechContext = createContext<{
     pronounce: { (character: Character): void }
+    sayJapanese: { (text: string): void }
 }>({
-    pronounce: () => { console.warn('no speech provider') }
+    pronounce: () => { console.warn('no speech provider') },
+    sayJapanese: () => { console.warn('no speech provider') },
 })
 
 const SpeechProvider: React.FunctionComponent<{ children: ReactNode }> = ({ children }) => {
@@ -35,8 +37,17 @@ const SpeechProvider: React.FunctionComponent<{ children: ReactNode }> = ({ chil
         speak(speechSynthesis, text, voice, 1, 1)
     }
 
+    const sayJapanese = (text: string) => {
+        const voice = pickJapaneseVoice(voices)
+        if (!voice) {
+            console.warn('no japanese voices');
+            return
+        }
+        speak(speechSynthesis, text, voice, 1, 1)
+    }
+
     return (
-        <SpeechContext.Provider value={{ pronounce }}>
+        <SpeechContext.Provider value={{ pronounce, sayJapanese }}>
             {children}
         </SpeechContext.Provider>
     )

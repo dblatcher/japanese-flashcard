@@ -13,29 +13,30 @@ import { FullHeightBox } from "../layout/FullHeightBox";
 
 interface Props {
     roundsPerGame?: number;
-    showRomanji: boolean
+    showRomanji: boolean;
+    speakWord: boolean;
 }
 
 
-export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame, showRomanji }) => {
+export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame, showRomanji, speakWord }) => {
     const [rounds, setRounds] = useState<VocabRound[]>([])
     const [word, setWord] = useState<Word | undefined>(undefined)
     const [options, setOptions] = useState<Word[]>([])
-    const { } = useSpeech()
+    const { sayJapanese } = useSpeech()
 
     const reset = () => {
         setRounds([])
         setWord(undefined)
         setOptions([])
     }
+    const nextWord = (rounds: VocabRound[] = []) => {
+        const newWord = getWordForNextRound(rounds)
+        setWord(newWord)
+        setOptions(getOptionsForNextRound(newWord, rounds))
+        if (speakWord) { sayJapanese(newWord.write()) }
+    }
 
     useEffect(reset, [roundsPerGame, showRomanji])
-
-    const start = () => {
-        const firstWord = getWordForNextRound([])
-        setWord(firstWord)
-        setOptions(getOptionsForNextRound(firstWord, []))
-    }
 
     const handleSubmit = (guess: string) => {
         if (!word || !guess) {
@@ -52,9 +53,7 @@ export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame, showR
 
         const hasNextRound = typeof roundsPerGame === 'undefined' ? true : updatedRounds.length < roundsPerGame
         if (hasNextRound) {
-            const nextWord = getWordForNextRound(updatedRounds)
-            setWord(nextWord)
-            setOptions(getOptionsForNextRound(nextWord, updatedRounds))
+            nextWord(updatedRounds)
         } else {
             setWord(undefined)
             setOptions([])
@@ -75,7 +74,7 @@ export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame, showR
 
         {!wordToDisplay && (
             <Button
-                onClick={start}
+                onClick={() => nextWord()}
                 sx={{ minWidth: 250, minHeight: 150 }}
                 variant="contained">start vocab test</Button>
         )}

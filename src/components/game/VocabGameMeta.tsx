@@ -10,6 +10,7 @@ export const VocabGameMeta: React.FunctionComponent = () => {
 
     const [optionsOpen, setOptionsOpen] = useState(false)
     const [showRomanji, setShowRomanji] = useState(false)
+    const [speakWord, setspeakWord] = useState(false)
     const [roundsPerGame, setRoundPerGame] = useState<number>(10)
 
     return <SpeechProvider>
@@ -21,6 +22,7 @@ export const VocabGameMeta: React.FunctionComponent = () => {
             <VocabGame
                 roundsPerGame={roundsPerGame}
                 showRomanji={showRomanji}
+                speakWord={speakWord}
             />
         </FullHeightBox>
         <Dialog open={optionsOpen} onClose={() => { setOptionsOpen(false) }}>
@@ -31,6 +33,10 @@ export const VocabGameMeta: React.FunctionComponent = () => {
                         <Stack flexDirection={'row'} border={1} alignItems={'center'} minWidth={60} justifyContent={'center'}>
                             <FormLabel>Show romanji</FormLabel>
                             <Checkbox checked={showRomanji} size="small" onChange={() => { setShowRomanji(!showRomanji) }} />
+                        </Stack>
+                        <Stack flexDirection={'row'} border={1} alignItems={'center'} minWidth={60} justifyContent={'center'}>
+                            <FormLabel>Say Words</FormLabel>
+                            <Checkbox checked={speakWord} size="small" onChange={() => { setspeakWord(!speakWord) }} />
                         </Stack>
                     </Grid>
 
