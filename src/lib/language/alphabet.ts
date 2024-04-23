@@ -19,8 +19,8 @@ class Alphabet {
         return Object.keys(this.characters)
     }
 
-    get characterArray():Character[] {
-         return Object.values(this.characters)
+    get characterArray(): Character[] {
+        return Object.values(this.characters)
     }
 
     get constanents() {
@@ -90,6 +90,17 @@ class Alphabet {
         var set = filterFunction ? this.characterArray.filter(filterFunction) : this.characterArray
         var i = Math.floor(Math.random() * set.length)
         return set[i]
+    }
+
+    romaniseWord(japanese: string) {
+        const charactersInWord = japanese.split('')
+            .map((symb) => this.characterArray
+                .find(char => char.string === symb))
+        const romanisedSymbols = charactersInWord
+            .map(maybeChar => maybeChar?.phonetic ?? "")
+        return romanisedSymbols
+            .join('')
+            .toLowerCase()
     }
 }
 

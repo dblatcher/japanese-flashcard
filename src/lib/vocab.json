@@ -1,0 +1,6027 @@
+[
+    {
+        "english": [
+            "human"
+        ],
+        "japanese": [
+            "にんげん",
+            "人間"
+        ]
+    },
+    {
+        "english": [
+            "humanity"
+        ],
+        "japanese": [
+            "じんるい",
+            "人類"
+        ]
+    },
+    {
+        "english": [
+            "person"
+        ],
+        "japanese": [
+            "ひと",
+            "人"
+        ]
+    },
+    {
+        "english": [
+            "male"
+        ],
+        "japanese": [
+            "おとこ",
+            "男"
+        ]
+    },
+    {
+        "english": [
+            "man"
+        ],
+        "japanese": [
+            "おとこのひと",
+            "男の人"
+        ]
+    },
+    {
+        "english": [
+            "boy"
+        ],
+        "japanese": [
+            "おとこのこ",
+            "男の子"
+        ]
+    },
+    {
+        "english": [
+            "female"
+        ],
+        "japanese": [
+            "おんな",
+            "女"
+        ]
+    },
+    {
+        "english": [
+            "woman"
+        ],
+        "japanese": [
+            "おんなのひと",
+            "女の人"
+        ]
+    },
+    {
+        "english": [
+            "girl"
+        ],
+        "japanese": [
+            "おんなのこ",
+            "女の子"
+        ]
+    },
+    {
+        "english": [
+            "baby"
+        ],
+        "japanese": [
+            "あかちゃん",
+            "赤ちゃん"
+        ]
+    },
+    {
+        "english": [
+            "youth",
+            "young person"
+        ],
+        "japanese": [
+            "わかもの",
+            "若者"
+        ]
+    },
+    {
+        "english": [
+            "I",
+            "myself"
+        ],
+        "japanese": [
+            "わたし",
+            "私"
+        ]
+    },
+    {
+        "english": [
+            "I",
+            "myself"
+        ],
+        "japanese": [
+            "わたくし",
+            "私"
+        ]
+    },
+    {
+        "english": [
+            "I",
+            "myself"
+        ],
+        "japanese": [
+            "ぼく",
+            "僕"
+        ]
+    },
+    {
+        "english": [
+            "I",
+            "myself"
+        ],
+        "japanese": [
+            "おれ",
+            "俺"
+        ]
+    },
+    {
+        "english": [
+            "I",
+            "myself"
+        ],
+        "japanese": [
+            "あたし",
+            "私"
+        ]
+    },
+    {
+        "english": [
+            "girl"
+        ],
+        "japanese": [
+            "しょうじょ",
+            "少女"
+        ]
+    },
+    {
+        "english": [
+            "boy"
+        ],
+        "japanese": [
+            "しょうねん",
+            "少年"
+        ]
+    },
+    {
+        "english": [
+            "doctor"
+        ],
+        "japanese": [
+            "いしゃ",
+            "医者"
+        ]
+    },
+    {
+        "english": [
+            "nurse"
+        ],
+        "japanese": [
+            "かんごし",
+            "看護師"
+        ]
+    },
+    {
+        "english": [
+            "female nurse"
+        ],
+        "japanese": [
+            "かんごふ",
+            "看護婦"
+        ]
+    },
+    {
+        "english": [
+            "dentist"
+        ],
+        "japanese": [
+            "しかい",
+            "歯科医",
+            "はいしゃ",
+            "歯医者"
+        ]
+    },
+    {
+        "english": [
+            "politician"
+        ],
+        "japanese": [
+            "せいじか",
+            "政治家"
+        ]
+    },
+    {
+        "english": [
+            "lawyer"
+        ],
+        "japanese": [
+            "べんごし",
+            "弁護士"
+        ]
+    },
+    {
+        "english": [
+            "firefighter"
+        ],
+        "japanese": [
+            "しょうぼうし",
+            "消防士"
+        ]
+    },
+    {
+        "english": [
+            "police officer"
+        ],
+        "japanese": [
+            "けいさつかん",
+            "警察官"
+        ]
+    },
+    {
+        "english": [
+            "soldier"
+        ],
+        "japanese": [
+            "へいし",
+            "兵士"
+        ]
+    },
+    {
+        "english": [
+            "architect"
+        ],
+        "japanese": [
+            "けんちくか",
+            "建築家"
+        ]
+    },
+    {
+        "english": [
+            "teacher"
+        ],
+        "japanese": [
+            "せんせい",
+            "先生"
+        ]
+    },
+    {
+        "english": [
+            "(academic) teacher"
+        ],
+        "japanese": [
+            "きょうし",
+            "教師"
+        ]
+    },
+    {
+        "english": [
+            "singer"
+        ],
+        "japanese": [
+            "かしゅ",
+            "歌手"
+        ]
+    },
+    {
+        "english": [
+            "engineer"
+        ],
+        "japanese": [
+            "エンジニア"
+        ]
+    },
+    {
+        "english": [
+            "foot",
+            "leg"
+        ],
+        "japanese": [
+            "あし",
+            "足",
+            "脚"
+        ]
+    },
+    {
+        "english": [
+            "heel"
+        ],
+        "japanese": [
+            "かかと",
+            "踵"
+        ]
+    },
+    {
+        "english": [
+            "shin"
+        ],
+        "japanese": [
+            "すね",
+            "脛"
+        ]
+    },
+    {
+        "english": [
+            "knee"
+        ],
+        "japanese": [
+            "ひざ",
+            "膝"
+        ]
+    },
+    {
+        "english": [
+            "thigh"
+        ],
+        "japanese": [
+            "もも",
+            "腿"
+        ]
+    },
+    {
+        "english": [
+            "head"
+        ],
+        "japanese": [
+            "あたま",
+            "頭"
+        ]
+    },
+    {
+        "english": [
+            "face"
+        ],
+        "japanese": [
+            "かお",
+            "顔"
+        ]
+    },
+    {
+        "english": [
+            "mouth"
+        ],
+        "japanese": [
+            "くち",
+            "口"
+        ]
+    },
+    {
+        "english": [
+            "lips"
+        ],
+        "japanese": [
+            "くちびる",
+            "唇"
+        ]
+    },
+    {
+        "english": [
+            "tooth"
+        ],
+        "japanese": [
+            "は",
+            "歯"
+        ]
+    },
+    {
+        "english": [
+            "nose"
+        ],
+        "japanese": [
+            "はな",
+            "鼻"
+        ]
+    },
+    {
+        "english": [
+            "eye"
+        ],
+        "japanese": [
+            "め",
+            "目"
+        ]
+    },
+    {
+        "english": [
+            "moustache",
+            "beard"
+        ],
+        "japanese": [
+            "ひげ",
+            "髭",
+            "鬚",
+            "髯"
+        ]
+    },
+    {
+        "english": [
+            "hair"
+        ],
+        "japanese": [
+            "かみ",
+            "髪"
+        ]
+    },
+    {
+        "english": [
+            "ear"
+        ],
+        "japanese": [
+            "みみ",
+            "耳"
+        ]
+    },
+    {
+        "english": [
+            "stomach"
+        ],
+        "japanese": [
+            "おなか",
+            "御腹"
+        ]
+    },
+    {
+        "english": [
+            "arm"
+        ],
+        "japanese": [
+            "うで",
+            "腕"
+        ]
+    },
+    {
+        "english": [
+            "elbow"
+        ],
+        "japanese": [
+            "ひじ",
+            "肘"
+        ]
+    },
+    {
+        "english": [
+            "shoulder"
+        ],
+        "japanese": [
+            "かた",
+            "肩"
+        ]
+    },
+    {
+        "english": [
+            "nail"
+        ],
+        "japanese": [
+            "つめ",
+            "爪"
+        ]
+    },
+    {
+        "english": [
+            "hand"
+        ],
+        "japanese": [
+            "て",
+            "手"
+        ]
+    },
+    {
+        "english": [
+            "wrist"
+        ],
+        "japanese": [
+            "てくび",
+            "手首"
+        ]
+    },
+    {
+        "english": [
+            "palm of hand"
+        ],
+        "japanese": [
+            "てのひら",
+            "掌",
+            "手の平"
+        ]
+    },
+    {
+        "english": [
+            "finger",
+            "toe"
+        ],
+        "japanese": [
+            "ゆび",
+            "指"
+        ]
+    },
+    {
+        "english": [
+            "buttocks"
+        ],
+        "japanese": [
+            "しり",
+            "尻"
+        ]
+    },
+    {
+        "english": [
+            "） – abdomen"
+        ],
+        "japanese": [
+            "おなか",
+            "お腹",
+            "はら",
+            "腹"
+        ]
+    },
+    {
+        "english": [
+            "liver"
+        ],
+        "japanese": [
+            "かんぞう",
+            "肝臓"
+        ]
+    },
+    {
+        "english": [
+            "liver"
+        ],
+        "japanese": [
+            "きも",
+            "肝"
+        ]
+    },
+    {
+        "english": [
+            "muscle"
+        ],
+        "japanese": [
+            "きんにく",
+            "筋肉"
+        ]
+    },
+    {
+        "english": [
+            "neck"
+        ],
+        "japanese": [
+            "くび",
+            "首"
+        ]
+    },
+    {
+        "english": [
+            "heart [as in feelings]"
+        ],
+        "japanese": [
+            "こころ",
+            "心"
+        ]
+    },
+    {
+        "english": [
+            "waist",
+            "hip"
+        ],
+        "japanese": [
+            "こし",
+            "腰"
+        ]
+    },
+    {
+        "english": [
+            "heart"
+        ],
+        "japanese": [
+            "しんぞう",
+            "心臓"
+        ]
+    },
+    {
+        "english": [
+            "back"
+        ],
+        "japanese": [
+            "せなか",
+            "背中"
+        ]
+    },
+    {
+        "english": [
+            "blood"
+        ],
+        "japanese": [
+            "ち",
+            "血"
+        ]
+    },
+    {
+        "english": [
+            "meat"
+        ],
+        "japanese": [
+            "にく",
+            "肉"
+        ]
+    },
+    {
+        "english": [
+            "skin"
+        ],
+        "japanese": [
+            "はだ",
+            "肌",
+            "膚"
+        ]
+    },
+    {
+        "english": [
+            "skin"
+        ],
+        "japanese": [
+            "ひふ",
+            "皮膚"
+        ]
+    },
+    {
+        "english": [
+            "bone"
+        ],
+        "japanese": [
+            "ほね",
+            "骨"
+        ]
+    },
+    {
+        "english": [
+            "chest"
+        ],
+        "japanese": [
+            "むね",
+            "胸"
+        ]
+    },
+    {
+        "english": [
+            "cold [illness]"
+        ],
+        "japanese": [
+            "かぜ",
+            "風邪"
+        ]
+    },
+    {
+        "english": [
+            "diarrhea"
+        ],
+        "japanese": [
+            "げり",
+            "下痢"
+        ]
+    },
+    {
+        "english": [
+            "illness"
+        ],
+        "japanese": [
+            "びょうき",
+            "病気"
+        ]
+    },
+    {
+        "english": [
+            "family"
+        ],
+        "japanese": [
+            "かぞく",
+            "家族"
+        ]
+    },
+    {
+        "english": [
+            "parents"
+        ],
+        "japanese": [
+            "りょうしん",
+            "両親"
+        ]
+    },
+    {
+        "english": [
+            "children",
+            "child"
+        ],
+        "japanese": [
+            "こども",
+            "子供"
+        ]
+    },
+    {
+        "english": [
+            "father"
+        ],
+        "japanese": [
+            "ちち",
+            "父"
+        ]
+    },
+    {
+        "english": [
+            "mother"
+        ],
+        "japanese": [
+            "はは",
+            "母"
+        ]
+    },
+    {
+        "english": [
+            "wife"
+        ],
+        "japanese": [
+            "つま",
+            "妻"
+        ]
+    },
+    {
+        "english": [
+            "husband"
+        ],
+        "japanese": [
+            "おっと",
+            "夫"
+        ]
+    },
+    {
+        "english": [
+            "older brother"
+        ],
+        "japanese": [
+            "あに",
+            "兄"
+        ]
+    },
+    {
+        "english": [
+            "older sister"
+        ],
+        "japanese": [
+            "あね",
+            "姉"
+        ]
+    },
+    {
+        "english": [
+            "younger brother"
+        ],
+        "japanese": [
+            "おとうと",
+            "弟"
+        ]
+    },
+    {
+        "english": [
+            "younger sister"
+        ],
+        "japanese": [
+            "いもうと",
+            "妹"
+        ]
+    },
+    {
+        "english": [
+            "brothers",
+            "siblings"
+        ],
+        "japanese": [
+            "きょうだい",
+            "兄弟"
+        ]
+    },
+    {
+        "english": [
+            "sisters"
+        ],
+        "japanese": [
+            "しまい",
+            "姉妹"
+        ]
+    },
+    {
+        "english": [
+            "grandfather"
+        ],
+        "japanese": [
+            "そふ",
+            "祖父"
+        ]
+    },
+    {
+        "english": [
+            "grandmother"
+        ],
+        "japanese": [
+            "そぼ",
+            "祖母"
+        ]
+    },
+    {
+        "english": [
+            "grandchild"
+        ],
+        "japanese": [
+            "まご",
+            "孫"
+        ]
+    },
+    {
+        "english": [
+            "uncle"
+        ],
+        "japanese": [
+            "おじ",
+            "伯父",
+            "叔父"
+        ]
+    },
+    {
+        "english": [
+            "aunt"
+        ],
+        "japanese": [
+            "おば",
+            "伯母",
+            "叔母"
+        ]
+    },
+    {
+        "english": [
+            "cousin"
+        ],
+        "japanese": [
+            "いとこ",
+            "従兄弟",
+            "従姉妹",
+            "従兄",
+            "従弟",
+            "従姉",
+            "従妹"
+        ]
+    },
+    {
+        "english": [
+            "niece"
+        ],
+        "japanese": [
+            "めい",
+            "姪"
+        ]
+    },
+    {
+        "english": [
+            "nephew"
+        ],
+        "japanese": [
+            "おい",
+            "甥"
+        ]
+    },
+    {
+        "english": [
+            "living creatures"
+        ],
+        "japanese": [
+            "いきもの",
+            "生き物"
+        ]
+    },
+    {
+        "english": [
+            "monster"
+        ],
+        "japanese": [
+            "ばけもの",
+            "化け物"
+        ]
+    },
+    {
+        "english": [
+            "animal"
+        ],
+        "japanese": [
+            "どうぶつ",
+            "動物"
+        ]
+    },
+    {
+        "english": [
+            "cheetah"
+        ],
+        "japanese": [
+            "チーター"
+        ]
+    },
+    {
+        "english": [
+            "dog"
+        ],
+        "japanese": [
+            "いぬ",
+            "犬"
+        ]
+    },
+    {
+        "english": [
+            "cat"
+        ],
+        "japanese": [
+            "ねこ",
+            "猫"
+        ]
+    },
+    {
+        "english": [
+            "cow"
+        ],
+        "japanese": [
+            "うし",
+            "牛"
+        ]
+    },
+    {
+        "english": [
+            "pig"
+        ],
+        "japanese": [
+            "ぶた",
+            "豚"
+        ]
+    },
+    {
+        "english": [
+            "horse"
+        ],
+        "japanese": [
+            "うま",
+            "馬"
+        ]
+    },
+    {
+        "english": [
+            "sheep"
+        ],
+        "japanese": [
+            "ひつじ",
+            "羊"
+        ]
+    },
+    {
+        "english": [
+            "monkey"
+        ],
+        "japanese": [
+            "さる",
+            "猿"
+        ]
+    },
+    {
+        "english": [
+            "mouse",
+            "rat"
+        ],
+        "japanese": [
+            "ねずみ",
+            "鼠"
+        ]
+    },
+    {
+        "english": [
+            "tiger"
+        ],
+        "japanese": [
+            "とら",
+            "虎"
+        ]
+    },
+    {
+        "english": [
+            "wolf"
+        ],
+        "japanese": [
+            "オオカミ",
+            "狼"
+        ]
+    },
+    {
+        "english": [
+            "rabbit"
+        ],
+        "japanese": [
+            "うさぎ",
+            "兎"
+        ]
+    },
+    {
+        "english": [
+            "dragon"
+        ],
+        "japanese": [
+            "りゅう",
+            "たつ",
+            "竜"
+        ]
+    },
+    {
+        "english": [
+            "deer"
+        ],
+        "japanese": [
+            "しか",
+            "鹿"
+        ]
+    },
+    {
+        "english": [
+            "frog"
+        ],
+        "japanese": [
+            "かえる",
+            "蛙"
+        ]
+    },
+    {
+        "english": [
+            "toad"
+        ],
+        "japanese": [
+            "がま",
+            "蟇"
+        ]
+    },
+    {
+        "english": [
+            "lion"
+        ],
+        "japanese": [
+            "しし",
+            "獅子"
+        ]
+    },
+    {
+        "english": [
+            "giraffe"
+        ],
+        "japanese": [
+            "キリン",
+            "麒麟"
+        ]
+    },
+    {
+        "english": [
+            "elephant"
+        ],
+        "japanese": [
+            "ぞう",
+            "象"
+        ]
+    },
+    {
+        "english": [
+            "bird"
+        ],
+        "japanese": [
+            "とり",
+            "鳥"
+        ]
+    },
+    {
+        "english": [
+            "chicken"
+        ],
+        "japanese": [
+            "にわとり",
+            "鶏"
+        ]
+    },
+    {
+        "english": [
+            "sparrow"
+        ],
+        "japanese": [
+            "すずめ",
+            "雀"
+        ]
+    },
+    {
+        "english": [
+            "crow",
+            "raven"
+        ],
+        "japanese": [
+            "からす",
+            "烏"
+        ]
+    },
+    {
+        "english": [
+            "eagle"
+        ],
+        "japanese": [
+            "わし",
+            "鷲"
+        ]
+    },
+    {
+        "english": [
+            "hawk",
+            "falcon"
+        ],
+        "japanese": [
+            "たか",
+            "鷹"
+        ]
+    },
+    {
+        "english": [
+            "fish"
+        ],
+        "japanese": [
+            "さかな",
+            "魚"
+        ]
+    },
+    {
+        "english": [
+            "red snapper"
+        ],
+        "japanese": [
+            "たい",
+            "鯛"
+        ]
+    },
+    {
+        "english": [
+            "shrimp",
+            "lobster"
+        ],
+        "japanese": [
+            "えび",
+            "海老"
+        ]
+    },
+    {
+        "english": [
+            "sardine"
+        ],
+        "japanese": [
+            "いわし",
+            "鰯"
+        ]
+    },
+    {
+        "english": [
+            "tuna"
+        ],
+        "japanese": [
+            "まぐろ",
+            "鮪"
+        ]
+    },
+    {
+        "english": [
+            "bonito"
+        ],
+        "japanese": [
+            "かつお",
+            "鰹"
+        ]
+    },
+    {
+        "english": [
+            "pike"
+        ],
+        "japanese": [
+            "さんま",
+            "秋刀魚"
+        ]
+    },
+    {
+        "english": [
+            "horse mackerel"
+        ],
+        "japanese": [
+            "あじ",
+            "鰺"
+        ]
+    },
+    {
+        "english": [
+            "mackerel"
+        ],
+        "japanese": [
+            "さば",
+            "鯖"
+        ]
+    },
+    {
+        "english": [
+            "squid"
+        ],
+        "japanese": [
+            "イカ",
+            "烏賊"
+        ]
+    },
+    {
+        "english": [
+            "octopus"
+        ],
+        "japanese": [
+            "タコ",
+            "蛸",
+            "章魚"
+        ]
+    },
+    {
+        "english": [
+            "insect"
+        ],
+        "japanese": [
+            "むし",
+            "虫"
+        ]
+    },
+    {
+        "english": [
+            "butterfly"
+        ],
+        "japanese": [
+            "ちょう",
+            "蝶"
+        ]
+    },
+    {
+        "english": [
+            "moth"
+        ],
+        "japanese": [
+            "ガ",
+            "蛾"
+        ]
+    },
+    {
+        "english": [
+            "cicada"
+        ],
+        "japanese": [
+            "せみ",
+            "蝉"
+        ]
+    },
+    {
+        "english": [
+            "dragonfly"
+        ],
+        "japanese": [
+            "トンボ",
+            "蜻蛉"
+        ]
+    },
+    {
+        "english": [
+            "grasshopper"
+        ],
+        "japanese": [
+            "バッタ",
+            "飛蝗"
+        ]
+    },
+    {
+        "english": [
+            "spider"
+        ],
+        "japanese": [
+            "クモ",
+            "蜘蛛"
+        ]
+    },
+    {
+        "english": [
+            "firefly"
+        ],
+        "japanese": [
+            "ホタル",
+            "蛍"
+        ]
+    },
+    {
+        "english": [
+            "housefly"
+        ],
+        "japanese": [
+            "ハエ",
+            "蝿",
+            "蠅"
+        ]
+    },
+    {
+        "english": [
+            "mosquito",
+            "gnat"
+        ],
+        "japanese": [
+            "カ",
+            "蚊"
+        ]
+    },
+    {
+        "english": [
+            "cockroach"
+        ],
+        "japanese": [
+            "ゴキブリ",
+            "蜚蠊"
+        ]
+    },
+    {
+        "english": [
+            "snail"
+        ],
+        "japanese": [
+            "カタツムリ",
+            "蝸牛"
+        ]
+    },
+    {
+        "english": [
+            "slug"
+        ],
+        "japanese": [
+            "ナメクジ",
+            "蛞蝓"
+        ]
+    },
+    {
+        "english": [
+            "earthworm"
+        ],
+        "japanese": [
+            "ミミズ",
+            "蚯蚓"
+        ]
+    },
+    {
+        "english": [
+            "shellfish"
+        ],
+        "japanese": [
+            "かい",
+            "貝"
+        ]
+    },
+    {
+        "english": [
+            "shell"
+        ],
+        "japanese": [
+            "かいがら",
+            "貝殻"
+        ]
+    },
+    {
+        "english": [
+            "lizard"
+        ],
+        "japanese": [
+            "トカゲ",
+            "蜥蜴"
+        ]
+    },
+    {
+        "english": [
+            "snake"
+        ],
+        "japanese": [
+            "へび",
+            "蛇"
+        ]
+    },
+    {
+        "english": [
+            "bear"
+        ],
+        "japanese": [
+            "くま",
+            "熊"
+        ]
+    },
+    {
+        "english": [
+            "plants"
+        ],
+        "japanese": [
+            "しょくぶつ",
+            "植物"
+        ]
+    },
+    {
+        "english": [
+            "grass"
+        ],
+        "japanese": [
+            "くさ",
+            "草"
+        ]
+    },
+    {
+        "english": [
+            "flower"
+        ],
+        "japanese": [
+            "はな",
+            "花"
+        ]
+    },
+    {
+        "english": [
+            "fruit"
+        ],
+        "japanese": [
+            "み",
+            "実"
+        ]
+    },
+    {
+        "english": [
+            "tree"
+        ],
+        "japanese": [
+            "き",
+            "木"
+        ]
+    },
+    {
+        "english": [
+            ") - leaf"
+        ],
+        "japanese": [
+            "は",
+            "葉",
+            "はっぱ",
+            "葉っぱ"
+        ]
+    },
+    {
+        "english": [
+            ") - root"
+        ],
+        "japanese": [
+            "ね",
+            "根",
+            "ねっこ",
+            "根っ子"
+        ]
+    },
+    {
+        "english": [
+            "stem"
+        ],
+        "japanese": [
+            "くき",
+            "茎"
+        ]
+    },
+    {
+        "english": [
+            "mushroom"
+        ],
+        "japanese": [
+            "きのこ",
+            "茸"
+        ]
+    },
+    {
+        "english": [
+            "chrysanthemum"
+        ],
+        "japanese": [
+            "きく",
+            "菊"
+        ]
+    },
+    {
+        "english": [
+            "cherry blossom"
+        ],
+        "japanese": [
+            "さくら",
+            "桜"
+        ]
+    },
+    {
+        "english": [
+            "pine tree"
+        ],
+        "japanese": [
+            "まつ",
+            "松"
+        ]
+    },
+    {
+        "english": [
+            "japanese plum or apricot"
+        ],
+        "japanese": [
+            "うめ",
+            "梅"
+        ]
+    },
+    {
+        "english": [
+            "uncooked rice"
+        ],
+        "japanese": [
+            "こめ",
+            "米"
+        ]
+    },
+    {
+        "english": [
+            "rice growing in a field"
+        ],
+        "japanese": [
+            "いね",
+            "稲"
+        ]
+    },
+    {
+        "english": [
+            "wheat",
+            "barley",
+            "oats"
+        ],
+        "japanese": [
+            "むぎ",
+            "麦"
+        ]
+    },
+    {
+        "english": [
+            "vegetable"
+        ],
+        "japanese": [
+            "やさい",
+            "野菜"
+        ]
+    },
+    {
+        "english": [
+            "fruit for eating"
+        ],
+        "japanese": [
+            "くだもの",
+            "果物"
+        ]
+    },
+    {
+        "english": [
+            "yam",
+            "potato",
+            "taro"
+        ],
+        "japanese": [
+            "いも",
+            "芋"
+        ]
+    },
+    {
+        "english": [
+            "beans",
+            "peas"
+        ],
+        "japanese": [
+            "まめ",
+            "豆"
+        ]
+    },
+    {
+        "english": [
+            "Japanese white radish"
+        ],
+        "japanese": [
+            "だいこん",
+            "大根"
+        ]
+    },
+    {
+        "english": [
+            "carrot"
+        ],
+        "japanese": [
+            "にんじん",
+            "人参"
+        ]
+    },
+    {
+        "english": [
+            "apple"
+        ],
+        "japanese": [
+            "リンゴ",
+            "林檎"
+        ]
+    },
+    {
+        "english": [
+            "mandarin orange"
+        ],
+        "japanese": [
+            "ミカン",
+            "蜜柑"
+        ]
+    },
+    {
+        "english": [
+            "banana"
+        ],
+        "japanese": [
+            "バナナ",
+            "かんしょう",
+            "甘蕉"
+        ]
+    },
+    {
+        "english": [
+            "pear"
+        ],
+        "japanese": [
+            "ナシ",
+            "梨"
+        ]
+    },
+    {
+        "english": [
+            "chestnut tree"
+        ],
+        "japanese": [
+            "クリ",
+            "栗"
+        ]
+    },
+    {
+        "english": [
+            "peach"
+        ],
+        "japanese": [
+            "モモ",
+            "桃"
+        ]
+    },
+    {
+        "english": [
+            "tomato"
+        ],
+        "japanese": [
+            "トマト",
+            "ばんか",
+            "蕃茄"
+        ]
+    },
+    {
+        "english": [
+            "watermelon"
+        ],
+        "japanese": [
+            "スイカ",
+            "西瓜"
+        ]
+    },
+    {
+        "english": [
+            "food"
+        ],
+        "japanese": [
+            "たべもの",
+            "食べ物"
+        ]
+    },
+    {
+        "english": [
+            "breakfast"
+        ],
+        "japanese": [
+            "ちょうしょく",
+            "朝食"
+        ]
+    },
+    {
+        "english": [
+            "lunch"
+        ],
+        "japanese": [
+            "ひるごはん",
+            "昼御飯"
+        ]
+    },
+    {
+        "english": [
+            "dinner"
+        ],
+        "japanese": [
+            "ばんごはん",
+            "晩御飯"
+        ]
+    },
+    {
+        "english": [
+            "cooked rice or meal"
+        ],
+        "japanese": [
+            "ごはん",
+            "御飯"
+        ]
+    },
+    {
+        "english": [
+            "miso"
+        ],
+        "japanese": [
+            "みそ",
+            "味噌"
+        ]
+    },
+    {
+        "english": [
+            "cooking"
+        ],
+        "japanese": [
+            "りょうり",
+            "料理"
+        ]
+    },
+    {
+        "english": [
+            "salad"
+        ],
+        "japanese": [
+            "サラダ"
+        ]
+    },
+    {
+        "english": [
+            "dessert"
+        ],
+        "japanese": [
+            "デザート"
+        ]
+    },
+    {
+        "english": [
+            "bread"
+        ],
+        "japanese": [
+            "パン"
+        ]
+    },
+    {
+        "english": [
+            "sandwich"
+        ],
+        "japanese": [
+            "サンドイッチ"
+        ]
+    },
+    {
+        "english": [
+            "snack"
+        ],
+        "japanese": [
+            "おやつ",
+            "間食"
+        ]
+    },
+    {
+        "english": [
+            "ice cream"
+        ],
+        "japanese": [
+            "アイスクリーム"
+        ]
+    },
+    {
+        "english": [
+            "octopus dumpling"
+        ],
+        "japanese": [
+            "たこやき",
+            "たこ焼き"
+        ]
+    },
+    {
+        "english": [
+            "drink/beverage"
+        ],
+        "japanese": [
+            "のみもの",
+            "飲み物"
+        ]
+    },
+    {
+        "english": [
+            "tea"
+        ],
+        "japanese": [
+            "ちゃ",
+            "茶"
+        ]
+    },
+    {
+        "english": [
+            "green tea"
+        ],
+        "japanese": [
+            "おちゃ",
+            "お茶"
+        ]
+    },
+    {
+        "english": [
+            "coffee"
+        ],
+        "japanese": [
+            "コーヒー",
+            "珈琲"
+        ]
+    },
+    {
+        "english": [
+            "milk"
+        ],
+        "japanese": [
+            "ぎゅうにゅう",
+            "牛乳"
+        ]
+    },
+    {
+        "english": [
+            "water"
+        ],
+        "japanese": [
+            "みず",
+            "水"
+        ]
+    },
+    {
+        "english": [
+            "beer"
+        ],
+        "japanese": [
+            "ビール"
+        ]
+    },
+    {
+        "english": [
+            "wine"
+        ],
+        "japanese": [
+            "ワイン"
+        ]
+    },
+    {
+        "english": [
+            "sugar"
+        ],
+        "japanese": [
+            "さとう",
+            "砂糖"
+        ]
+    },
+    {
+        "english": [
+            "salt"
+        ],
+        "japanese": [
+            "しお",
+            "塩"
+        ]
+    },
+    {
+        "english": [
+            "soy sauce"
+        ],
+        "japanese": [
+            "しょうゆ",
+            "醤油"
+        ]
+    },
+    {
+        "english": [
+            "time"
+        ],
+        "japanese": [
+            "じかん",
+            "時間"
+        ]
+    },
+    {
+        "english": [
+            "~hours"
+        ],
+        "japanese": [
+            "とき",
+            "じ",
+            "時"
+        ]
+    },
+    {
+        "english": [
+            "calendar"
+        ],
+        "japanese": [
+            "こよみ",
+            "カレンダー",
+            "暦"
+        ]
+    },
+    {
+        "english": [
+            "minute"
+        ],
+        "japanese": [
+            "ふん",
+            "分"
+        ]
+    },
+    {
+        "english": [
+            "second"
+        ],
+        "japanese": [
+            "びょう",
+            "秒"
+        ]
+    },
+    {
+        "english": [
+            "day"
+        ],
+        "japanese": [
+            "ひ",
+            "にち",
+            "日"
+        ]
+    },
+    {
+        "english": [
+            "month"
+        ],
+        "japanese": [
+            "つき",
+            "がつ",
+            "月"
+        ]
+    },
+    {
+        "english": [],
+        "japanese": []
+    },
+    {
+        "english": [
+            "year"
+        ],
+        "japanese": [
+            "とし",
+            "ねん",
+            "年"
+        ]
+    },
+    {
+        "english": [],
+        "japanese": []
+    },
+    {
+        "english": [
+            "yesterday"
+        ],
+        "japanese": [
+            "きのう",
+            "さくじつ",
+            "昨日"
+        ]
+    },
+    {
+        "english": [
+            "today"
+        ],
+        "japanese": [
+            "きょう",
+            "今日"
+        ]
+    },
+    {
+        "english": [
+            "tomorrow"
+        ],
+        "japanese": [
+            "あした",
+            "あす",
+            "みょうにち",
+            "明日"
+        ]
+    },
+    {
+        "english": [
+            "morning"
+        ],
+        "japanese": [
+            "あさ",
+            "朝"
+        ]
+    },
+    {
+        "english": [],
+        "japanese": []
+    },
+    {
+        "english": [
+            "afternoon"
+        ],
+        "japanese": [
+            "ひる",
+            "昼"
+        ]
+    },
+    {
+        "english": [
+            "evening"
+        ],
+        "japanese": [
+            "ゆうがた",
+            "夕方"
+        ]
+    },
+    {
+        "english": [
+            "evening"
+        ],
+        "japanese": [
+            "ばん",
+            "晩"
+        ]
+    },
+    {
+        "english": [
+            "evening",
+            "night"
+        ],
+        "japanese": [
+            "よる",
+            "夜"
+        ]
+    },
+    {
+        "english": [
+            "~day"
+        ],
+        "japanese": [
+            "ようび",
+            "曜日"
+        ]
+    },
+    {
+        "english": [
+            "week"
+        ],
+        "japanese": [
+            "しゅう",
+            "週"
+        ]
+    },
+    {
+        "english": [],
+        "japanese": []
+    },
+    {
+        "english": [
+            "one week"
+        ],
+        "japanese": [
+            "いっしゅうかん",
+            "一週間"
+        ]
+    },
+    {
+        "english": [
+            "Sunday"
+        ],
+        "japanese": [
+            "にちようび",
+            "日曜日"
+        ]
+    },
+    {
+        "english": [
+            "Monday"
+        ],
+        "japanese": [
+            "げつようび",
+            "月曜日"
+        ]
+    },
+    {
+        "english": [
+            "Tuesday"
+        ],
+        "japanese": [
+            "かようび",
+            "火曜日"
+        ]
+    },
+    {
+        "english": [
+            "Wednesday"
+        ],
+        "japanese": [
+            "すいようび",
+            "水曜日"
+        ]
+    },
+    {
+        "english": [
+            "Thursday"
+        ],
+        "japanese": [
+            "もくようび",
+            "木曜日"
+        ]
+    },
+    {
+        "english": [
+            "Friday"
+        ],
+        "japanese": [
+            "きんようび",
+            "金曜日"
+        ]
+    },
+    {
+        "english": [
+            "Saturday"
+        ],
+        "japanese": [
+            "どようび",
+            "土曜日"
+        ]
+    },
+    {
+        "english": [
+            "sun"
+        ],
+        "japanese": [
+            "たいよう",
+            "太陽"
+        ]
+    },
+    {
+        "english": [
+            "moon"
+        ],
+        "japanese": [
+            "つき",
+            "月"
+        ]
+    },
+    {
+        "english": [
+            "star"
+        ],
+        "japanese": [
+            "ほし",
+            "星"
+        ]
+    },
+    {
+        "english": [
+            "weather"
+        ],
+        "japanese": [
+            "てんき",
+            "天気"
+        ]
+    },
+    {
+        "english": [
+            "clear weather"
+        ],
+        "japanese": [
+            "はれ",
+            "晴れ"
+        ]
+    },
+    {
+        "english": [
+            "rain"
+        ],
+        "japanese": [
+            "あめ",
+            "雨"
+        ]
+    },
+    {
+        "english": [
+            "cloudy"
+        ],
+        "japanese": [
+            "くもり",
+            "曇り"
+        ]
+    },
+    {
+        "english": [
+            "snow"
+        ],
+        "japanese": [
+            "ゆき",
+            "雪"
+        ]
+    },
+    {
+        "english": [
+            "wind"
+        ],
+        "japanese": [
+            "かぜ",
+            "風"
+        ]
+    },
+    {
+        "english": [
+            "thunder",
+            "lightning"
+        ],
+        "japanese": [
+            "かみなり",
+            "雷"
+        ]
+    },
+    {
+        "english": [
+            "typhoon"
+        ],
+        "japanese": [
+            "たいふう",
+            "台風"
+        ]
+    },
+    {
+        "english": [
+            "storm"
+        ],
+        "japanese": [
+            "あらし",
+            "嵐"
+        ]
+    },
+    {
+        "english": [
+            "sky"
+        ],
+        "japanese": [
+            "そら",
+            "空"
+        ]
+    },
+    {
+        "english": [
+            "north"
+        ],
+        "japanese": [
+            "きた",
+            "北"
+        ]
+    },
+    {
+        "english": [
+            "east"
+        ],
+        "japanese": [
+            "ひがし",
+            "東"
+        ]
+    },
+    {
+        "english": [
+            "south"
+        ],
+        "japanese": [
+            "みなみ",
+            "南"
+        ]
+    },
+    {
+        "english": [
+            "west"
+        ],
+        "japanese": [
+            "にし",
+            "西"
+        ]
+    },
+    {
+        "english": [
+            "here"
+        ],
+        "japanese": [
+            "ここ"
+        ]
+    },
+    {
+        "english": [
+            "there"
+        ],
+        "japanese": [
+            "そこ"
+        ]
+    },
+    {
+        "english": [
+            "over there"
+        ],
+        "japanese": [
+            "あそこ"
+        ]
+    },
+    {
+        "english": [
+            "right"
+        ],
+        "japanese": [
+            "みぎ",
+            "右"
+        ]
+    },
+    {
+        "english": [
+            "left"
+        ],
+        "japanese": [
+            "ひだり",
+            "左"
+        ]
+    },
+    {
+        "english": [
+            "above",
+            "up"
+        ],
+        "japanese": [
+            "うえ",
+            "上"
+        ]
+    },
+    {
+        "english": [
+            "below",
+            "down"
+        ],
+        "japanese": [
+            "した",
+            "下"
+        ]
+    },
+    {
+        "english": [
+            "front"
+        ],
+        "japanese": [
+            "まえ",
+            "前"
+        ]
+    },
+    {
+        "english": [
+            "behind"
+        ],
+        "japanese": [
+            "うしろ",
+            "後"
+        ]
+    },
+    {
+        "english": [
+            "the other side",
+            "opposite side"
+        ],
+        "japanese": [
+            "むこう",
+            "向こう"
+        ]
+    },
+    {
+        "english": [
+            "diagonal"
+        ],
+        "japanese": [
+            "ななめ",
+            "斜め"
+        ]
+    },
+    {
+        "english": [
+            "nearer",
+            "more in front"
+        ],
+        "japanese": [
+            "てまえ",
+            "手前"
+        ]
+    },
+    {
+        "english": [
+            "far"
+        ],
+        "japanese": [
+            "とおい",
+            "遠い"
+        ]
+    },
+    {
+        "english": [
+            "near",
+            "close"
+        ],
+        "japanese": [
+            "ちかい",
+            "近い"
+        ]
+    },
+    {
+        "english": [
+            "water"
+        ],
+        "japanese": [
+            "みず",
+            "水"
+        ]
+    },
+    {
+        "english": [
+            "hot water"
+        ],
+        "japanese": [
+            "ゆ",
+            "湯"
+        ]
+    },
+    {
+        "english": [
+            "ice"
+        ],
+        "japanese": [
+            "こおり",
+            "氷"
+        ]
+    },
+    {
+        "english": [
+            "steam"
+        ],
+        "japanese": [
+            "ゆげ",
+            "湯気"
+        ]
+    },
+    {
+        "english": [
+            "fire"
+        ],
+        "japanese": [
+            "ひ",
+            "火"
+        ]
+    },
+    {
+        "english": [
+            "gas"
+        ],
+        "japanese": [
+            "ガス"
+        ]
+    },
+    {
+        "english": [
+            "air",
+            "atmosphere"
+        ],
+        "japanese": [
+            "くうき",
+            "空気"
+        ]
+    },
+    {
+        "english": [
+            "earth",
+            "ground"
+        ],
+        "japanese": [
+            "つち",
+            "土"
+        ]
+    },
+    {
+        "english": [
+            "metal",
+            "metallic"
+        ],
+        "japanese": [
+            "きんぞく",
+            "金属"
+        ]
+    },
+    {
+        "english": [
+            "mud",
+            "mire",
+            "clay",
+            "plaster"
+        ],
+        "japanese": [
+            "どろ",
+            "泥"
+        ]
+    },
+    {
+        "english": [
+            "smoke",
+            "tobacco",
+            "opium"
+        ],
+        "japanese": [
+            "けむり",
+            "煙"
+        ]
+    },
+    {
+        "english": [
+            "iron [Fe]"
+        ],
+        "japanese": [
+            "てつ",
+            "鉄"
+        ]
+    },
+    {
+        "english": [
+            "copper [Cu]"
+        ],
+        "japanese": [
+            "どう",
+            "銅"
+        ]
+    },
+    {
+        "english": [
+            "gold [Au]; money"
+        ],
+        "japanese": [
+            "きん",
+            "金"
+        ]
+    },
+    {
+        "english": [
+            "silver [Ag]; wealth"
+        ],
+        "japanese": [
+            "ぎん",
+            "銀"
+        ]
+    },
+    {
+        "english": [
+            "lead [Pb]"
+        ],
+        "japanese": [
+            "なまり",
+            "鉛"
+        ]
+    },
+    {
+        "english": [
+            "salt [NaCl]"
+        ],
+        "japanese": [
+            "しお",
+            "塩"
+        ]
+    },
+    {
+        "english": [
+            "meter"
+        ],
+        "japanese": [
+            "メートル"
+        ]
+    },
+    {
+        "english": [
+            "litre"
+        ],
+        "japanese": [
+            "リットル"
+        ]
+    },
+    {
+        "english": [
+            "gram"
+        ],
+        "japanese": [
+            "グラム"
+        ]
+    },
+    {
+        "english": [
+            "kilo-"
+        ],
+        "japanese": [
+            "キロ"
+        ]
+    },
+    {
+        "english": [
+            "milli-"
+        ],
+        "japanese": [
+            "ミリ"
+        ]
+    },
+    {
+        "english": [
+            "centimeter"
+        ],
+        "japanese": [
+            "センチメートル",
+            "センチ"
+        ]
+    },
+    {
+        "english": [
+            "inch"
+        ],
+        "japanese": [
+            "インチ"
+        ]
+    },
+    {
+        "english": [
+            "society"
+        ],
+        "japanese": [
+            "しゃかい",
+            "社会"
+        ]
+    },
+    {
+        "english": [
+            "economy",
+            "economics"
+        ],
+        "japanese": [
+            "けいざい",
+            "経済"
+        ]
+    },
+    {
+        "english": [
+            "company"
+        ],
+        "japanese": [
+            "かいしゃ",
+            "会社"
+        ]
+    },
+    {
+        "english": [
+            "meeting"
+        ],
+        "japanese": [
+            "かいぎ",
+            "会議"
+        ]
+    },
+    {
+        "english": [
+            "school"
+        ],
+        "japanese": [
+            "がっこう",
+            "学校"
+        ]
+    },
+    {
+        "english": [
+            "local government office"
+        ],
+        "japanese": [
+            "やくしょ",
+            "役所"
+        ]
+    },
+    {
+        "english": [
+            "store"
+        ],
+        "japanese": [
+            "みせ",
+            "店"
+        ]
+    },
+    {
+        "english": [
+            "hotel"
+        ],
+        "japanese": [
+            "ホテル"
+        ]
+    },
+    {
+        "english": [
+            "factory"
+        ],
+        "japanese": [
+            "こうじょう",
+            "工場"
+        ]
+    },
+    {
+        "english": [
+            "money"
+        ],
+        "japanese": [
+            "かね",
+            "金"
+        ]
+    },
+    {
+        "english": [
+            "bill [of money",
+            "e.g.",
+            "a thousand-yen bill]"
+        ],
+        "japanese": [
+            "さつ",
+            "札"
+        ]
+    },
+    {
+        "english": [
+            "small change"
+        ],
+        "japanese": [
+            "こぜに",
+            "小銭"
+        ]
+    },
+    {
+        "english": [
+            "change"
+        ],
+        "japanese": [
+            "つりせん",
+            "釣り銭",
+            "おつり",
+            "お釣り"
+        ]
+    },
+    {
+        "english": [
+            "vending machine",
+            "slot machine"
+        ],
+        "japanese": [
+            "じどうはんばいき",
+            "自動販売機"
+        ]
+    },
+    {
+        "english": [
+            "ticket"
+        ],
+        "japanese": [
+            "きっぷ",
+            "切符"
+        ]
+    },
+    {
+        "english": [
+            "stamp"
+        ],
+        "japanese": [
+            "きって",
+            "切手"
+        ]
+    },
+    {
+        "english": [
+            "desk"
+        ],
+        "japanese": [
+            "つくえ",
+            "机"
+        ]
+    },
+    {
+        "english": [
+            "chair",
+            "position"
+        ],
+        "japanese": [
+            "いす",
+            "椅子"
+        ]
+    },
+    {
+        "english": [
+            "a tatami mat"
+        ],
+        "japanese": [
+            "たたみ",
+            "畳"
+        ]
+    },
+    {
+        "english": [
+            "door",
+            "family"
+        ],
+        "japanese": [
+            "と",
+            "戸"
+        ]
+    },
+    {
+        "english": [
+            "door panel"
+        ],
+        "japanese": [
+            "とびら",
+            "扉"
+        ]
+    },
+    {
+        "english": [
+            "door"
+        ],
+        "japanese": [
+            "ドア"
+        ]
+    },
+    {
+        "english": [
+            "window"
+        ],
+        "japanese": [
+            "まど",
+            "窓"
+        ]
+    },
+    {
+        "english": [
+            "futon"
+        ],
+        "japanese": [
+            "ふとん",
+            "布団"
+        ]
+    },
+    {
+        "english": [
+            "entrance"
+        ],
+        "japanese": [
+            "げんかん",
+            "玄関"
+        ]
+    },
+    {
+        "english": [
+            "house",
+            "home"
+        ],
+        "japanese": [
+            "いえ",
+            "家"
+        ]
+    },
+    {
+        "english": [
+            "elevator"
+        ],
+        "japanese": [
+            "エレベーター"
+        ]
+    },
+    {
+        "english": [
+            "escalator"
+        ],
+        "japanese": [
+            "エスカレーター"
+        ]
+    },
+    {
+        "english": [
+            "electricity"
+        ],
+        "japanese": [
+            "でんき",
+            "電気"
+        ]
+    },
+    {
+        "english": [
+            "nail",
+            "spike"
+        ],
+        "japanese": [
+            "くぎ",
+            "釘"
+        ]
+    },
+    {
+        "english": [
+            "string",
+            "cord"
+        ],
+        "japanese": [
+            "ひも",
+            "紐"
+        ]
+    },
+    {
+        "english": [
+            "rope",
+            "string"
+        ],
+        "japanese": [
+            "なわ",
+            "縄"
+        ]
+    },
+    {
+        "english": [
+            "pocket",
+            "bag"
+        ],
+        "japanese": [
+            "ふくろ",
+            "袋"
+        ]
+    },
+    {
+        "english": [
+            "leather bag"
+        ],
+        "japanese": [
+            "かばん",
+            "鞄"
+        ]
+    },
+    {
+        "english": [
+            "umbrella",
+            "parasol"
+        ],
+        "japanese": [
+            "かさ",
+            "傘"
+        ]
+    },
+    {
+        "english": [
+            "door bolt",
+            "key"
+        ],
+        "japanese": [
+            "かぎ",
+            "鍵"
+        ]
+    },
+    {
+        "english": [
+            "sculpture",
+            "engraving"
+        ],
+        "japanese": [
+            "ちょうこく",
+            "彫刻"
+        ]
+    },
+    {
+        "english": [
+            "stationery ​"
+        ],
+        "japanese": [
+            "ぶんぼうぐ",
+            "文房具"
+        ]
+    },
+    {
+        "english": [
+            "ink"
+        ],
+        "japanese": [
+            "インク"
+        ]
+    },
+    {
+        "english": [
+            "pen"
+        ],
+        "japanese": [
+            "ペン"
+        ]
+    },
+    {
+        "english": [
+            "ball-point pen"
+        ],
+        "japanese": [
+            "ボールペン"
+        ]
+    },
+    {
+        "english": [
+            "fountain pen"
+        ],
+        "japanese": [
+            "まんねんひつ",
+            "万年筆"
+        ]
+    },
+    {
+        "english": [
+            "pencil"
+        ],
+        "japanese": [
+            "えんぴつ",
+            "鉛筆"
+        ]
+    },
+    {
+        "english": [
+            "brush for writing or painting"
+        ],
+        "japanese": [
+            "ふで",
+            "筆"
+        ]
+    },
+    {
+        "english": [
+            "chalk"
+        ],
+        "japanese": [
+            "チョーク"
+        ]
+    },
+    {
+        "english": [
+            "eraser"
+        ],
+        "japanese": [
+            "けしゴム",
+            "消しゴム"
+        ]
+    },
+    {
+        "english": [
+            "pencil sharpener"
+        ],
+        "japanese": [
+            "えんぴつけずり",
+            "鉛筆削り"
+        ]
+    },
+    {
+        "english": [
+            "ruler"
+        ],
+        "japanese": [
+            "じょうぎ",
+            "定規"
+        ]
+    },
+    {
+        "english": [
+            "notebook"
+        ],
+        "japanese": [
+            "ノート"
+        ]
+    },
+    {
+        "english": [
+            "diary"
+        ],
+        "japanese": [
+            "にっき",
+            "日記"
+        ]
+    },
+    {
+        "english": [
+            "book cover"
+        ],
+        "japanese": [
+            "カバー"
+        ]
+    },
+    {
+        "english": [
+            "envelope"
+        ],
+        "japanese": [
+            "ふうとう",
+            "封筒"
+        ]
+    },
+    {
+        "english": [
+            "scissors"
+        ],
+        "japanese": [
+            "はさみ",
+            "鋏"
+        ]
+    },
+    {
+        "english": [
+            "stapler"
+        ],
+        "japanese": [
+            "ホッチキス"
+        ]
+    },
+    {
+        "english": [
+            "clothes"
+        ],
+        "japanese": [
+            "ふく",
+            "服"
+        ]
+    },
+    {
+        "english": [
+            "western clothing"
+        ],
+        "japanese": [
+            "ようふく",
+            "洋服"
+        ]
+    },
+    {
+        "english": [
+            "kimono"
+        ],
+        "japanese": [
+            "きもの",
+            "着物"
+        ]
+    },
+    {
+        "english": [
+            "Japanese clothing"
+        ],
+        "japanese": [
+            "わふく",
+            "和服"
+        ]
+    },
+    {
+        "english": [
+            "sleeve"
+        ],
+        "japanese": [
+            "そで",
+            "袖"
+        ]
+    },
+    {
+        "english": [
+            "lapel",
+            "collar"
+        ],
+        "japanese": [
+            "えり",
+            "襟"
+        ]
+    },
+    {
+        "english": [
+            "button"
+        ],
+        "japanese": [
+            "ボタン"
+        ]
+    },
+    {
+        "english": [
+            "zipper",
+            "zipper fastener"
+        ],
+        "japanese": [
+            "チャック",
+            "ファスナー",
+            "ジッパー"
+        ]
+    },
+    {
+        "english": [
+            "belt"
+        ],
+        "japanese": [
+            "ベルト"
+        ]
+    },
+    {
+        "english": [
+            "shoe"
+        ],
+        "japanese": [
+            "くつ",
+            "靴"
+        ]
+    },
+    {
+        "english": [
+            "sock"
+        ],
+        "japanese": [
+            "くつした",
+            "靴下"
+        ]
+    },
+    {
+        "english": [
+            "glasses"
+        ],
+        "japanese": [
+            "めがね",
+            "眼鏡"
+        ]
+    },
+    {
+        "english": [
+            "railway"
+        ],
+        "japanese": [
+            "てつどう",
+            "鉄道"
+        ]
+    },
+    {
+        "english": [
+            "station"
+        ],
+        "japanese": [
+            "えき",
+            "駅"
+        ]
+    },
+    {
+        "english": [
+            "airplane"
+        ],
+        "japanese": [
+            "ひこうき",
+            "飛行機"
+        ]
+    },
+    {
+        "english": [
+            "） – airport"
+        ],
+        "japanese": [
+            "くうこう",
+            "空港",
+            "ひこうじょう",
+            "飛行場"
+        ]
+    },
+    {
+        "english": [
+            "street",
+            "way",
+            "road"
+        ],
+        "japanese": [
+            "みち",
+            "道"
+        ]
+    },
+    {
+        "english": [
+            "road"
+        ],
+        "japanese": [
+            "どうろ",
+            "道路"
+        ]
+    },
+    {
+        "english": [
+            "bus-stop"
+        ],
+        "japanese": [
+            "バスてい",
+            "バス停"
+        ]
+    },
+    {
+        "english": [
+            "avenue"
+        ],
+        "japanese": [
+            "とおり",
+            "通り"
+        ]
+    },
+    {
+        "english": [
+            "train"
+        ],
+        "japanese": [
+            "でんしゃ",
+            "電車"
+        ]
+    },
+    {
+        "english": [
+            ") – car"
+        ],
+        "japanese": [
+            "くるま",
+            "車",
+            "じどうしゃ",
+            "自動車"
+        ]
+    },
+    {
+        "english": [
+            "–　bicycle"
+        ],
+        "japanese": [
+            "じてんしゃ",
+            "自転車"
+        ]
+    },
+    {
+        "english": [
+            "letter",
+            "character",
+            "script"
+        ],
+        "japanese": [
+            "もじ",
+            "文字"
+        ]
+    },
+    {
+        "english": [
+            "a letter",
+            "character"
+        ],
+        "japanese": [
+            "じ",
+            "字"
+        ]
+    },
+    {
+        "english": [
+            "Chinese character"
+        ],
+        "japanese": [
+            "かんじ",
+            "漢字"
+        ]
+    },
+    {
+        "english": [
+            "hiragana syllabary characters"
+        ],
+        "japanese": [
+            "ひらがな",
+            "平仮名"
+        ]
+    },
+    {
+        "english": [
+            "katakana syllabary characters"
+        ],
+        "japanese": [
+            "カタカナ",
+            "片仮名"
+        ]
+    },
+    {
+        "english": [
+            "numbers"
+        ],
+        "japanese": [
+            "すうじ",
+            "数字"
+        ]
+    },
+    {
+        "english": [
+            "alphabet"
+        ],
+        "japanese": [
+            "アルファベット"
+        ]
+    },
+    {
+        "english": [
+            "Roman characters",
+            "Latin script"
+        ],
+        "japanese": [
+            "ローマ字"
+        ]
+    },
+    {
+        "english": [
+            "book"
+        ],
+        "japanese": [
+            "ほん",
+            "本"
+        ]
+    },
+    {
+        "english": [
+            "paper"
+        ],
+        "japanese": [
+            "かみ",
+            "紙"
+        ]
+    },
+    {
+        "english": [
+            "letter"
+        ],
+        "japanese": [
+            "てがみ",
+            "手紙"
+        ]
+    },
+    {
+        "english": [
+            "newspaper"
+        ],
+        "japanese": [
+            "しんぶん",
+            "新聞"
+        ]
+    },
+    {
+        "english": [
+            "dictionary"
+        ],
+        "japanese": [
+            "じしょ",
+            "辞書"
+        ]
+    },
+    {
+        "english": [
+            "personal computer"
+        ],
+        "japanese": [
+            "パソコン"
+        ]
+    },
+    {
+        "english": [
+            "color"
+        ],
+        "japanese": [
+            "いろ",
+            "色"
+        ]
+    },
+    {
+        "english": [
+            "red"
+        ],
+        "japanese": [
+            "あか",
+            "赤"
+        ]
+    },
+    {
+        "english": [
+            "yellow"
+        ],
+        "japanese": [
+            "きいろ",
+            "黄色"
+        ]
+    },
+    {
+        "english": [
+            "green"
+        ],
+        "japanese": [
+            "みどり",
+            "緑"
+        ]
+    },
+    {
+        "english": [
+            "blue"
+        ],
+        "japanese": [
+            "あお",
+            "青"
+        ]
+    },
+    {
+        "english": [
+            "purple"
+        ],
+        "japanese": [
+            "むらさき",
+            "紫"
+        ]
+    },
+    {
+        "english": [
+            "white"
+        ],
+        "japanese": [
+            "しろ",
+            "白"
+        ]
+    },
+    {
+        "english": [
+            "black"
+        ],
+        "japanese": [
+            "くろ",
+            "黒"
+        ]
+    },
+    {
+        "english": [
+            "pink"
+        ],
+        "japanese": [
+            "ピンク"
+        ]
+    },
+    {
+        "english": [
+            "brown"
+        ],
+        "japanese": [
+            "ちゃいろ",
+            "茶色"
+        ]
+    },
+    {
+        "english": [
+            "grey"
+        ],
+        "japanese": [
+            "はいいろ",
+            "灰色",
+            "ねずみいろ",
+            "鼠色"
+        ]
+    },
+    {
+        "english": [
+            "orange"
+        ],
+        "japanese": [
+            "オレンジ"
+        ]
+    },
+    {
+        "english": [
+            "picture"
+        ],
+        "japanese": [
+            "え",
+            "絵"
+        ]
+    },
+    {
+        "english": [
+            "music"
+        ],
+        "japanese": [
+            "おんがく",
+            "音楽"
+        ]
+    },
+    {
+        "english": [
+            "science"
+        ],
+        "japanese": [
+            "りか",
+            "理科"
+        ]
+    },
+    {
+        "english": [
+            "arithmetic"
+        ],
+        "japanese": [
+            "さんすう",
+            "算数"
+        ]
+    },
+    {
+        "english": [
+            "history"
+        ],
+        "japanese": [
+            "れきし",
+            "歴史"
+        ]
+    },
+    {
+        "english": [
+            "geography"
+        ],
+        "japanese": [
+            "ちり",
+            "地理"
+        ]
+    },
+    {
+        "english": [
+            "physical education"
+        ],
+        "japanese": [
+            "たいいく",
+            "体育"
+        ]
+    },
+    {
+        "english": [
+            "sport"
+        ],
+        "japanese": [
+            "スポーツ"
+        ]
+    },
+    {
+        "english": [
+            "system"
+        ],
+        "japanese": [
+            "システム"
+        ]
+    },
+    {
+        "english": [
+            "information",
+            "news"
+        ],
+        "japanese": [
+            "じょうほう",
+            "情報"
+        ]
+    },
+    {
+        "english": [
+            "necessity"
+        ],
+        "japanese": [
+            "ひつよう",
+            "必要"
+        ]
+    },
+    {
+        "english": [
+            "study"
+        ],
+        "japanese": [
+            "べんきょう",
+            "勉強"
+        ]
+    },
+    {
+        "english": [
+            "request"
+        ],
+        "japanese": [
+            "いらい",
+            "依頼"
+        ]
+    },
+    {
+        "english": [
+            "zero"
+        ],
+        "japanese": [
+            "れい",
+            "ゼロ",
+            "零"
+        ]
+    },
+    {
+        "english": [
+            "one"
+        ],
+        "japanese": [
+            "いち",
+            "一"
+        ]
+    },
+    {
+        "english": [
+            "two"
+        ],
+        "japanese": [
+            "に",
+            "二"
+        ]
+    },
+    {
+        "english": [
+            "three"
+        ],
+        "japanese": [
+            "さん",
+            "三"
+        ]
+    },
+    {
+        "english": [
+            "four"
+        ],
+        "japanese": [
+            "よん",
+            "し",
+            "四"
+        ]
+    },
+    {
+        "english": [
+            "five"
+        ],
+        "japanese": [
+            "ご",
+            "五"
+        ]
+    },
+    {
+        "english": [
+            "six"
+        ],
+        "japanese": [
+            "ろく",
+            "六"
+        ]
+    },
+    {
+        "english": [
+            "seven"
+        ],
+        "japanese": [
+            "なな",
+            "しち",
+            "七"
+        ]
+    },
+    {
+        "english": [
+            "eight"
+        ],
+        "japanese": [
+            "はち",
+            "八"
+        ]
+    },
+    {
+        "english": [
+            "nine"
+        ],
+        "japanese": [
+            "きゅう",
+            "く",
+            "九"
+        ]
+    },
+    {
+        "english": [
+            "ten"
+        ],
+        "japanese": [
+            "じゅう",
+            "十"
+        ]
+    },
+    {
+        "english": [
+            "hundred"
+        ],
+        "japanese": [
+            "ひゃく",
+            "百"
+        ]
+    },
+    {
+        "english": [
+            "thousand"
+        ],
+        "japanese": [
+            "せん",
+            "千"
+        ]
+    },
+    {
+        "english": [
+            "ten thousand"
+        ],
+        "japanese": [
+            "まん",
+            "万"
+        ]
+    },
+    {
+        "english": [
+            "one hundred million"
+        ],
+        "japanese": [
+            "おく",
+            "億"
+        ]
+    },
+    {
+        "english": [
+            "one",
+            "one thing"
+        ],
+        "japanese": [
+            "ひとつ",
+            "一つ"
+        ]
+    },
+    {
+        "english": [
+            "two",
+            "two things"
+        ],
+        "japanese": [
+            "ふたつ",
+            "二つ"
+        ]
+    },
+    {
+        "english": [
+            "three",
+            "three things"
+        ],
+        "japanese": [
+            "みっつ",
+            "三つ"
+        ]
+    },
+    {
+        "english": [
+            "four",
+            "four things"
+        ],
+        "japanese": [
+            "よっつ",
+            "四つ"
+        ]
+    },
+    {
+        "english": [
+            "five",
+            "five things"
+        ],
+        "japanese": [
+            "いつつ",
+            "五つ"
+        ]
+    },
+    {
+        "english": [
+            "six",
+            "six things"
+        ],
+        "japanese": [
+            "むっつ",
+            "六つ"
+        ]
+    },
+    {
+        "english": [
+            "seven",
+            "seven things"
+        ],
+        "japanese": [
+            "ななつ",
+            "七つ"
+        ]
+    },
+    {
+        "english": [
+            "eight",
+            "eight things"
+        ],
+        "japanese": [
+            "やっつ",
+            "八つ"
+        ]
+    },
+    {
+        "english": [
+            "nine",
+            "nine things"
+        ],
+        "japanese": [
+            "ここのつ",
+            "九つ"
+        ]
+    },
+    {
+        "english": [
+            "ten",
+            "ten things"
+        ],
+        "japanese": [
+            "とお",
+            "十"
+        ]
+    },
+    {
+        "english": [
+            "this",
+            "it"
+        ],
+        "japanese": [
+            "これ"
+        ]
+    },
+    {
+        "english": [
+            "that"
+        ],
+        "japanese": [
+            "それ"
+        ]
+    },
+    {
+        "english": [
+            "that over there"
+        ],
+        "japanese": [
+            "あれ"
+        ]
+    },
+    {
+        "english": [
+            "which"
+        ],
+        "japanese": [
+            "どれ"
+        ]
+    },
+    {
+        "english": [
+            "this direction",
+            "thing",
+            "person",
+            "or place"
+        ],
+        "japanese": [
+            "こちら",
+            "こっち"
+        ]
+    },
+    {
+        "english": [
+            "that direction",
+            "thing",
+            "person",
+            "or place"
+        ],
+        "japanese": [
+            "そちら",
+            "そっち"
+        ]
+    },
+    {
+        "english": [
+            "that direction",
+            "thing",
+            "person",
+            "or place over there"
+        ],
+        "japanese": [
+            "あちら",
+            "あっち"
+        ]
+    },
+    {
+        "english": [
+            "which direction",
+            "thing",
+            "person",
+            "or place"
+        ],
+        "japanese": [
+            "どちら",
+            "どっち"
+        ]
+    },
+    {
+        "english": [
+            "secret"
+        ],
+        "japanese": [
+            "ひみつ",
+            "秘密"
+        ]
+    },
+    {
+        "english": [
+            "automatic"
+        ],
+        "japanese": [
+            "じどう",
+            "自動"
+        ]
+    },
+    {
+        "english": [
+            "content"
+        ],
+        "japanese": [
+            "ないよう",
+            "内容"
+        ]
+    },
+    {
+        "english": [
+            "width",
+            "breadth",
+            "free room",
+            "difference (between two substances)"
+        ],
+        "japanese": [
+            "はば",
+            "幅"
+        ]
+    },
+    {
+        "english": [
+            "formality"
+        ],
+        "japanese": [
+            "せいしき",
+            "正式"
+        ]
+    },
+    {
+        "english": [
+            "marriage"
+        ],
+        "japanese": [
+            "けっこん",
+            "結婚"
+        ]
+    },
+    {
+        "english": [
+            "now"
+        ],
+        "japanese": [
+            "げんざい",
+            "現在"
+        ]
+    },
+    {
+        "english": [
+            "now"
+        ],
+        "japanese": [
+            "いま",
+            "今"
+        ]
+    },
+    {
+        "english": [
+            "past"
+        ],
+        "japanese": [
+            "かこ",
+            "過去"
+        ]
+    },
+    {
+        "english": [
+            "future"
+        ],
+        "japanese": [
+            "みらい",
+            "未来"
+        ]
+    },
+    {
+        "english": [
+            "good"
+        ],
+        "japanese": [
+            "いい",
+            "よい",
+            "良い"
+        ]
+    },
+    {
+        "english": [
+            "amazing"
+        ],
+        "japanese": [
+            "すごい",
+            "凄い"
+        ]
+    },
+    {
+        "english": [
+            "wonderful"
+        ],
+        "japanese": [
+            "すばらしい",
+            "素晴らしい"
+        ]
+    },
+    {
+        "english": [
+            "bad",
+            "inferior"
+        ],
+        "japanese": [
+            "わるい",
+            "悪い"
+        ]
+    },
+    {
+        "english": [
+            "expensive",
+            "high"
+        ],
+        "japanese": [
+            "たかい",
+            "高い"
+        ]
+    },
+    {
+        "english": [
+            "low"
+        ],
+        "japanese": [
+            "ひくい",
+            "低い"
+        ]
+    },
+    {
+        "english": [
+            "cheap"
+        ],
+        "japanese": [
+            "やすい",
+            "安い"
+        ]
+    },
+    {
+        "english": [
+            "big"
+        ],
+        "japanese": [
+            "おおきい",
+            "大きい"
+        ]
+    },
+    {
+        "english": [
+            "small"
+        ],
+        "japanese": [
+            "ちいさい",
+            "小さい"
+        ]
+    },
+    {
+        "english": [
+            "thin"
+        ],
+        "japanese": [
+            "ほそい",
+            "細い"
+        ]
+    },
+    {
+        "english": [
+            "thick"
+        ],
+        "japanese": [
+            "ふとい",
+            "太い"
+        ]
+    },
+    {
+        "english": [
+            "old"
+        ],
+        "japanese": [
+            "ふるい",
+            "古い"
+        ]
+    },
+    {
+        "english": [
+            "new"
+        ],
+        "japanese": [
+            "あたらしい",
+            "新しい"
+        ]
+    },
+    {
+        "english": [
+            "young"
+        ],
+        "japanese": [
+            "わかい",
+            "若い"
+        ]
+    },
+    {
+        "english": [
+            "light",
+            "easy"
+        ],
+        "japanese": [
+            "かるい",
+            "軽い"
+        ]
+    },
+    {
+        "english": [
+            "heavy"
+        ],
+        "japanese": [
+            "おもい",
+            "重い"
+        ]
+    },
+    {
+        "english": [
+            "easy",
+            "simple"
+        ],
+        "japanese": [
+            "やさしい",
+            "易しい"
+        ]
+    },
+    {
+        "english": [
+            "difficult"
+        ],
+        "japanese": [
+            "むずかしい",
+            "難しい"
+        ]
+    },
+    {
+        "english": [
+            "soft"
+        ],
+        "japanese": [
+            "やわらかい",
+            "柔らかい"
+        ]
+    },
+    {
+        "english": [
+            "hard"
+        ],
+        "japanese": [
+            "かたい",
+            "硬い",
+            "堅い"
+        ]
+    },
+    {
+        "english": [
+            "hot"
+        ],
+        "japanese": [
+            "あつい",
+            "熱い",
+            "暑い"
+        ]
+    },
+    {
+        "english": [
+            "cold"
+        ],
+        "japanese": [
+            "つめたい",
+            "冷たい"
+        ]
+    },
+    {
+        "english": [
+            "cold"
+        ],
+        "japanese": [
+            "さむい",
+            "寒い"
+        ]
+    },
+    {
+        "english": [
+            "delicious"
+        ],
+        "japanese": [
+            "おいしい",
+            "美味しい"
+        ]
+    },
+    {
+        "english": [
+            "delicious",
+            "appetizing"
+        ],
+        "japanese": [
+            "うまい",
+            "美味い",
+            "旨い"
+        ]
+    },
+    {
+        "english": [
+            "tastes awful"
+        ],
+        "japanese": [
+            "まずい",
+            "不味い"
+        ]
+    },
+    {
+        "english": [
+            "sweet"
+        ],
+        "japanese": [
+            "あまい",
+            "甘い"
+        ]
+    },
+    {
+        "english": [
+            "hot [spicy]"
+        ],
+        "japanese": [
+            "からい",
+            "辛い"
+        ]
+    },
+    {
+        "english": [
+            "salty"
+        ],
+        "japanese": [
+            "しょっぱい",
+            "塩っぱい"
+        ]
+    },
+    {
+        "english": [
+            "bitter"
+        ],
+        "japanese": [
+            "にがい",
+            "苦い"
+        ]
+    },
+    {
+        "english": [
+            "beautiful"
+        ],
+        "japanese": [
+            "うつくしい",
+            "美しい"
+        ]
+    },
+    {
+        "english": [
+            "happy"
+        ],
+        "japanese": [
+            "うれしい",
+            "嬉しい"
+        ]
+    },
+    {
+        "english": [
+            "fun"
+        ],
+        "japanese": [
+            "たのしい",
+            "楽しい"
+        ]
+    },
+    {
+        "english": [
+            "sad"
+        ],
+        "japanese": [
+            "かなしい",
+            "悲しい"
+        ]
+    },
+    {
+        "english": [
+            "lonely"
+        ],
+        "japanese": [
+            "さびしい",
+            "寂しい",
+            "淋しい"
+        ]
+    },
+    {
+        "english": [
+            "sad",
+            "lonely"
+        ],
+        "japanese": [
+            "さみしい",
+            "寂しい",
+            "淋しい"
+        ]
+    },
+    {
+        "english": [
+            "scary"
+        ],
+        "japanese": [
+            "こわい",
+            "怖い",
+            "恐い"
+        ]
+    },
+    {
+        "english": [
+            "painful"
+        ],
+        "japanese": [
+            "いたい",
+            "痛い"
+        ]
+    },
+    {
+        "english": [
+            "itchy"
+        ],
+        "japanese": [
+            "かゆい",
+            "痒い"
+        ]
+    },
+    {
+        "english": [
+            "stinky"
+        ],
+        "japanese": [
+            "くさい",
+            "臭い"
+        ]
+    },
+    {
+        "english": [
+            "painful",
+            "heart-breaking"
+        ],
+        "japanese": [
+            "つらい",
+            "辛い"
+        ]
+    },
+    {
+        "english": [
+            "to exist [for animate objects]"
+        ],
+        "japanese": [
+            "いる"
+        ]
+    },
+    {
+        "english": [
+            "to exist [for inanimate objects]"
+        ],
+        "japanese": [
+            "ある"
+        ]
+    },
+    {
+        "english": [
+            "to become"
+        ],
+        "japanese": [
+            "なる"
+        ]
+    },
+    {
+        "english": [
+            "to occur"
+        ],
+        "japanese": [
+            "おこる",
+            "起こる",
+            "興る"
+        ]
+    },
+    {
+        "english": [
+            "to appear"
+        ],
+        "japanese": [
+            "あらわれる",
+            "現れる"
+        ]
+    },
+    {
+        "english": [
+            "to live"
+        ],
+        "japanese": [
+            "いきる",
+            "生きる"
+        ]
+    },
+    {
+        "english": [
+            "to give birth"
+        ],
+        "japanese": [
+            "うむ",
+            "生む",
+            "産む"
+        ]
+    },
+    {
+        "english": [
+            "to die"
+        ],
+        "japanese": [
+            "しぬ",
+            "死ぬ"
+        ]
+    },
+    {
+        "english": [
+            "to break"
+        ],
+        "japanese": [
+            "こわれる",
+            "壊れる"
+        ]
+    },
+    {
+        "english": [
+            "to go"
+        ],
+        "japanese": [
+            "いく",
+            "行く"
+        ]
+    },
+    {
+        "english": [
+            "to come"
+        ],
+        "japanese": [
+            "くる",
+            "来る"
+        ]
+    },
+    {
+        "english": [
+            "to return"
+        ],
+        "japanese": [
+            "かえる",
+            "帰る",
+            "返る"
+        ]
+    },
+    {
+        "english": [
+            "to walk"
+        ],
+        "japanese": [
+            "あるく",
+            "歩く"
+        ]
+    },
+    {
+        "english": [
+            "to jump",
+            "to fly"
+        ],
+        "japanese": [
+            "とぶ",
+            "飛ぶ"
+        ]
+    },
+    {
+        "english": [
+            "to swim"
+        ],
+        "japanese": [
+            "およぐ",
+            "泳ぐ"
+        ]
+    },
+    {
+        "english": [
+            "to move"
+        ],
+        "japanese": [
+            "うごく",
+            "動く"
+        ]
+    },
+    {
+        "english": [
+            "to dance"
+        ],
+        "japanese": [
+            "おどる",
+            "踊る"
+        ]
+    },
+    {
+        "english": [
+            "to sleep"
+        ],
+        "japanese": [
+            "ねる",
+            "寝る"
+        ]
+    },
+    {
+        "english": [
+            "to sing"
+        ],
+        "japanese": [
+            "うたう",
+            "歌う"
+        ]
+    },
+    {
+        "english": [
+            "to bite"
+        ],
+        "japanese": [
+            "かむ",
+            "噛む"
+        ]
+    },
+    {
+        "english": [
+            "to eat"
+        ],
+        "japanese": [
+            "たべる",
+            "食べる"
+        ]
+    },
+    {
+        "english": [
+            "to drink"
+        ],
+        "japanese": [
+            "のむ",
+            "飲む"
+        ]
+    },
+    {
+        "english": [
+            "to touch"
+        ],
+        "japanese": [
+            "さわる",
+            "触る"
+        ]
+    },
+    {
+        "english": [
+            "to throw"
+        ],
+        "japanese": [
+            "なげる",
+            "投げる"
+        ]
+    },
+    {
+        "english": [
+            "to hold"
+        ],
+        "japanese": [
+            "もつ",
+            "持つ"
+        ]
+    },
+    {
+        "english": [
+            "to hit",
+            "to strike"
+        ],
+        "japanese": [
+            "うつ",
+            "打つ"
+        ]
+    },
+    {
+        "english": [
+            "to hit",
+            "to strike"
+        ],
+        "japanese": [
+            "なぐる",
+            "殴る"
+        ]
+    },
+    {
+        "english": [
+            "to point"
+        ],
+        "japanese": [
+            "さす",
+            "指す"
+        ]
+    },
+    {
+        "english": [
+            "to stab"
+        ],
+        "japanese": [
+            "さす",
+            "刺す"
+        ]
+    },
+    {
+        "english": [
+            "to raise or extend one's hands"
+        ],
+        "japanese": [
+            "さす",
+            "差す"
+        ]
+    },
+    {
+        "english": [
+            "to kick"
+        ],
+        "japanese": [
+            "ける",
+            "蹴る"
+        ]
+    },
+    {
+        "english": [
+            "to sit"
+        ],
+        "japanese": [
+            "すわる",
+            "座る"
+        ]
+    },
+    {
+        "english": [
+            "to stand"
+        ],
+        "japanese": [
+            "たつ",
+            "立つ"
+        ]
+    },
+    {
+        "english": [
+            "to run"
+        ],
+        "japanese": [
+            "はしる",
+            "走る"
+        ]
+    },
+    {
+        "english": [
+            "to become unoccupied"
+        ],
+        "japanese": [
+            "あく",
+            "空く"
+        ]
+    },
+    {
+        "english": [
+            "to be crowded"
+        ],
+        "japanese": [
+            "こむ",
+            "込む"
+        ]
+    },
+    {
+        "english": [
+            "to need"
+        ],
+        "japanese": [
+            "いる",
+            "要る"
+        ]
+    },
+    {
+        "english": [
+            "to become dry"
+        ],
+        "japanese": [
+            "かわく",
+            "乾く"
+        ]
+    },
+    {
+        "english": [
+            "to disturb",
+            "to disarrange"
+        ],
+        "japanese": [
+            "みだす",
+            "乱す"
+        ]
+    },
+    {
+        "english": [
+            "to be disturbed",
+            "to become confused"
+        ],
+        "japanese": [
+            "みだれる",
+            "乱れる"
+        ]
+    },
+    {
+        "english": [
+            "to serve",
+            "to work for"
+        ],
+        "japanese": [
+            "つかえる",
+            "仕える"
+        ]
+    },
+    {
+        "english": [
+            "to be furnished with"
+        ],
+        "japanese": [
+            "そなわる",
+            "備わる"
+        ]
+    },
+    {
+        "english": [
+            "to excel",
+            "to surpass"
+        ],
+        "japanese": [
+            "すぐれる",
+            "優れる"
+        ]
+    },
+    {
+        "english": [
+            "to grow cold",
+            "to get chilly",
+            "to cool down"
+        ],
+        "japanese": [
+            "ひえる",
+            "冷える"
+        ]
+    },
+    {
+        "english": [
+            "to wake",
+            "to become sober",
+            "to be disillusioned"
+        ],
+        "japanese": [
+            "さめる",
+            "覚める"
+        ]
+    },
+    {
+        "english": [
+            "to cool down"
+        ],
+        "japanese": [
+            "さめる",
+            "冷める"
+        ]
+    },
+    {
+        "english": [
+            "to face",
+            "to turn toward"
+        ],
+        "japanese": [
+            "むく",
+            "向く"
+        ]
+    },
+    {
+        "english": [
+            "to fall",
+            "to collapse"
+        ],
+        "japanese": [
+            "たおれる",
+            "倒れる"
+        ]
+    },
+    {
+        "english": [
+            "to harden",
+            "to solidify",
+            "to become firm"
+        ],
+        "japanese": [
+            "かたまる",
+            "固まる"
+        ]
+    },
+    {
+        "english": [
+            "to be filled",
+            "to be surrounded",
+            "to overflow"
+        ],
+        "japanese": [
+            "うまる",
+            "埋まる"
+        ]
+    },
+    {
+        "english": [
+            "to be buried",
+            "to be covered"
+        ],
+        "japanese": [
+            "うもれる",
+            "埋もれる"
+        ]
+    },
+    {
+        "english": [
+            "to increase",
+            "to grow"
+        ],
+        "japanese": [
+            "ます",
+            "増す"
+        ]
+    },
+    {
+        "english": [
+            "to increase",
+            "to multiply"
+        ],
+        "japanese": [
+            "ふえる",
+            "増える"
+        ]
+    },
+    {
+        "english": [
+            "to decrease"
+        ],
+        "japanese": [
+            "へる",
+            "減る"
+        ]
+    },
+    {
+        "english": [
+            "to deviate"
+        ],
+        "japanese": [
+            "はずれる",
+            "外れる"
+        ]
+    },
+    {
+        "english": [
+            "to grow fat"
+        ],
+        "japanese": [
+            "ふとる",
+            "太る"
+        ]
+    },
+    {
+        "english": [
+            "to begin"
+        ],
+        "japanese": [
+            "はじまる",
+            "始まる"
+        ]
+    },
+    {
+        "english": [
+            "to finish",
+            "to close"
+        ],
+        "japanese": [
+            "おわる",
+            "終わる"
+        ]
+    },
+    {
+        "english": [
+            "to decide"
+        ],
+        "japanese": [
+            "きめる",
+            "決める"
+        ]
+    },
+    {
+        "english": [
+            "to see"
+        ],
+        "japanese": [
+            "みる",
+            "見る"
+        ]
+    },
+    {
+        "english": [
+            "to hear",
+            "to listen"
+        ],
+        "japanese": [
+            "きく",
+            "聞く",
+            "聴く"
+        ]
+    },
+    {
+        "english": [
+            "to touch",
+            "to feel"
+        ],
+        "japanese": [
+            "さわる",
+            "触る"
+        ]
+    },
+    {
+        "english": [
+            "to smell"
+        ],
+        "japanese": [
+            "かぐ",
+            "嗅ぐ"
+        ]
+    },
+    {
+        "english": [
+            "to say"
+        ],
+        "japanese": [
+            "いう",
+            "言う"
+        ]
+    },
+    {
+        "english": [
+            "to speak"
+        ],
+        "japanese": [
+            "はなす",
+            "話す"
+        ]
+    },
+    {
+        "english": [
+            "to tell"
+        ],
+        "japanese": [
+            "かたる",
+            "語る"
+        ]
+    },
+    {
+        "english": [
+            "to write"
+        ],
+        "japanese": [
+            "かく",
+            "書く"
+        ]
+    },
+    {
+        "english": [
+            "to read"
+        ],
+        "japanese": [
+            "よむ",
+            "読む"
+        ]
+    },
+    {
+        "english": [
+            "to use"
+        ],
+        "japanese": [
+            "つかう",
+            "使う"
+        ]
+    },
+    {
+        "english": [
+            "to make"
+        ],
+        "japanese": [
+            "つくる",
+            "作る",
+            "造る",
+            "創る"
+        ]
+    },
+    {
+        "english": [
+            "to fix",
+            "repair"
+        ],
+        "japanese": [
+            "なおす",
+            "直す",
+            "治す"
+        ]
+    },
+    {
+        "english": [
+            "to discard",
+            "throw away"
+        ],
+        "japanese": [
+            "すてる",
+            "捨てる"
+        ]
+    },
+    {
+        "english": [
+            "to take"
+        ],
+        "japanese": [
+            "とる",
+            "取る",
+            "撮る",
+            "採る"
+        ]
+    },
+    {
+        "english": [
+            "to put"
+        ],
+        "japanese": [
+            "おく",
+            "置く"
+        ]
+    },
+    {
+        "english": [
+            "to be sad"
+        ],
+        "japanese": [
+            "かなしむ",
+            "悲しむ",
+            "哀しむ"
+        ]
+    },
+    {
+        "english": [
+            "to cry"
+        ],
+        "japanese": [
+            "なく",
+            "泣く"
+        ]
+    },
+    {
+        "english": [
+            "to laugh"
+        ],
+        "japanese": [
+            "わらう",
+            "笑う"
+        ]
+    },
+    {
+        "english": [
+            "to be angry"
+        ],
+        "japanese": [
+            "おこる",
+            "怒る"
+        ]
+    },
+    {
+        "english": [
+            "to encourage"
+        ],
+        "japanese": [
+            "ほめる",
+            "褒める"
+        ]
+    },
+    {
+        "english": [
+            "to scold"
+        ],
+        "japanese": [
+            "しかる",
+            "叱る"
+        ]
+    },
+    {
+        "english": [
+            "to celebrate",
+            "to be jubilant",
+            "to have joy",
+            "to have delight",
+            "to have rapture"
+        ],
+        "japanese": [
+            "よろこぶ",
+            "喜ぶ"
+        ]
+    },
+    {
+        "english": [
+            "joy",
+            "delight",
+            "rapture"
+        ],
+        "japanese": [
+            "よろこび",
+            "喜び"
+        ]
+    },
+    {
+        "english": [
+            "to console",
+            "to consolate",
+            "to provide empathy"
+        ],
+        "japanese": [
+            "なぐさめる",
+            "慰める"
+        ]
+    },
+    {
+        "english": [
+            "to be disinterested",
+            "to be bored",
+            "to be tired of",
+            "to be weary"
+        ],
+        "japanese": [
+            "あきる",
+            "飽きる"
+        ]
+    },
+    {
+        "english": [
+            "to be astonished",
+            "to be surprised",
+            "to be scared"
+        ],
+        "japanese": [
+            "おどろく",
+            "驚く"
+        ]
+    },
+    {
+        "english": [
+            "to meet",
+            "to interview"
+        ],
+        "japanese": [
+            "あう",
+            "会う"
+        ]
+    },
+    {
+        "english": [
+            "to open"
+        ],
+        "japanese": [
+            "あける",
+            "開ける"
+        ]
+    },
+    {
+        "english": [
+            "to play"
+        ],
+        "japanese": [
+            "あそぶ",
+            "遊ぶ"
+        ]
+    },
+    {
+        "english": [
+            "to gather"
+        ],
+        "japanese": [
+            "あつまる",
+            "集まる"
+        ]
+    },
+    {
+        "english": [
+            "to sell"
+        ],
+        "japanese": [
+            "うる",
+            "売る"
+        ]
+    },
+    {
+        "english": [
+            "to obtain [some benefit or knowledge]"
+        ],
+        "japanese": [
+            "える",
+            "得る"
+        ]
+    },
+    {
+        "english": [
+            "to break"
+        ],
+        "japanese": [
+            "おる",
+            "折る"
+        ]
+    },
+    {
+        "english": [
+            "to buy"
+        ],
+        "japanese": [
+            "かう",
+            "買う"
+        ]
+    },
+    {
+        "english": [
+            "to cut"
+        ],
+        "japanese": [
+            "きる",
+            "切る"
+        ]
+    },
+    {
+        "english": [
+            "to wear [on the upper body]"
+        ],
+        "japanese": [
+            "きる",
+            "着る"
+        ]
+    },
+    {
+        "english": [
+            "to wear [on the lower body]"
+        ],
+        "japanese": [
+            "はく",
+            "履く"
+        ]
+    },
+    {
+        "english": [
+            "to change"
+        ],
+        "japanese": [
+            "かえる",
+            "変える"
+        ]
+    },
+    {
+        "english": [
+            "to exchange",
+            "to substitute",
+            "to replace"
+        ],
+        "japanese": [
+            "かえる",
+            "代える"
+        ]
+    },
+    {
+        "english": [
+            "to close"
+        ],
+        "japanese": [
+            "しめる",
+            "閉める"
+        ]
+    },
+    {
+        "english": [
+            "to tie",
+            "to fasten"
+        ],
+        "japanese": [
+            "しめる",
+            "締める"
+        ]
+    },
+    {
+        "english": [
+            "to comprise",
+            "to account for"
+        ],
+        "japanese": [
+            "しめる",
+            "占める"
+        ]
+    },
+    {
+        "english": [
+            "to know"
+        ],
+        "japanese": [
+            "しる",
+            "知る"
+        ]
+    },
+    {
+        "english": [
+            "to get tired"
+        ],
+        "japanese": [
+            "つかれる",
+            "疲れる"
+        ]
+    },
+    {
+        "english": [
+            "to go out",
+            "to depart"
+        ],
+        "japanese": [
+            "でかける",
+            "出掛ける"
+        ]
+    },
+    {
+        "english": [
+            "to work [e.g.",
+            "at a job]"
+        ],
+        "japanese": [
+            "はたらく",
+            "働く"
+        ]
+    },
+    {
+        "english": [
+            "to let go of"
+        ],
+        "japanese": [
+            "はなす",
+            "放す",
+            "離す"
+        ]
+    },
+    {
+        "english": [
+            "to rest",
+            "to take a break",
+            "to go to bed"
+        ],
+        "japanese": [
+            "やすむ",
+            "休む"
+        ]
+    },
+    {
+        "english": [
+            "to split into"
+        ],
+        "japanese": [
+            "わかれる",
+            "分かれる"
+        ]
+    },
+    {
+        "english": [
+            "to part"
+        ],
+        "japanese": [
+            "わかれる",
+            "別れる"
+        ]
+    },
+    {
+        "english": [
+            "subject marker",
+            "but"
+        ],
+        "japanese": [
+            "が"
+        ]
+    },
+    {
+        "english": [
+            "at",
+            "by"
+        ],
+        "japanese": [
+            "で"
+        ]
+    },
+    {
+        "english": [
+            "and",
+            "with"
+        ],
+        "japanese": [
+            "と"
+        ]
+    },
+    {
+        "english": [
+            "indirect object marker"
+        ],
+        "japanese": [
+            "に"
+        ]
+    },
+    {
+        "english": [
+            "possession marker",
+            "of"
+        ],
+        "japanese": [
+            "の"
+        ]
+    },
+    {
+        "english": [
+            "to"
+        ],
+        "japanese": [
+            "へ"
+        ]
+    },
+    {
+        "english": [
+            "to"
+        ],
+        "japanese": [
+            "まで"
+        ]
+    },
+    {
+        "english": [
+            "from"
+        ],
+        "japanese": [
+            "から"
+        ]
+    },
+    {
+        "english": [
+            "than"
+        ],
+        "japanese": [
+            "より"
+        ]
+    },
+    {
+        "english": [
+            "direct object marker"
+        ],
+        "japanese": [
+            "を"
+        ]
+    },
+    {
+        "english": [
+            "and; as well as"
+        ],
+        "japanese": [
+            "および",
+            "及び"
+        ]
+    },
+    {
+        "english": [
+            "whether"
+        ],
+        "japanese": [
+            "か"
+        ]
+    },
+    {
+        "english": [
+            "might be",
+            "possible that"
+        ],
+        "japanese": [
+            "かも"
+        ]
+    },
+    {
+        "english": [
+            "and then"
+        ],
+        "japanese": [
+            "そして"
+        ]
+    },
+    {
+        "english": [
+            "or"
+        ],
+        "japanese": [
+            "それとも"
+        ]
+    },
+    {
+        "english": [
+            "things like <list of things>",
+            "including",
+            "such things as"
+        ],
+        "japanese": [
+            "だの"
+        ]
+    },
+    {
+        "english": [
+            "ongoing occurrence"
+        ],
+        "japanese": [
+            "つつ"
+        ]
+    },
+    {
+        "english": [
+            "form of verb or adjective [see"
+        ],
+        "japanese": [
+            "て"
+        ]
+    },
+    {
+        "english": [
+            "when",
+            "if",
+            "that"
+        ],
+        "japanese": [
+            "と"
+        ]
+    },
+    {
+        "english": [
+            "while",
+            "though",
+            "both"
+        ],
+        "japanese": [
+            "ながら"
+        ]
+    },
+    {
+        "english": [
+            "as well as"
+        ],
+        "japanese": [
+            "ならびに"
+        ]
+    },
+    {
+        "english": [
+            "whether or not"
+        ],
+        "japanese": [
+            "なり"
+        ]
+    },
+    {
+        "english": [
+            "to <somewhere>",
+            "by <someone>"
+        ],
+        "japanese": [
+            "に"
+        ]
+    },
+    {
+        "english": [
+            "possession"
+        ],
+        "japanese": [
+            "の"
+        ]
+    },
+    {
+        "english": [
+            "so"
+        ],
+        "japanese": [
+            "ので"
+        ]
+    },
+    {
+        "english": [
+            "also",
+            "again"
+        ],
+        "japanese": [
+            "また",
+            "又"
+        ]
+    },
+    {
+        "english": [
+            "or alternatively"
+        ],
+        "japanese": [
+            "または",
+            "又は"
+        ]
+    },
+    {
+        "english": [
+            "also",
+            "too"
+        ],
+        "japanese": [
+            "も"
+        ]
+    },
+    {
+        "english": [
+            "and"
+        ],
+        "japanese": [
+            "や"
+        ]
+    },
+    {
+        "english": [
+            "emphasis and question marker",
+            "equivalent to \"right?\""
+        ],
+        "japanese": [
+            "ね"
+        ]
+    },
+    {
+        "english": [
+            "question marker"
+        ],
+        "japanese": [
+            "か"
+        ]
+    },
+    {
+        "english": [
+            "the copula particle used after quasi-adjectives"
+        ],
+        "japanese": [
+            "な"
+        ]
+    },
+    {
+        "english": [
+            "I wonder"
+        ],
+        "japanese": [
+            "かしら"
+        ]
+    },
+    {
+        "english": [
+            "-ness"
+        ],
+        "japanese": [
+            "さ"
+        ]
+    },
+    {
+        "english": [
+            "particle indicating that the speaker is trying to recall some information [\"What class is next"
+        ],
+        "japanese": [
+            "っけ"
+        ]
+    },
+    {
+        "english": [
+            "emphasis"
+        ],
+        "japanese": [
+            "こそ"
+        ]
+    },
+    {
+        "english": [
+            "even"
+        ],
+        "japanese": [
+            "さえ"
+        ]
+    },
+    {
+        "english": [
+            "only"
+        ],
+        "japanese": [
+            "しか"
+        ]
+    },
+    {
+        "english": [
+            "even"
+        ],
+        "japanese": [
+            "すら"
+        ]
+    },
+    {
+        "english": [
+            "approximately",
+            "about"
+        ],
+        "japanese": [
+            "くらい",
+            "ぐらい"
+        ]
+    },
+    {
+        "english": [
+            "only",
+            "as much as"
+        ],
+        "japanese": [
+            "だけ"
+        ]
+    },
+    {
+        "english": [
+            "however"
+        ],
+        "japanese": [
+            "だって"
+        ]
+    },
+    {
+        "english": [
+            "casual topic marker"
+        ],
+        "japanese": [
+            "ったら"
+        ]
+    },
+    {
+        "english": [
+            "said that"
+        ],
+        "japanese": [
+            "って"
+        ]
+    },
+    {
+        "english": [
+            "also",
+            "or"
+        ],
+        "japanese": [
+            "でも"
+        ]
+    },
+    {
+        "english": [],
+        "japanese": [
+            "どころ"
+        ]
+    },
+    {
+        "english": [
+            "for example"
+        ],
+        "japanese": [
+            "など"
+        ]
+    },
+    {
+        "english": [
+            "if [for verbs]; subject marker [for nouns]"
+        ],
+        "japanese": [
+            "なら"
+        ]
+    },
+    {
+        "english": [
+            "casual undervalue",
+            "dislike",
+            "lack"
+        ],
+        "japanese": [
+            "なんか"
+        ]
+    },
+    {
+        "english": [
+            "casual undervalue",
+            "dislike",
+            "lack"
+        ],
+        "japanese": [
+            "なんて"
+        ]
+    },
+    {
+        "english": [
+            "topic marker"
+        ],
+        "japanese": [
+            "は"
+        ]
+    },
+    {
+        "english": [
+            "just",
+            "full of",
+            "only"
+        ],
+        "japanese": [
+            "ばかり",
+            "ばっかり"
+        ]
+    },
+    {
+        "english": [
+            "until"
+        ],
+        "japanese": [
+            "まで"
+        ]
+    },
+    {
+        "english": [
+            "too",
+            "also"
+        ],
+        "japanese": [
+            "も"
+        ]
+    }
+]
