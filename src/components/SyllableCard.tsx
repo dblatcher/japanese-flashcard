@@ -53,7 +53,7 @@ export const SyllableCard = ({ character, noCaption = false, size = 'normal' }: 
         }}>
             <Typography fontSize={fontSize} lineHeight={1}>{character.string}</Typography>
             {!noCaption && (
-                <Typography variant='caption' fontSize={fontSize * .5}>{character.phonetic}</Typography>
+                <Typography variant='caption' lineHeight={1} fontSize={fontSize * .5}>{character.phonetic}</Typography>
             )}
         </Card>
     )
