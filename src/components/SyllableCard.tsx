@@ -49,6 +49,7 @@ export const SyllableCard = ({ character, noCaption = false, size = 'normal' }: 
             flexDirection: 'column',
             textAlign: 'center',
             boxSizing: 'border-box',
+            backgroundColor: 'primary.light',
         }}>
             <Typography fontSize={fontSize} lineHeight={1}>{character.string}</Typography>
             {!noCaption && (

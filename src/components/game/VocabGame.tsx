@@ -82,7 +82,7 @@ export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame, showR
         {wordToDisplay &&
             <Box
                 sx={{
-                    minWidth: 300,
+                    minWidth: 500,
                     maxWidth: '100%',
                 }}>
 

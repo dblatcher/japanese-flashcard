@@ -47,6 +47,7 @@ export const WordCard = ({ word, noCaption = false, size = 'normal', showRomanji
             flexDirection: 'column',
             textAlign: 'center',
             boxSizing: 'border-box',
+            backgroundColor: 'primary.light',
         }}>
             <Typography fontSize={fontSize * 1.5} lineHeight={1}>{word.write()}</Typography>
             {showRomanji &&
