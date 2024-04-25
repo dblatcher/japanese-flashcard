@@ -2,14 +2,16 @@
 import { useSpeech } from "@/context/speechContext";
 import { VocabRound, getOptionsForNextRound, getWordForNextRound } from "@/lib/game-logic";
 import { Word } from "@/lib/language/word";
-import { Box, Button, Dialog, DialogActions, DialogContent, Typography, Zoom } from "@mui/material";
+import { Box, Typography, Zoom } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { AnswerFeedback } from "./AnswerFeedback";
-import { MultipleChoice } from "./MultipleChoice";
-import { ScoreLine } from "./ScoreLine";
 import { TransitionIn } from "../TransitionIn";
 import { WordCard } from "../WordCard";
 import { FullHeightBox } from "../layout/FullHeightBox";
+import { AnswerFeedback } from "./AnswerFeedback";
+import { BigStartButton } from "./BigStartButton";
+import { MultipleChoice } from "./MultipleChoice";
+import { ScoreDialog } from "./ScoreDialog";
+import { ScoreLine } from "./ScoreLine";
 
 interface Props {
     roundsPerGame?: number;
@@ -73,10 +75,9 @@ export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame, showR
     return <FullHeightBox alignItems={'center'} width={'100%'} justifyContent={'center'}>
 
         {!wordToDisplay && (
-            <Button
+            <BigStartButton
                 onClick={() => nextWord()}
-                sx={{ minWidth: 250, minHeight: 150 }}
-                variant="contained">start vocab test</Button>
+            >start vocab test</BigStartButton>
         )}
         {wordToDisplay &&
             <Box
@@ -111,22 +112,16 @@ export const VocabGame: React.FunctionComponent<Props> = ({ roundsPerGame, showR
             </Box>
         }
 
-        <Dialog
-            fullWidth
+        <ScoreDialog
             open={hasFinished}
-            onClose={reset} >
-            <DialogContent>
-                <ScoreLine roundsCorrect={rounds.filter(r => r.correct).length} roundsPlayed={rounds.length} />
-                {rounds.map((round, index) => (
-                    <Box key={index} display={'flex'} gap={1} marginBottom={1}>
-                        <WordCard word={round.word} size="small" showRomanji />
-                        <Typography color={round.correct ? 'success.dark' : 'error.dark'}>{round.answer}</Typography>
-                    </Box>
-                ))}
-            </DialogContent>
-            <DialogActions>
-                <Button onClick={reset}>new game</Button>
-            </DialogActions>
-        </Dialog>
+            onClose={reset}
+            rounds={rounds}>
+            {rounds.map((round, index) => (
+                <Box key={index} display={'flex'} gap={1} marginBottom={1}>
+                    <WordCard word={round.word} size="small" showRomanji />
+                    <Typography color={round.correct ? 'success.dark' : 'error.dark'}>{round.answer}</Typography>
+                </Box>
+            ))}
+        </ScoreDialog>
     </FullHeightBox>
 }

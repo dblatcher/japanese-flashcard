@@ -2,15 +2,17 @@
 import { useSpeech } from "@/context/speechContext";
 import { Round, getCharacterForNextRound } from "@/lib/game-logic";
 import { Character } from "@/lib/language/character";
-import { Box, Button, Dialog, DialogActions, DialogContent, Zoom } from "@mui/material";
+import { Box, Zoom } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { AnswerFeedback } from "./AnswerFeedback";
-import { CharacterInput } from "./CharacterInput";
-import { RoundHistory } from "./RoundHistory";
-import { ScoreLine } from "./ScoreLine";
 import { SyllableCard } from "../SyllableCard";
 import { TransitionIn } from "../TransitionIn";
 import { FullHeightBox } from "../layout/FullHeightBox";
+import { AnswerFeedback } from "./AnswerFeedback";
+import { BigStartButton } from "./BigStartButton";
+import { CharacterInput } from "./CharacterInput";
+import { RoundHistory } from "./RoundHistory";
+import { ScoreDialog } from "./ScoreDialog";
+import { ScoreLine } from "./ScoreLine";
 
 interface Props {
     hiraganaConstanents: string[];
@@ -70,10 +72,8 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ hiraganaConstane
     return <FullHeightBox alignItems={'center'} width={'100%'} justifyContent={'center'}>
 
         {!characterToDisplay && (
-            <Button
-                onClick={start}
-                sx={{ minWidth: 250, minHeight: 150 }}
-                variant="contained">start character test</Button>
+            <BigStartButton onClick={start}
+            >start character test</BigStartButton>
         )}
         {characterToDisplay &&
             <Box
@@ -105,16 +105,13 @@ export const CharacterGame: React.FunctionComponent<Props> = ({ hiraganaConstane
             </Box>
         }
 
-        <Dialog
-            fullWidth
+        <ScoreDialog
             open={hasFinished}
-            onClose={reset} >
-            <DialogContent>
-                <RoundHistory rounds={rounds} />
-            </DialogContent>
-            <DialogActions>
-                <Button onClick={reset}>new game</Button>
-            </DialogActions>
-        </Dialog>
+            onClose={reset}
+            rounds={rounds}
+        >
+            <RoundHistory rounds={rounds} />
+        </ScoreDialog>
+
     </FullHeightBox>
 }

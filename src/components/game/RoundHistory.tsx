@@ -1,9 +1,7 @@
-'use client'
 import { Round } from "@/lib/game-logic";
 import { Box, List, ListItem, ListItemIcon, Typography } from "@mui/material";
 import React from "react";
 import { SyllableCard } from "../SyllableCard";
-import { ScoreLine } from "./ScoreLine";
 
 
 interface Props {
@@ -15,7 +13,6 @@ export const RoundHistory: React.FunctionComponent<Props> = ({ rounds }) => {
     return (
         <Box display='flex' flexWrap={'wrap'} gap={1}>
             <Box paddingY={1} flex={1}>
-                <ScoreLine roundsCorrect={rounds.filter(r => r.correct).length} roundsPlayed={rounds.length} />
             </Box>
             <List dense>
                 {rounds.map((round, index) => (
