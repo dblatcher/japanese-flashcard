@@ -1,9 +1,8 @@
 import { PageHeader } from "@/components/layout/PageHeader";
-import { CssBaseline } from "@mui/material";
+import { Container } from "@mui/material";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import { CSSProperties } from "react";
-import "./globals.css";
+import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,25 +27,16 @@ export const metadata: Metadata = {
     { rel: "icon", url: "icons/icon-128x128.png" },
   ],
 
-
 };
 
 export const viewport: Viewport = {
-  themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#fff" }],
+  // themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#fff" }],
   minimumScale: 1,
   initialScale: 1,
   width: 'device-width',
   viewportFit: 'cover',
   // "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
 }
-
-const layoutStyle: CSSProperties = {
-  display: 'flex',
-  flexDirection: 'column',
-  height: '100vh',
-}
-
-CssBaseline
 
 export default function RootLayout({
   children,
@@ -55,10 +45,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className} style={layoutStyle}>
+      <Container component={'body'} className={inter.className}
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          marginY: 0,
+          height: '100vh'
+        }}>
         <PageHeader />
         {children}
-      </body>
+      </Container>
     </html>
   );
 }
