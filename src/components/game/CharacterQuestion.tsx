@@ -29,13 +29,13 @@ export const CharacterQuestion: React.FunctionComponent<Props> = ({ roundToDispl
                 <TransitionIn key={roundToDisplay.character.identifier} timeout={500} Transition={Zoom}>
                     <Typography>What is the character for: {roundToDisplay.character.phonetic} in {findLanguage(roundToDisplay.character)}</Typography>
                 </TransitionIn>
-                <ButtonGroup>
+                <Box display={'flex'} flexWrap={'wrap'} justifyContent={'space-evenly'}>
                     {roundToDisplay.options.map((option, index) => (
                         <Button onClick={() => handleSubmit(option.phonetic)} key={index}>
                             <SyllableCard character={option} noCaption size="normal" />
                         </Button>
                     ))}
-                </ButtonGroup>
+                </Box>
             </>}
         </Box>
     )
