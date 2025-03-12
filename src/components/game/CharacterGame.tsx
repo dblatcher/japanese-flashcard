@@ -1,18 +1,16 @@
 'use client'
 import { useSpeech } from "@/context/speechContext";
-import { Round, getCharacterForNextRound } from "@/lib/game-logic";
-import { Character } from "@/lib/language/character";
-import { Box, Zoom } from "@mui/material";
+import { CharacterRound, CharacterRoundInProgress, getNextCharacterRound } from "@/lib/game-logic";
+import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { SyllableCard } from "../SyllableCard";
-import { TransitionIn } from "../TransitionIn";
 import { FullHeightBox } from "../layout/FullHeightBox";
 import { AnswerFeedback } from "./AnswerFeedback";
 import { BigStartButton } from "./BigStartButton";
-import { CharacterInput } from "./CharacterInput";
+import { CharacterQuestion } from "./CharacterQuestion";
 import { RoundHistory } from "./RoundHistory";
 import { ScoreDialog } from "./ScoreDialog";
 import { ScoreLine } from "./ScoreLine";
+import { scoreComment } from "@/lib/feedback-phrases";
 
 interface Props {
     hiraganaConstanents: string[];
@@ -22,95 +20,102 @@ interface Props {
 
 
 export const CharacterGame: React.FunctionComponent<Props> = ({ hiraganaConstanents, katakanaConstanents, roundsPerGame }) => {
-    const [rounds, setRounds] = useState<Round[]>([])
-    const [character, setCharacter] = useState<Character | undefined>(undefined)
-    const { pronounce } = useSpeech()
+    const [previousRounds, setPreviousRounds] = useState<CharacterRound[]>([])
+    const [currentRound, setCurrentRound] = useState<CharacterRoundInProgress | undefined>(undefined)
+    const { pronounce, sayJapanese } = useSpeech()
 
     const reset = () => {
-        setRounds([])
-        setCharacter(undefined)
+        setPreviousRounds([])
+        setCurrentRound(undefined)
     }
 
     useEffect(reset, [hiraganaConstanents, katakanaConstanents, roundsPerGame])
 
     const start = () => {
-        setCharacter(getCharacterForNextRound([], hiraganaConstanents, katakanaConstanents))
+        setCurrentRound(getNextCharacterRound([], hiraganaConstanents, katakanaConstanents))
     }
 
     const handleSubmit = (guess: string) => {
-        if (!character || !guess) {
+        if (!currentRound || !guess) {
             return
         }
         const answer = guess
-        const correct = answer === character.phonetic
-        pronounce(character)
+        const correct = answer === currentRound.character.phonetic
+        pronounce(currentRound.character)
 
-        const updatedRounds = [...rounds, {
-            character, answer, correct
-        }]
+        const newRound: CharacterRound = {
+            ...currentRound,
+            options: [],
+            answer,
+            correct,
+        }
 
-        setRounds(updatedRounds)
+        const updatedRounds = [...previousRounds, newRound]
+
+        setPreviousRounds(updatedRounds)
 
         const hasNextRound = typeof roundsPerGame === 'undefined' ? true : updatedRounds.length < roundsPerGame
         if (hasNextRound) {
-            setCharacter(getCharacterForNextRound(updatedRounds, hiraganaConstanents, katakanaConstanents))
+            setCurrentRound(getNextCharacterRound(previousRounds, hiraganaConstanents, katakanaConstanents))
         } else {
-            setCharacter(undefined)
+            setCurrentRound(undefined)
         }
     }
 
-    const hasFinished = !!(roundsPerGame && rounds.length >= roundsPerGame)
-    const numberRight = rounds.filter(round => round.correct).length
-    const previousRound = rounds.length ? rounds[rounds.length - 1] : undefined
-    const characterToDisplay = character ?? previousRound?.character
+    const hasFinished = !!(roundsPerGame && previousRounds.length >= roundsPerGame)
+    const numberRight = previousRounds.filter(round => round.correct).length
+    const mostRecentRound = previousRounds.length ? previousRounds[previousRounds.length - 1] : undefined
+    const roundToDisplay = currentRound ?? mostRecentRound
 
-    const answerFeedback = previousRound ? <>
-        {previousRound.correct ? 'CORRECT! ' : `WRONG! `}
-        {previousRound.character.string} is &ldquo;{previousRound.character.phonetic}&rdquo;
+    useEffect(() => {
+        if (hasFinished) {
+            console.log('finished!', { numberRight, total: previousRounds.length });
+            // timeout to make sure the last utterance is finished
+            // to do - queue utterances!
+            setTimeout(() => {
+                sayJapanese(scoreComment(numberRight, previousRounds.length))
+            }, 2000)
+        }
+    }, [hasFinished, numberRight, previousRounds, sayJapanese])
+
+
+    const answerFeedback = mostRecentRound ? <>
+        {mostRecentRound.correct ? 'CORRECT! ' : `WRONG! `}
+        {mostRecentRound.character.string} is &ldquo;{mostRecentRound.character.phonetic}&rdquo;
     </> : undefined
 
     return <FullHeightBox alignItems={'center'} width={'100%'} justifyContent={'center'}>
 
-        {!characterToDisplay && (
+        {!roundToDisplay && (
             <BigStartButton onClick={start}
             >start character test</BigStartButton>
         )}
-        {characterToDisplay &&
+        {roundToDisplay &&
             <Box
                 component={'article'}
                 sx={{
                     minWidth: 350,
                     maxWidth: '100%',
                 }}>
-
                 <ScoreLine
                     roundsCorrect={numberRight}
-                    roundsPlayed={rounds.length}
+                    roundsPlayed={previousRounds.length}
                     roundsPerGame={roundsPerGame} />
-                <Box
-                    display={'flex'}
-                    flexDirection={'column'}
-                    alignItems={'center'}
-                    gap={1}
-                    padding={1}>
-                    <TransitionIn key={characterToDisplay.identifier} timeout={500} Transition={Zoom}>
-                        <SyllableCard size="large" character={characterToDisplay} noCaption />
-                    </TransitionIn>
-                    <CharacterInput submit={handleSubmit} />
-                </Box>
+                <CharacterQuestion handleSubmit={handleSubmit} roundToDisplay={roundToDisplay} />
                 <AnswerFeedback
                     content={answerFeedback}
-                    transitionKey={rounds.length}
-                    success={previousRound?.correct} />
+                    transitionKey={previousRounds.length}
+                    success={mostRecentRound?.correct} />
             </Box>
         }
 
         <ScoreDialog
             open={hasFinished}
             onClose={reset}
-            rounds={rounds}
+            rounds={previousRounds}
         >
-            <RoundHistory rounds={rounds} />
+            <Typography>{scoreComment(previousRounds.filter(_ => _.correct).length, previousRounds.length)}</Typography>
+            <RoundHistory rounds={previousRounds} />
         </ScoreDialog>
 
     </FullHeightBox>

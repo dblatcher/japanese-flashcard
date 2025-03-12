@@ -21,7 +21,7 @@ function speak(synth: SpeechSynthesis, text: string, voice: SpeechSynthesisVoice
     const utterThis = new SpeechSynthesisUtterance(text);
 
     utterThis.onend = function (event) {
-        console.log("SpeechSynthesisUtterance.onend");
+        console.log("SpeechSynthesisUtterance.onend", event.utterance.text);
     };
 
     utterThis.onerror = function (event) {

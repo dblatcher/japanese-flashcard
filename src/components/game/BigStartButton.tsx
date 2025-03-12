@@ -1,5 +1,6 @@
 'use client'
 import { useSpeech } from "@/context/speechContext";
+import { LETS_START } from "@/lib/feedback-phrases";
 import { Button } from "@mui/material";
 import React, { ReactNode } from "react";
 
@@ -14,7 +15,7 @@ export const BigStartButton: React.FunctionComponent<Props> = ({ onClick, childr
     const { sayJapanese } = useSpeech()
 
     const handleClick = () => {
-        sayJapanese("はじめましょう")
+        sayJapanese(LETS_START)
         onClick()
     }
 

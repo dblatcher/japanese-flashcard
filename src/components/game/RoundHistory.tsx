@@ -1,19 +1,17 @@
-import { Round } from "@/lib/game-logic";
+import { CharacterRound } from "@/lib/game-logic";
 import { Box, List, ListItem, ListItemIcon, Typography } from "@mui/material";
 import React from "react";
 import { SyllableCard } from "../SyllableCard";
 
 
 interface Props {
-    rounds: Round[]
+    rounds: CharacterRound[]
 }
 
 export const RoundHistory: React.FunctionComponent<Props> = ({ rounds }) => {
 
     return (
         <Box display='flex' flexWrap={'wrap'} gap={1}>
-            <Box paddingY={1} flex={1}>
-            </Box>
             <List dense>
                 {rounds.map((round, index) => (
                     <ListItem key={index} sx={{

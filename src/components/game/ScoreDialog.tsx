@@ -1,5 +1,5 @@
 'use client'
-import { Round, VocabRound } from "@/lib/game-logic";
+import { CharacterRound, VocabRound } from "@/lib/game-logic";
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material";
 import React, { ReactNode } from "react";
 import { ScoreLine } from "./ScoreLine";
@@ -9,7 +9,7 @@ interface Props {
     onClose: { (): void }
 
     children: ReactNode
-    rounds: Array<Round | VocabRound>
+    rounds: Array<CharacterRound | VocabRound>
 }
 
 

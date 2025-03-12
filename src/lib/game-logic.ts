@@ -6,11 +6,21 @@ import { pickAtRandom, pickManyAtRandom, shuffle } from "./util"
 import { hiraganaWordList, katakanaWordList } from "./wordlists"
 
 
-export type Round = {
+export type CharacterRound = {
     character: Character
     answer: string
     correct: boolean
+    options: Character[], /// not used - split union to avoid
+    type: 'enter-romanji'
+} | {
+    character: Character
+    answer: string
+    correct: boolean,
+    options: Character[],
+    type: 'pick-character'
 }
+
+export type CharacterRoundInProgress = Omit<CharacterRound, 'answer' | 'correct'>
 
 export type VocabRound = {
     word: Word
@@ -19,7 +29,7 @@ export type VocabRound = {
 }
 
 export const getCharacterForNextRound = (
-    previousRounds: Round[],
+    previousRounds: CharacterRound[],
     hiraganaConstanents: string[],
     katakanaConstanents: string[],
 ): Character => {
@@ -49,6 +59,26 @@ export const getCharacterForNextRound = (
 
     const both = [...hiraganaOptions, ...katakanaOptions]
     return pickAtRandom(both) ?? both[0]
+}
+
+export const getNextCharacterRound = (
+    previousRounds: CharacterRound[],
+    hiraganaConstanents: string[],
+    katakanaConstanents: string[],
+): CharacterRoundInProgress => {
+    const character = getCharacterForNextRound(previousRounds, hiraganaConstanents, katakanaConstanents)
+    const type: CharacterRound['type'] = pickAtRandom(['enter-romanji', 'pick-character'])
+    if (type === 'enter-romanji') {
+        return {
+            type, character, options: []
+        }
+    }
+
+    const possibleAnswers = [...HIRAGANA.characterArray, ...KATAKANA.characterArray].filter(otherCharacter => otherCharacter !== character)
+    const options: Character[] = shuffle([character, ...pickManyAtRandom(5, possibleAnswers)])
+    return {
+        type, character, options
+    }
 }
 
 export const getWordForNextRound = (
